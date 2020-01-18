@@ -954,7 +954,7 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
     /**
      * Sets vitamins
      *
-     * @param string[] $vitamins An array of vitamins that can be found in this item
+     * @param string[] $vitamins An array of vitamins that are found in this item
      *
      * @return $this
      */
