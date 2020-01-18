@@ -81,6 +81,7 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
 'has_english_ingredients' => 'bool',
 'minerals' => 'string[]',
 'traces' => 'string[]',
+'vitamins' => 'string[]',
 'common_name' => 'string',
 'description' => 'string',
 'keywords' => 'string[]',
@@ -116,6 +117,7 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
 'has_english_ingredients' => null,
 'minerals' => null,
 'traces' => null,
+'vitamins' => null,
 'common_name' => null,
 'description' => null,
 'keywords' => null,
@@ -172,6 +174,7 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
 'has_english_ingredients' => 'has_english_ingredients',
 'minerals' => 'minerals',
 'traces' => 'traces',
+'vitamins' => 'vitamins',
 'common_name' => 'common_name',
 'description' => 'description',
 'keywords' => 'keywords',
@@ -207,6 +210,7 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
 'has_english_ingredients' => 'setHasEnglishIngredients',
 'minerals' => 'setMinerals',
 'traces' => 'setTraces',
+'vitamins' => 'setVitamins',
 'common_name' => 'setCommonName',
 'description' => 'setDescription',
 'keywords' => 'setKeywords',
@@ -242,6 +246,7 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
 'has_english_ingredients' => 'getHasEnglishIngredients',
 'minerals' => 'getMinerals',
 'traces' => 'getTraces',
+'vitamins' => 'getVitamins',
 'common_name' => 'getCommonName',
 'description' => 'getDescription',
 'keywords' => 'getKeywords',
@@ -329,6 +334,7 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
         $this->container['has_english_ingredients'] = isset($data['has_english_ingredients']) ? $data['has_english_ingredients'] : null;
         $this->container['minerals'] = isset($data['minerals']) ? $data['minerals'] : null;
         $this->container['traces'] = isset($data['traces']) ? $data['traces'] : null;
+        $this->container['vitamins'] = isset($data['vitamins']) ? $data['vitamins'] : null;
         $this->container['common_name'] = isset($data['common_name']) ? $data['common_name'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['keywords'] = isset($data['keywords']) ? $data['keywords'] : null;
@@ -931,6 +937,30 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
     public function setTraces($traces)
     {
         $this->container['traces'] = $traces;
+
+        return $this;
+    }
+
+    /**
+     * Gets vitamins
+     *
+     * @return string[]
+     */
+    public function getVitamins()
+    {
+        return $this->container['vitamins'];
+    }
+
+    /**
+     * Sets vitamins
+     *
+     * @param string[] $vitamins An array of vitamins that can be found in this item
+     *
+     * @return $this
+     */
+    public function setVitamins($vitamins)
+    {
+        $this->container['vitamins'] = $vitamins;
 
         return $this;
     }

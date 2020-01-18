@@ -27,6 +27,7 @@ Name | Type | Description | Notes
 **has_english_ingredients** | **bool** | A boolean indicating if we have English ingredients for this item | [optional] 
 **minerals** | **string[]** | An array of minerals that this item contains | [optional] 
 **traces** | **string[]** | An array of trace ingredients that may be found in this item | [optional] 
+**vitamins** | **string[]** | An array of vitamins that can be found in this item | [optional] 
 **common_name** | **string** | Common names associated with this item. These generally clarify what the item is (e.g. when the brand name is \&quot;BRAND&#x27;s Spicy Enchilada\&quot; the common name may be \&quot;Chicken enchilada\&quot;) | [optional] 
 **description** | **string** | A description of this item | [optional] 
 **keywords** | **string[]** | An array of keywords that can be used to describe this item | [optional] 
