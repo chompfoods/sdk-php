@@ -1268,7 +1268,7 @@ class DefaultApi
     }
 
     /**
-     * Operation ingredientSearchPhpGet
+     * Operation foodIngredientSearchPhpGet
      *
      * Get raw/generic food ingredient item(s)
      *
@@ -1281,14 +1281,14 @@ class DefaultApi
      * @throws \InvalidArgumentException
      * @return \Swagger\Client\Model\IngredientObject
      */
-    public function ingredientSearchPhpGet($find, $list, $raw = null, $limit = null)
+    public function foodIngredientSearchPhpGet($find, $list, $raw = null, $limit = null)
     {
-        list($response) = $this->ingredientSearchPhpGetWithHttpInfo($find, $list, $raw, $limit);
+        list($response) = $this->foodIngredientSearchPhpGetWithHttpInfo($find, $list, $raw, $limit);
         return $response;
     }
 
     /**
-     * Operation ingredientSearchPhpGetWithHttpInfo
+     * Operation foodIngredientSearchPhpGetWithHttpInfo
      *
      * Get raw/generic food ingredient item(s)
      *
@@ -1301,10 +1301,10 @@ class DefaultApi
      * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\IngredientObject, HTTP status code, HTTP response headers (array of strings)
      */
-    public function ingredientSearchPhpGetWithHttpInfo($find, $list, $raw = null, $limit = null)
+    public function foodIngredientSearchPhpGetWithHttpInfo($find, $list, $raw = null, $limit = null)
     {
         $returnType = '\Swagger\Client\Model\IngredientObject';
-        $request = $this->ingredientSearchPhpGetRequest($find, $list, $raw, $limit);
+        $request = $this->foodIngredientSearchPhpGetRequest($find, $list, $raw, $limit);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1366,7 +1366,7 @@ class DefaultApi
     }
 
     /**
-     * Operation ingredientSearchPhpGetAsync
+     * Operation foodIngredientSearchPhpGetAsync
      *
      * Get raw/generic food ingredient item(s)
      *
@@ -1378,9 +1378,9 @@ class DefaultApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function ingredientSearchPhpGetAsync($find, $list, $raw = null, $limit = null)
+    public function foodIngredientSearchPhpGetAsync($find, $list, $raw = null, $limit = null)
     {
-        return $this->ingredientSearchPhpGetAsyncWithHttpInfo($find, $list, $raw, $limit)
+        return $this->foodIngredientSearchPhpGetAsyncWithHttpInfo($find, $list, $raw, $limit)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1389,7 +1389,7 @@ class DefaultApi
     }
 
     /**
-     * Operation ingredientSearchPhpGetAsyncWithHttpInfo
+     * Operation foodIngredientSearchPhpGetAsyncWithHttpInfo
      *
      * Get raw/generic food ingredient item(s)
      *
@@ -1401,10 +1401,10 @@ class DefaultApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function ingredientSearchPhpGetAsyncWithHttpInfo($find, $list, $raw = null, $limit = null)
+    public function foodIngredientSearchPhpGetAsyncWithHttpInfo($find, $list, $raw = null, $limit = null)
     {
         $returnType = '\Swagger\Client\Model\IngredientObject';
-        $request = $this->ingredientSearchPhpGetRequest($find, $list, $raw, $limit);
+        $request = $this->foodIngredientSearchPhpGetRequest($find, $list, $raw, $limit);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1444,7 +1444,7 @@ class DefaultApi
     }
 
     /**
-     * Create request for operation 'ingredientSearchPhpGet'
+     * Create request for operation 'foodIngredientSearchPhpGet'
      *
      * @param  int $find Specify the ingredient name(s).  __Example #1:__ broccoli  __Example #2:__ broccoli,cauliflower,spinach  ___Important Note:__ Set the \&quot;is_list\&quot; parameter to true before passing in a comma-separated list of ingredients._ (required)
      * @param  bool $list Specify if you are searching for multiple ingredients.  _Setting this to true will configure this endpoint so that it accepts a comma-separated list of ingredients._  _By default, this endpoint expects a single ingredient._  __Example:__ true _(defaults to false)_ (required)
@@ -1454,22 +1454,22 @@ class DefaultApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function ingredientSearchPhpGetRequest($find, $list, $raw = null, $limit = null)
+    protected function foodIngredientSearchPhpGetRequest($find, $list, $raw = null, $limit = null)
     {
         // verify the required parameter 'find' is set
         if ($find === null || (is_array($find) && count($find) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $find when calling ingredientSearchPhpGet'
+                'Missing the required parameter $find when calling foodIngredientSearchPhpGet'
             );
         }
         // verify the required parameter 'list' is set
         if ($list === null || (is_array($list) && count($list) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $list when calling ingredientSearchPhpGet'
+                'Missing the required parameter $list when calling foodIngredientSearchPhpGet'
             );
         }
 
-        $resourcePath = '/ingredient/search.php';
+        $resourcePath = '/food/ingredient/search.php';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

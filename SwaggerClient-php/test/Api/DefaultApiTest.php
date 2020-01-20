@@ -111,12 +111,12 @@ class DefaultApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for ingredientSearchPhpGet
+     * Test case for foodIngredientSearchPhpGet
      *
      * Get raw/generic food ingredient item(s).
      *
      */
-    public function testIngredientSearchPhpGet()
+    public function testFoodIngredientSearchPhpGet()
     {
     }
 }

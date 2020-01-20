@@ -8,7 +8,7 @@ Method | HTTP request | Description
 [**foodBrandedIdPhpGet**](DefaultApi.md#foodbrandedidphpget) | **GET** /food/branded/id.php | Get a branded food item using an ID number
 [**foodBrandedNamePhpGet**](DefaultApi.md#foodbrandednamephpget) | **GET** /food/branded/name.php | Get a branded food item by name
 [**foodBrandedSearchPhpGet**](DefaultApi.md#foodbrandedsearchphpget) | **GET** /food/branded/search.php | Get data for branded food items using various search parameters
-[**ingredientSearchPhpGet**](DefaultApi.md#ingredientsearchphpget) | **GET** /ingredient/search.php | Get raw/generic food ingredient item(s)
+[**foodIngredientSearchPhpGet**](DefaultApi.md#foodingredientsearchphpget) | **GET** /food/ingredient/search.php | Get raw/generic food ingredient item(s)
 
 # **foodBrandedBarcodePhpGet**
 > \Swagger\Client\Model\BrandedFoodObject foodBrandedBarcodePhpGet($code)
@@ -256,8 +256,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **ingredientSearchPhpGet**
-> \Swagger\Client\Model\IngredientObject ingredientSearchPhpGet($find, $list, $raw, $limit)
+# **foodIngredientSearchPhpGet**
+> \Swagger\Client\Model\IngredientObject foodIngredientSearchPhpGet($find, $list, $raw, $limit)
 
 Get raw/generic food ingredient item(s)
 
@@ -284,10 +284,10 @@ $raw = true; // bool | Specify if you only want data for raw ingredients.  __Exa
 $limit = 56; // int | Set maximum number of records you want the API to return.  ___Important Note:__ Setting this to \"1\" will return 1 record per search term._  __Example:__ 1 _(defaults to 1, max is 3)_
 
 try {
-    $result = $apiInstance->ingredientSearchPhpGet($find, $list, $raw, $limit);
+    $result = $apiInstance->foodIngredientSearchPhpGet($find, $list, $raw, $limit);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DefaultApi->ingredientSearchPhpGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling DefaultApi->foodIngredientSearchPhpGet: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```

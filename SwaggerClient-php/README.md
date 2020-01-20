@@ -168,10 +168,10 @@ $raw = true; // bool | Specify if you only want data for raw ingredients.  __Exa
 $limit = 56; // int | Set maximum number of records you want the API to return.  ___Important Note:__ Setting this to \"1\" will return 1 record per search term._  __Example:__ 1 _(defaults to 1, max is 3)_
 
 try {
-    $result = $apiInstance->ingredientSearchPhpGet($find, $list, $raw, $limit);
+    $result = $apiInstance->foodIngredientSearchPhpGet($find, $list, $raw, $limit);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling DefaultApi->ingredientSearchPhpGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling DefaultApi->foodIngredientSearchPhpGet: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -186,7 +186,7 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**foodBrandedIdPhpGet**](docs/Api/DefaultApi.md#foodbrandedidphpget) | **GET** /food/branded/id.php | Get a branded food item using an ID number
 *DefaultApi* | [**foodBrandedNamePhpGet**](docs/Api/DefaultApi.md#foodbrandednamephpget) | **GET** /food/branded/name.php | Get a branded food item by name
 *DefaultApi* | [**foodBrandedSearchPhpGet**](docs/Api/DefaultApi.md#foodbrandedsearchphpget) | **GET** /food/branded/search.php | Get data for branded food items using various search parameters
-*DefaultApi* | [**ingredientSearchPhpGet**](docs/Api/DefaultApi.md#ingredientsearchphpget) | **GET** /ingredient/search.php | Get raw/generic food ingredient item(s)
+*DefaultApi* | [**foodIngredientSearchPhpGet**](docs/Api/DefaultApi.md#foodingredientsearchphpget) | **GET** /food/ingredient/search.php | Get raw/generic food ingredient item(s)
 
 ## Documentation For Models
 
