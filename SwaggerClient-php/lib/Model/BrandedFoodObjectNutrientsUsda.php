@@ -63,9 +63,9 @@ class BrandedFoodObjectNutrientsUsda implements ModelInterface, ArrayAccess
 'min' => 'float',
 'max' => 'float',
 'median' => 'float',
+'rank' => 'int',
 'data_points' => 'int',
 'footnote' => 'string',
-'source' => 'string',
 'description' => 'string'    ];
 
     /**
@@ -81,9 +81,9 @@ class BrandedFoodObjectNutrientsUsda implements ModelInterface, ArrayAccess
 'min' => null,
 'max' => null,
 'median' => null,
+'rank' => null,
 'data_points' => null,
 'footnote' => null,
-'source' => null,
 'description' => null    ];
 
     /**
@@ -120,9 +120,9 @@ class BrandedFoodObjectNutrientsUsda implements ModelInterface, ArrayAccess
 'min' => 'min',
 'max' => 'max',
 'median' => 'median',
+'rank' => 'rank',
 'data_points' => 'data_points',
 'footnote' => 'footnote',
-'source' => 'source',
 'description' => 'description'    ];
 
     /**
@@ -138,9 +138,9 @@ class BrandedFoodObjectNutrientsUsda implements ModelInterface, ArrayAccess
 'min' => 'setMin',
 'max' => 'setMax',
 'median' => 'setMedian',
+'rank' => 'setRank',
 'data_points' => 'setDataPoints',
 'footnote' => 'setFootnote',
-'source' => 'setSource',
 'description' => 'setDescription'    ];
 
     /**
@@ -156,9 +156,9 @@ class BrandedFoodObjectNutrientsUsda implements ModelInterface, ArrayAccess
 'min' => 'getMin',
 'max' => 'getMax',
 'median' => 'getMedian',
+'rank' => 'getRank',
 'data_points' => 'getDataPoints',
 'footnote' => 'getFootnote',
-'source' => 'getSource',
 'description' => 'getDescription'    ];
 
     /**
@@ -226,9 +226,9 @@ class BrandedFoodObjectNutrientsUsda implements ModelInterface, ArrayAccess
         $this->container['min'] = isset($data['min']) ? $data['min'] : null;
         $this->container['max'] = isset($data['max']) ? $data['max'] : null;
         $this->container['median'] = isset($data['median']) ? $data['median'] : null;
+        $this->container['rank'] = isset($data['rank']) ? $data['rank'] : null;
         $this->container['data_points'] = isset($data['data_points']) ? $data['data_points'] : null;
         $this->container['footnote'] = isset($data['footnote']) ? $data['footnote'] : null;
-        $this->container['source'] = isset($data['source']) ? $data['source'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
     }
 
@@ -425,6 +425,30 @@ class BrandedFoodObjectNutrientsUsda implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets rank
+     *
+     * @return int
+     */
+    public function getRank()
+    {
+        return $this->container['rank'];
+    }
+
+    /**
+     * Sets rank
+     *
+     * @param int $rank Nutrient rank
+     *
+     * @return $this
+     */
+    public function setRank($rank)
+    {
+        $this->container['rank'] = $rank;
+
+        return $this;
+    }
+
+    /**
      * Gets data_points
      *
      * @return int
@@ -473,30 +497,6 @@ class BrandedFoodObjectNutrientsUsda implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets source
-     *
-     * @return string
-     */
-    public function getSource()
-    {
-        return $this->container['source'];
-    }
-
-    /**
-     * Sets source
-     *
-     * @param string $source Description of the nutrient source
-     *
-     * @return $this
-     */
-    public function setSource($source)
-    {
-        $this->container['source'] = $source;
-
-        return $this;
-    }
-
-    /**
      * Gets description
      *
      * @return string
@@ -509,7 +509,7 @@ class BrandedFoodObjectNutrientsUsda implements ModelInterface, ArrayAccess
     /**
      * Sets description
      *
-     * @param string $description Description of how the food nutrient value was obtained
+     * @param string $description Description of the nutrient source
      *
      * @return $this
      */

@@ -125,6 +125,13 @@ class BrandedFoodObjectNutrientsUsdaTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "rank"
+     */
+    public function testPropertyRank()
+    {
+    }
+
+    /**
      * Test attribute "data_points"
      */
     public function testPropertyDataPoints()
@@ -135,13 +142,6 @@ class BrandedFoodObjectNutrientsUsdaTest extends \PHPUnit_Framework_TestCase
      * Test attribute "footnote"
      */
     public function testPropertyFootnote()
-    {
-    }
-
-    /**
-     * Test attribute "source"
-     */
-    public function testPropertySource()
     {
     }
 
