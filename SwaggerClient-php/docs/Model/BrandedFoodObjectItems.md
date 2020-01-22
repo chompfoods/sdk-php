@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **barcode** | **string** | EAN/UPC barcode | [optional] 
 **name** | **string** | Item name as provided by brand owner or as shown on packaging | [optional] 
 **brand** | **string** | The brand name that owns this item | [optional] 
-**ingredients** | **string** | Ingredients in order of highest value to least | [optional] 
+**ingredients** | [**\Swagger\Client\Model\BrandedFoodObjectIngredients**](BrandedFoodObjectIngredients.md) |  | [optional] 
 **package** | [**\Swagger\Client\Model\BrandedFoodObjectPackage**](BrandedFoodObjectPackage.md) |  | [optional] 
 **serving** | [**\Swagger\Client\Model\BrandedFoodObjectServing**](BrandedFoodObjectServing.md) |  | [optional] 
 **categories** | **string[]** |  | [optional] 

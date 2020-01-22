@@ -1,6 +1,6 @@
 <?php
 /**
- * BrandedFoodObjectPackage
+ * BrandedFoodObjectIngredients
  *
  * PHP version 5
  *
@@ -32,15 +32,15 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * BrandedFoodObjectPackage Class Doc Comment
+ * BrandedFoodObjectIngredients Class Doc Comment
  *
  * @category Class
- * @description An object containing basic packaging information about this item
+ * @description An object containing this item&#x27;s ingredients in order of highest value to least
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class BrandedFoodObjectPackage implements ModelInterface, ArrayAccess
+class BrandedFoodObjectIngredients implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class BrandedFoodObjectPackage implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'BrandedFoodObject_package';
+    protected static $swaggerModelName = 'BrandedFoodObject_ingredients';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,8 +57,8 @@ class BrandedFoodObjectPackage implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'quantity' => 'int',
-'size' => 'string'    ];
+        'chomp' => 'string',
+'usda' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -66,8 +66,8 @@ class BrandedFoodObjectPackage implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'quantity' => null,
-'size' => null    ];
+        'chomp' => null,
+'usda' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -96,8 +96,8 @@ class BrandedFoodObjectPackage implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'quantity' => 'quantity',
-'size' => 'size'    ];
+        'chomp' => 'chomp',
+'usda' => 'usda'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -105,8 +105,8 @@ class BrandedFoodObjectPackage implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'quantity' => 'setQuantity',
-'size' => 'setSize'    ];
+        'chomp' => 'setChomp',
+'usda' => 'setUsda'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -114,8 +114,8 @@ class BrandedFoodObjectPackage implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'quantity' => 'getQuantity',
-'size' => 'getSize'    ];
+        'chomp' => 'getChomp',
+'usda' => 'getUsda'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -175,8 +175,8 @@ class BrandedFoodObjectPackage implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['quantity'] = isset($data['quantity']) ? $data['quantity'] : null;
-        $this->container['size'] = isset($data['size']) ? $data['size'] : null;
+        $this->container['chomp'] = isset($data['chomp']) ? $data['chomp'] : null;
+        $this->container['usda'] = isset($data['usda']) ? $data['usda'] : null;
     }
 
     /**
@@ -204,49 +204,49 @@ class BrandedFoodObjectPackage implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets quantity
+     * Gets chomp
      *
-     * @return int
+     * @return string
      */
-    public function getQuantity()
+    public function getChomp()
     {
-        return $this->container['quantity'];
+        return $this->container['chomp'];
     }
 
     /**
-     * Sets quantity
+     * Sets chomp
      *
-     * @param int $quantity Package quantity
+     * @param string $chomp This item's ingredients as seen on ChompThis.com
      *
      * @return $this
      */
-    public function setQuantity($quantity)
+    public function setChomp($chomp)
     {
-        $this->container['quantity'] = $quantity;
+        $this->container['chomp'] = $chomp;
 
         return $this;
     }
 
     /**
-     * Gets size
+     * Gets usda
      *
      * @return string
      */
-    public function getSize()
+    public function getUsda()
     {
-        return $this->container['size'];
+        return $this->container['usda'];
     }
 
     /**
-     * Sets size
+     * Sets usda
      *
-     * @param string $size Package size
+     * @param string $usda This branded food item's ingredients according to the USDA
      *
      * @return $this
      */
-    public function setSize($size)
+    public function setUsda($usda)
     {
-        $this->container['size'] = $size;
+        $this->container['usda'] = $usda;
 
         return $this;
     }

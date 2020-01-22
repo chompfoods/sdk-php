@@ -200,6 +200,7 @@ Class | Method | HTTP request | Description
  - [BrandedFoodObjectDietLabelsGlutenFree](docs/Model/BrandedFoodObjectDietLabelsGlutenFree.md)
  - [BrandedFoodObjectDietLabelsVegan](docs/Model/BrandedFoodObjectDietLabelsVegan.md)
  - [BrandedFoodObjectDietLabelsVegetarian](docs/Model/BrandedFoodObjectDietLabelsVegetarian.md)
+ - [BrandedFoodObjectIngredients](docs/Model/BrandedFoodObjectIngredients.md)
  - [BrandedFoodObjectItems](docs/Model/BrandedFoodObjectItems.md)
  - [BrandedFoodObjectNutrients](docs/Model/BrandedFoodObjectNutrients.md)
  - [BrandedFoodObjectNutrientsChomp](docs/Model/BrandedFoodObjectNutrientsChomp.md)

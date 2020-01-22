@@ -60,7 +60,7 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
         'barcode' => 'string',
 'name' => 'string',
 'brand' => 'string',
-'ingredients' => 'string',
+'ingredients' => '\Swagger\Client\Model\BrandedFoodObjectIngredients',
 'package' => '\Swagger\Client\Model\BrandedFoodObjectPackage',
 'serving' => '\Swagger\Client\Model\BrandedFoodObjectServing',
 'categories' => 'string[]',
@@ -440,7 +440,7 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
     /**
      * Gets ingredients
      *
-     * @return string
+     * @return \Swagger\Client\Model\BrandedFoodObjectIngredients
      */
     public function getIngredients()
     {
@@ -450,7 +450,7 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
     /**
      * Sets ingredients
      *
-     * @param string $ingredients Ingredients in order of highest value to least
+     * @param \Swagger\Client\Model\BrandedFoodObjectIngredients $ingredients ingredients
      *
      * @return $this
      */
