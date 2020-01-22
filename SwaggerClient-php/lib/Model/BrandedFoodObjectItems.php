@@ -978,7 +978,7 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
     /**
      * Sets common_name
      *
-     * @param string $common_name Common names associated with this item. These generally clarify what the item is (e.g. when the brand name is \"BRAND's Spicy Enchilada\" the common name may be \"Chicken enchilada\")
+     * @param string $common_name Other names commonly associated with this item. These generally clarify what the item is (e.g. when the brand name is \"BRAND's Spicy Enchilada\" the common name may be \"Chicken enchilada\")
      *
      * @return $this
      */
