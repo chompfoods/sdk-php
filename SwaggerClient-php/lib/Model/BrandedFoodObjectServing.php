@@ -57,8 +57,7 @@ class BrandedFoodObjectServing implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'size' => 'int',
-'measurement_unit' => 'string',
+        'size' => 'string',
 'size_fulltext' => 'string',
 'total' => 'int'    ];
 
@@ -69,7 +68,6 @@ class BrandedFoodObjectServing implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'size' => null,
-'measurement_unit' => null,
 'size_fulltext' => null,
 'total' => null    ];
 
@@ -101,7 +99,6 @@ class BrandedFoodObjectServing implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'size' => 'size',
-'measurement_unit' => 'measurement_unit',
 'size_fulltext' => 'size_fulltext',
 'total' => 'total'    ];
 
@@ -112,7 +109,6 @@ class BrandedFoodObjectServing implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'size' => 'setSize',
-'measurement_unit' => 'setMeasurementUnit',
 'size_fulltext' => 'setSizeFulltext',
 'total' => 'setTotal'    ];
 
@@ -123,7 +119,6 @@ class BrandedFoodObjectServing implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'size' => 'getSize',
-'measurement_unit' => 'getMeasurementUnit',
 'size_fulltext' => 'getSizeFulltext',
 'total' => 'getTotal'    ];
 
@@ -186,7 +181,6 @@ class BrandedFoodObjectServing implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['size'] = isset($data['size']) ? $data['size'] : null;
-        $this->container['measurement_unit'] = isset($data['measurement_unit']) ? $data['measurement_unit'] : null;
         $this->container['size_fulltext'] = isset($data['size_fulltext']) ? $data['size_fulltext'] : null;
         $this->container['total'] = isset($data['total']) ? $data['total'] : null;
     }
@@ -218,7 +212,7 @@ class BrandedFoodObjectServing implements ModelInterface, ArrayAccess
     /**
      * Gets size
      *
-     * @return int
+     * @return string
      */
     public function getSize()
     {
@@ -228,37 +222,13 @@ class BrandedFoodObjectServing implements ModelInterface, ArrayAccess
     /**
      * Sets size
      *
-     * @param int $size Serving size
+     * @param string $size Serving size with measurement unit (e.g. if measure is 3 tsp, the unit is tsp)
      *
      * @return $this
      */
     public function setSize($size)
     {
         $this->container['size'] = $size;
-
-        return $this;
-    }
-
-    /**
-     * Gets measurement_unit
-     *
-     * @return string
-     */
-    public function getMeasurementUnit()
-    {
-        return $this->container['measurement_unit'];
-    }
-
-    /**
-     * Sets measurement_unit
-     *
-     * @param string $measurement_unit Serving measurement unit (e.g. if measure is 3 tsp, the unit is tsp)
-     *
-     * @return $this
-     */
-    public function setMeasurementUnit($measurement_unit)
-    {
-        $this->container['measurement_unit'] = $measurement_unit;
 
         return $this;
     }

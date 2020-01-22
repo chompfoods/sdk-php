@@ -83,13 +83,6 @@ class BrandedFoodObjectServingTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "measurement_unit"
-     */
-    public function testPropertyMeasurementUnit()
-    {
-    }
-
-    /**
      * Test attribute "size_fulltext"
      */
     public function testPropertySizeFulltext()
