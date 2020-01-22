@@ -82,7 +82,7 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
 'minerals' => 'string[]',
 'traces' => 'string[]',
 'vitamins' => 'string[]',
-'common_name' => 'string',
+'common_names' => 'string[]',
 'description' => 'string',
 'keywords' => 'string[]',
 'footnote' => 'string'    ];
@@ -118,7 +118,7 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
 'minerals' => null,
 'traces' => null,
 'vitamins' => null,
-'common_name' => null,
+'common_names' => null,
 'description' => null,
 'keywords' => null,
 'footnote' => null    ];
@@ -175,7 +175,7 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
 'minerals' => 'minerals',
 'traces' => 'traces',
 'vitamins' => 'vitamins',
-'common_name' => 'common_name',
+'common_names' => 'common_names',
 'description' => 'description',
 'keywords' => 'keywords',
 'footnote' => 'footnote'    ];
@@ -211,7 +211,7 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
 'minerals' => 'setMinerals',
 'traces' => 'setTraces',
 'vitamins' => 'setVitamins',
-'common_name' => 'setCommonName',
+'common_names' => 'setCommonNames',
 'description' => 'setDescription',
 'keywords' => 'setKeywords',
 'footnote' => 'setFootnote'    ];
@@ -247,7 +247,7 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
 'minerals' => 'getMinerals',
 'traces' => 'getTraces',
 'vitamins' => 'getVitamins',
-'common_name' => 'getCommonName',
+'common_names' => 'getCommonNames',
 'description' => 'getDescription',
 'keywords' => 'getKeywords',
 'footnote' => 'getFootnote'    ];
@@ -335,7 +335,7 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
         $this->container['minerals'] = isset($data['minerals']) ? $data['minerals'] : null;
         $this->container['traces'] = isset($data['traces']) ? $data['traces'] : null;
         $this->container['vitamins'] = isset($data['vitamins']) ? $data['vitamins'] : null;
-        $this->container['common_name'] = isset($data['common_name']) ? $data['common_name'] : null;
+        $this->container['common_names'] = isset($data['common_names']) ? $data['common_names'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['keywords'] = isset($data['keywords']) ? $data['keywords'] : null;
         $this->container['footnote'] = isset($data['footnote']) ? $data['footnote'] : null;
@@ -966,25 +966,25 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets common_name
+     * Gets common_names
      *
-     * @return string
+     * @return string[]
      */
-    public function getCommonName()
+    public function getCommonNames()
     {
-        return $this->container['common_name'];
+        return $this->container['common_names'];
     }
 
     /**
-     * Sets common_name
+     * Sets common_names
      *
-     * @param string $common_name Other names commonly associated with this item. These generally clarify what the item is (e.g. when the brand name is \"BRAND's Spicy Enchilada\" the common name may be \"Chicken enchilada\")
+     * @param string[] $common_names An array containing other names commonly associated with this item. These generally clarify what the item is (e.g. when the brand name is \"BRAND's Spicy Enchilada\" a common name may be \"Chicken enchilada\")
      *
      * @return $this
      */
-    public function setCommonName($common_name)
+    public function setCommonNames($common_names)
     {
-        $this->container['common_name'] = $common_name;
+        $this->container['common_names'] = $common_names;
 
         return $this;
     }

@@ -1,6 +1,6 @@
 <?php
 /**
- * BrandedFoodObjectServingTest
+ * BrandedFoodObjectServingUsdaTest
  *
  * PHP version 5
  *
@@ -29,15 +29,15 @@
 namespace Swagger\Client;
 
 /**
- * BrandedFoodObjectServingTest Class Doc Comment
+ * BrandedFoodObjectServingUsdaTest Class Doc Comment
  *
  * @category    Class
- * @description An object containing serving information for this item
+ * @description Serving information from the USDA
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class BrandedFoodObjectServingTest extends \PHPUnit_Framework_TestCase
+class BrandedFoodObjectServingUsdaTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -69,23 +69,30 @@ class BrandedFoodObjectServingTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "BrandedFoodObjectServing"
+     * Test "BrandedFoodObjectServingUsda"
      */
-    public function testBrandedFoodObjectServing()
+    public function testBrandedFoodObjectServingUsda()
     {
     }
 
     /**
-     * Test attribute "chomp"
+     * Test attribute "size"
      */
-    public function testPropertyChomp()
+    public function testPropertySize()
     {
     }
 
     /**
-     * Test attribute "usda"
+     * Test attribute "measurement_unit"
      */
-    public function testPropertyUsda()
+    public function testPropertyMeasurementUnit()
+    {
+    }
+
+    /**
+     * Test attribute "size_fulltext"
+     */
+    public function testPropertySizeFulltext()
     {
     }
 }

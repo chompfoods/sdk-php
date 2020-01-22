@@ -1,6 +1,6 @@
 <?php
 /**
- * BrandedFoodObjectServingTest
+ * BrandedFoodObjectServingChompTest
  *
  * PHP version 5
  *
@@ -29,15 +29,15 @@
 namespace Swagger\Client;
 
 /**
- * BrandedFoodObjectServingTest Class Doc Comment
+ * BrandedFoodObjectServingChompTest Class Doc Comment
  *
  * @category    Class
- * @description An object containing serving information for this item
+ * @description Serving information from as seen on ChompThis.com
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class BrandedFoodObjectServingTest extends \PHPUnit_Framework_TestCase
+class BrandedFoodObjectServingChompTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -69,23 +69,16 @@ class BrandedFoodObjectServingTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "BrandedFoodObjectServing"
+     * Test "BrandedFoodObjectServingChomp"
      */
-    public function testBrandedFoodObjectServing()
+    public function testBrandedFoodObjectServingChomp()
     {
     }
 
     /**
-     * Test attribute "chomp"
+     * Test attribute "size"
      */
-    public function testPropertyChomp()
-    {
-    }
-
-    /**
-     * Test attribute "usda"
-     */
-    public function testPropertyUsda()
+    public function testPropertySize()
     {
     }
 }

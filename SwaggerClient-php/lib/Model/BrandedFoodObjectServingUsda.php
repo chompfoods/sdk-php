@@ -1,6 +1,6 @@
 <?php
 /**
- * BrandedFoodObjectServing
+ * BrandedFoodObjectServingUsda
  *
  * PHP version 5
  *
@@ -32,15 +32,15 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * BrandedFoodObjectServing Class Doc Comment
+ * BrandedFoodObjectServingUsda Class Doc Comment
  *
  * @category Class
- * @description An object containing serving information for this item
+ * @description Serving information from the USDA
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class BrandedFoodObjectServing implements ModelInterface, ArrayAccess
+class BrandedFoodObjectServingUsda implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class BrandedFoodObjectServing implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'BrandedFoodObject_serving';
+    protected static $swaggerModelName = 'BrandedFoodObject_serving_usda';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,8 +57,9 @@ class BrandedFoodObjectServing implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'chomp' => '\Swagger\Client\Model\BrandedFoodObjectServingChomp',
-'usda' => '\Swagger\Client\Model\BrandedFoodObjectServingUsda'    ];
+        'size' => 'string',
+'measurement_unit' => 'string',
+'size_fulltext' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -66,8 +67,9 @@ class BrandedFoodObjectServing implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'chomp' => null,
-'usda' => null    ];
+        'size' => null,
+'measurement_unit' => null,
+'size_fulltext' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -96,8 +98,9 @@ class BrandedFoodObjectServing implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'chomp' => 'chomp',
-'usda' => 'usda'    ];
+        'size' => 'size',
+'measurement_unit' => 'measurement_unit',
+'size_fulltext' => 'size_fulltext'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -105,8 +108,9 @@ class BrandedFoodObjectServing implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'chomp' => 'setChomp',
-'usda' => 'setUsda'    ];
+        'size' => 'setSize',
+'measurement_unit' => 'setMeasurementUnit',
+'size_fulltext' => 'setSizeFulltext'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -114,8 +118,9 @@ class BrandedFoodObjectServing implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'chomp' => 'getChomp',
-'usda' => 'getUsda'    ];
+        'size' => 'getSize',
+'measurement_unit' => 'getMeasurementUnit',
+'size_fulltext' => 'getSizeFulltext'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -175,8 +180,9 @@ class BrandedFoodObjectServing implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['chomp'] = isset($data['chomp']) ? $data['chomp'] : null;
-        $this->container['usda'] = isset($data['usda']) ? $data['usda'] : null;
+        $this->container['size'] = isset($data['size']) ? $data['size'] : null;
+        $this->container['measurement_unit'] = isset($data['measurement_unit']) ? $data['measurement_unit'] : null;
+        $this->container['size_fulltext'] = isset($data['size_fulltext']) ? $data['size_fulltext'] : null;
     }
 
     /**
@@ -204,49 +210,73 @@ class BrandedFoodObjectServing implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets chomp
+     * Gets size
      *
-     * @return \Swagger\Client\Model\BrandedFoodObjectServingChomp
+     * @return string
      */
-    public function getChomp()
+    public function getSize()
     {
-        return $this->container['chomp'];
+        return $this->container['size'];
     }
 
     /**
-     * Sets chomp
+     * Sets size
      *
-     * @param \Swagger\Client\Model\BrandedFoodObjectServingChomp $chomp chomp
+     * @param string $size Serving size
      *
      * @return $this
      */
-    public function setChomp($chomp)
+    public function setSize($size)
     {
-        $this->container['chomp'] = $chomp;
+        $this->container['size'] = $size;
 
         return $this;
     }
 
     /**
-     * Gets usda
+     * Gets measurement_unit
      *
-     * @return \Swagger\Client\Model\BrandedFoodObjectServingUsda
+     * @return string
      */
-    public function getUsda()
+    public function getMeasurementUnit()
     {
-        return $this->container['usda'];
+        return $this->container['measurement_unit'];
     }
 
     /**
-     * Sets usda
+     * Sets measurement_unit
      *
-     * @param \Swagger\Client\Model\BrandedFoodObjectServingUsda $usda usda
+     * @param string $measurement_unit Measurement unit for each serving (e.g. if measure is 3 tsp, the unit is tsp)
      *
      * @return $this
      */
-    public function setUsda($usda)
+    public function setMeasurementUnit($measurement_unit)
     {
-        $this->container['usda'] = $usda;
+        $this->container['measurement_unit'] = $measurement_unit;
+
+        return $this;
+    }
+
+    /**
+     * Gets size_fulltext
+     *
+     * @return string
+     */
+    public function getSizeFulltext()
+    {
+        return $this->container['size_fulltext'];
+    }
+
+    /**
+     * Sets size_fulltext
+     *
+     * @param string $size_fulltext Serving size description
+     *
+     * @return $this
+     */
+    public function setSizeFulltext($size_fulltext)
+    {
+        $this->container['size_fulltext'] = $size_fulltext;
 
         return $this;
     }
