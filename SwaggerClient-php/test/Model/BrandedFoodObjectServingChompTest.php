@@ -32,7 +32,7 @@ namespace Swagger\Client;
  * BrandedFoodObjectServingChompTest Class Doc Comment
  *
  * @category    Class
- * @description Serving information from as seen on ChompThis.com
+ * @description Serving information from Chomp&#x27;s internal database
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen

@@ -216,7 +216,7 @@ class BrandedFoodObjectIngredients implements ModelInterface, ArrayAccess
     /**
      * Sets chomp
      *
-     * @param string $chomp This item's ingredients as seen on ChompThis.com
+     * @param string $chomp Ingredients for this item from Chomp's internal database
      *
      * @return $this
      */
