@@ -13,7 +13,7 @@
 /**
  * Chomp Food Database API Documentation
  *
- * __Important:__   - An __[API key](https://chompthis.com/api/)__ is required for access to this API.   - Get yours at __[https://chompthis.com/api](https://chompthis.com/api/)__.  -----  __Getting Started:__   - __[Subscribe](https://chompthis.com/api/#pricing)__ to the API.   - Scroll down and click the \"__Authorize__\" button.   - Enter your API key into the \"__value__\" input, click the \"__Authorize__\" button, then click the \"__Close__\" button.   - Scroll down to the section titled \"__default__\" and click on the API endpoint you wish to use.   - Click the \"__Try it out__\" button.   - Enter the information the endpoint requires.   - Click the \"__Execute__\" button.  __Example:__    - Branded Food: __[View example](https://raw.githubusercontent.com/chompfoods/examples/master/branded-food-response-object.json)__ API response object.   - Ingredient: __[View example](https://raw.githubusercontent.com/chompfoods/examples/master/ingredient-response-object.json)__ API response object.  -----  __How Do I Find My API Key?__   - Your API key was sent to the email address you used to create your subscription.   - You will also find your API key in the __[Client Center](https://chompthis.com/api/manage.php)__.   - _Read __[this article](https://desk.zoho.com/portal/chompthis/kb/articles/how-do-i-find-my-api-key)__ for more information._  ||| | ------- | -------- | | [Knowledge Base](https://desk.zoho.com/portal/chompthis/kb/chomp) | [Pricing](https://chompthis.com/api/) | | [Attribution](https://chompthis.com/api/docs/attribution.php) | [Cost Calculator](https://chompthis.com/api/cost-calculator.php) | | [Terms & License](https://chompthis.com/api/terms.php) | [Database Search](https://chompthis.com/api/lookup.php) | | [Support](https://chompthis.com/api/ticket-new.php) | [Query Builder](https://chompthis.com/api/build.php) | | [Client Center](https://chompthis.com/api/manage.php) | |
+ * __Important:__   - An __[API key](https://chompthis.com/api/)__ is required for access to this API. Get yours at __[https://chompthis.com/api](https://chompthis.com/api/)__.  -----  __Getting Started:__   - __[Subscribe](https://chompthis.com/api/#pricing)__ to the API.   - Scroll down and click the \"__Authorize__\" button.   - Enter your API key into the \"__value__\" input, click the \"__Authorize__\" button, then click the \"__Close__\" button.   - Scroll down to the section titled \"__default__\" and click on the API endpoint you wish to use.   - Click the \"__Try it out__\" button.   - Enter the information the endpoint requires.   - Click the \"__Execute__\" button.  __Example:__    - Branded Food: __[View example](https://raw.githubusercontent.com/chompfoods/examples/master/branded-food-response-object.json)__ API response object.   - Ingredient: __[View example](https://raw.githubusercontent.com/chompfoods/examples/master/ingredient-response-object.json)__ API response object.  -----  __How Do I Find My API Key?__   - Your API key was sent to the email address you used to create your subscription.   - You will also find your API key in the __[Client Center](https://chompthis.com/api/manage.php)__.   - _Read __[this article](https://desk.zoho.com/portal/chompthis/kb/articles/how-do-i-find-my-api-key)__ for more information._  ||| | ------- | -------- | | [Knowledge Base](https://desk.zoho.com/portal/chompthis/kb/chomp) | [Pricing](https://chompthis.com/api/) | | [Attribution](https://chompthis.com/api/docs/attribution.php) | [Cost Calculator](https://chompthis.com/api/cost-calculator.php) | | [Terms & License](https://chompthis.com/api/terms.php) | [Database Search](https://chompthis.com/api/lookup.php) | | [Support](https://chompthis.com/api/ticket-new.php) | [Query Builder](https://chompthis.com/api/build.php) | | [Client Center](https://chompthis.com/api/manage.php) | |
  *
  * OpenAPI spec version: 1.0.0-oas3
  * 
@@ -65,7 +65,7 @@ class IngredientObjectItems implements ModelInterface, ArrayAccess
 'diet_labels' => '\Swagger\Client\Model\BrandedFoodObjectDietLabels',
 'components' => '\Swagger\Client\Model\BrandedFoodObjectComponents[]',
 'portions' => '\Swagger\Client\Model\BrandedFoodObjectPortions[]',
-'common_name' => 'string',
+'common_names' => 'string',
 'description' => 'string',
 'footnote' => 'string'    ];
 
@@ -83,7 +83,7 @@ class IngredientObjectItems implements ModelInterface, ArrayAccess
 'diet_labels' => null,
 'components' => null,
 'portions' => null,
-'common_name' => null,
+'common_names' => null,
 'description' => null,
 'footnote' => null    ];
 
@@ -122,7 +122,7 @@ class IngredientObjectItems implements ModelInterface, ArrayAccess
 'diet_labels' => 'diet_labels',
 'components' => 'components',
 'portions' => 'portions',
-'common_name' => 'common_name',
+'common_names' => 'common_names',
 'description' => 'description',
 'footnote' => 'footnote'    ];
 
@@ -140,7 +140,7 @@ class IngredientObjectItems implements ModelInterface, ArrayAccess
 'diet_labels' => 'setDietLabels',
 'components' => 'setComponents',
 'portions' => 'setPortions',
-'common_name' => 'setCommonName',
+'common_names' => 'setCommonNames',
 'description' => 'setDescription',
 'footnote' => 'setFootnote'    ];
 
@@ -158,7 +158,7 @@ class IngredientObjectItems implements ModelInterface, ArrayAccess
 'diet_labels' => 'getDietLabels',
 'components' => 'getComponents',
 'portions' => 'getPortions',
-'common_name' => 'getCommonName',
+'common_names' => 'getCommonNames',
 'description' => 'getDescription',
 'footnote' => 'getFootnote'    ];
 
@@ -228,7 +228,7 @@ class IngredientObjectItems implements ModelInterface, ArrayAccess
         $this->container['diet_labels'] = isset($data['diet_labels']) ? $data['diet_labels'] : null;
         $this->container['components'] = isset($data['components']) ? $data['components'] : null;
         $this->container['portions'] = isset($data['portions']) ? $data['portions'] : null;
-        $this->container['common_name'] = isset($data['common_name']) ? $data['common_name'] : null;
+        $this->container['common_names'] = isset($data['common_names']) ? $data['common_names'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['footnote'] = isset($data['footnote']) ? $data['footnote'] : null;
     }
@@ -450,25 +450,25 @@ class IngredientObjectItems implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets common_name
+     * Gets common_names
      *
      * @return string
      */
-    public function getCommonName()
+    public function getCommonNames()
     {
-        return $this->container['common_name'];
+        return $this->container['common_names'];
     }
 
     /**
-     * Sets common_name
+     * Sets common_names
      *
-     * @param string $common_name Common names associated with this item. These generally clarify what the item is (e.g. when the brand name is \"BRAND's Spicy Enchilada\" the common name may be \"Chicken enchilada\")
+     * @param string $common_names Common names associated with this item. These generally clarify what the item is (e.g. when the brand name is \"BRAND's Spicy Enchilada\" the common name may be \"Chicken enchilada\")
      *
      * @return $this
      */
-    public function setCommonName($common_name)
+    public function setCommonNames($common_names)
     {
-        $this->container['common_name'] = $common_name;
+        $this->container['common_names'] = $common_names;
 
         return $this;
     }
