@@ -60,7 +60,7 @@ class IngredientObjectItems implements ModelInterface, ArrayAccess
         'name' => 'string',
 'categories' => 'string[]',
 'nutrients' => '\Swagger\Client\Model\IngredientObjectNutrients',
-'calorie_conversion_factor' => '\Swagger\Client\Model\BrandedFoodObjectCalorieConversionFactor',
+'calorie_conversion_factor' => '\Swagger\Client\Model\IngredientObjectCalorieConversionFactor',
 'protein_conversion_factor' => 'float',
 'diet_labels' => '\Swagger\Client\Model\BrandedFoodObjectDietLabels',
 'components' => '\Swagger\Client\Model\IngredientObjectComponents[]',
@@ -332,7 +332,7 @@ class IngredientObjectItems implements ModelInterface, ArrayAccess
     /**
      * Gets calorie_conversion_factor
      *
-     * @return \Swagger\Client\Model\BrandedFoodObjectCalorieConversionFactor
+     * @return \Swagger\Client\Model\IngredientObjectCalorieConversionFactor
      */
     public function getCalorieConversionFactor()
     {
@@ -342,7 +342,7 @@ class IngredientObjectItems implements ModelInterface, ArrayAccess
     /**
      * Sets calorie_conversion_factor
      *
-     * @param \Swagger\Client\Model\BrandedFoodObjectCalorieConversionFactor $calorie_conversion_factor calorie_conversion_factor
+     * @param \Swagger\Client\Model\IngredientObjectCalorieConversionFactor $calorie_conversion_factor calorie_conversion_factor
      *
      * @return $this
      */

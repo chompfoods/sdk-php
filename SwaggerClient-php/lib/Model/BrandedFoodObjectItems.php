@@ -65,8 +65,6 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
 'serving' => '\Swagger\Client\Model\BrandedFoodObjectServing',
 'categories' => 'string[]',
 'nutrients' => '\Swagger\Client\Model\BrandedFoodObjectNutrients',
-'calorie_conversion_factor' => '\Swagger\Client\Model\BrandedFoodObjectCalorieConversionFactor',
-'protein_conversion_factor' => 'float',
 'diet_labels' => '\Swagger\Client\Model\BrandedFoodObjectDietLabels',
 'diet_flags' => '\Swagger\Client\Model\BrandedFoodObjectDietFlags[]',
 'packaging_photos' => '\Swagger\Client\Model\BrandedFoodObjectPackagingPhotos',
@@ -97,8 +95,6 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
 'serving' => null,
 'categories' => null,
 'nutrients' => null,
-'calorie_conversion_factor' => null,
-'protein_conversion_factor' => null,
 'diet_labels' => null,
 'diet_flags' => null,
 'packaging_photos' => null,
@@ -150,8 +146,6 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
 'serving' => 'serving',
 'categories' => 'categories',
 'nutrients' => 'nutrients',
-'calorie_conversion_factor' => 'calorie_conversion_factor',
-'protein_conversion_factor' => 'protein_conversion_factor',
 'diet_labels' => 'diet_labels',
 'diet_flags' => 'diet_flags',
 'packaging_photos' => 'packaging_photos',
@@ -182,8 +176,6 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
 'serving' => 'setServing',
 'categories' => 'setCategories',
 'nutrients' => 'setNutrients',
-'calorie_conversion_factor' => 'setCalorieConversionFactor',
-'protein_conversion_factor' => 'setProteinConversionFactor',
 'diet_labels' => 'setDietLabels',
 'diet_flags' => 'setDietFlags',
 'packaging_photos' => 'setPackagingPhotos',
@@ -214,8 +206,6 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
 'serving' => 'getServing',
 'categories' => 'getCategories',
 'nutrients' => 'getNutrients',
-'calorie_conversion_factor' => 'getCalorieConversionFactor',
-'protein_conversion_factor' => 'getProteinConversionFactor',
 'diet_labels' => 'getDietLabels',
 'diet_flags' => 'getDietFlags',
 'packaging_photos' => 'getPackagingPhotos',
@@ -298,8 +288,6 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
         $this->container['serving'] = isset($data['serving']) ? $data['serving'] : null;
         $this->container['categories'] = isset($data['categories']) ? $data['categories'] : null;
         $this->container['nutrients'] = isset($data['nutrients']) ? $data['nutrients'] : null;
-        $this->container['calorie_conversion_factor'] = isset($data['calorie_conversion_factor']) ? $data['calorie_conversion_factor'] : null;
-        $this->container['protein_conversion_factor'] = isset($data['protein_conversion_factor']) ? $data['protein_conversion_factor'] : null;
         $this->container['diet_labels'] = isset($data['diet_labels']) ? $data['diet_labels'] : null;
         $this->container['diet_flags'] = isset($data['diet_flags']) ? $data['diet_flags'] : null;
         $this->container['packaging_photos'] = isset($data['packaging_photos']) ? $data['packaging_photos'] : null;
@@ -529,54 +517,6 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
     public function setNutrients($nutrients)
     {
         $this->container['nutrients'] = $nutrients;
-
-        return $this;
-    }
-
-    /**
-     * Gets calorie_conversion_factor
-     *
-     * @return \Swagger\Client\Model\BrandedFoodObjectCalorieConversionFactor
-     */
-    public function getCalorieConversionFactor()
-    {
-        return $this->container['calorie_conversion_factor'];
-    }
-
-    /**
-     * Sets calorie_conversion_factor
-     *
-     * @param \Swagger\Client\Model\BrandedFoodObjectCalorieConversionFactor $calorie_conversion_factor calorie_conversion_factor
-     *
-     * @return $this
-     */
-    public function setCalorieConversionFactor($calorie_conversion_factor)
-    {
-        $this->container['calorie_conversion_factor'] = $calorie_conversion_factor;
-
-        return $this;
-    }
-
-    /**
-     * Gets protein_conversion_factor
-     *
-     * @return float
-     */
-    public function getProteinConversionFactor()
-    {
-        return $this->container['protein_conversion_factor'];
-    }
-
-    /**
-     * Sets protein_conversion_factor
-     *
-     * @param float $protein_conversion_factor The multiplication factor used to calculate protein from nitrogen
-     *
-     * @return $this
-     */
-    public function setProteinConversionFactor($protein_conversion_factor)
-    {
-        $this->container['protein_conversion_factor'] = $protein_conversion_factor;
 
         return $this;
     }

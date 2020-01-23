@@ -11,8 +11,6 @@ Name | Type | Description | Notes
 **serving** | [**\Swagger\Client\Model\BrandedFoodObjectServing**](BrandedFoodObjectServing.md) |  | [optional] 
 **categories** | **string[]** |  | [optional] 
 **nutrients** | [**\Swagger\Client\Model\BrandedFoodObjectNutrients**](BrandedFoodObjectNutrients.md) |  | [optional] 
-**calorie_conversion_factor** | [**\Swagger\Client\Model\BrandedFoodObjectCalorieConversionFactor**](BrandedFoodObjectCalorieConversionFactor.md) |  | [optional] 
-**protein_conversion_factor** | **float** | The multiplication factor used to calculate protein from nitrogen | [optional] 
 **diet_labels** | [**\Swagger\Client\Model\BrandedFoodObjectDietLabels**](BrandedFoodObjectDietLabels.md) |  | [optional] 
 **diet_flags** | [**\Swagger\Client\Model\BrandedFoodObjectDietFlags[]**](BrandedFoodObjectDietFlags.md) | An array of ingredient objects that were flagged while grading this item for compatibility with each diet | [optional] 
 **packaging_photos** | [**\Swagger\Client\Model\BrandedFoodObjectPackagingPhotos**](BrandedFoodObjectPackagingPhotos.md) |  | [optional] 

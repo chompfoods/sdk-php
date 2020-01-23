@@ -1,6 +1,6 @@
 <?php
 /**
- * BrandedFoodObjectItemsTest
+ * IngredientObjectCalorieConversionFactorTest
  *
  * PHP version 5
  *
@@ -29,15 +29,15 @@
 namespace Swagger\Client;
 
 /**
- * BrandedFoodObjectItemsTest Class Doc Comment
+ * IngredientObjectCalorieConversionFactorTest Class Doc Comment
  *
  * @category    Class
- * @description An object containing information for this specific item.
+ * @description An object containing the multiplication factors to be used when calculating energy from macronutrients for a specific food.
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class BrandedFoodObjectItemsTest extends \PHPUnit_Framework_TestCase
+class IngredientObjectCalorieConversionFactorTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -69,170 +69,30 @@ class BrandedFoodObjectItemsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "BrandedFoodObjectItems"
+     * Test "IngredientObjectCalorieConversionFactor"
      */
-    public function testBrandedFoodObjectItems()
+    public function testIngredientObjectCalorieConversionFactor()
     {
     }
 
     /**
-     * Test attribute "barcode"
+     * Test attribute "protein_value"
      */
-    public function testPropertyBarcode()
+    public function testPropertyProteinValue()
     {
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "fat_value"
      */
-    public function testPropertyName()
+    public function testPropertyFatValue()
     {
     }
 
     /**
-     * Test attribute "brand"
+     * Test attribute "carbohydrate_value"
      */
-    public function testPropertyBrand()
-    {
-    }
-
-    /**
-     * Test attribute "ingredients"
-     */
-    public function testPropertyIngredients()
-    {
-    }
-
-    /**
-     * Test attribute "package"
-     */
-    public function testPropertyPackage()
-    {
-    }
-
-    /**
-     * Test attribute "serving"
-     */
-    public function testPropertyServing()
-    {
-    }
-
-    /**
-     * Test attribute "categories"
-     */
-    public function testPropertyCategories()
-    {
-    }
-
-    /**
-     * Test attribute "nutrients"
-     */
-    public function testPropertyNutrients()
-    {
-    }
-
-    /**
-     * Test attribute "diet_labels"
-     */
-    public function testPropertyDietLabels()
-    {
-    }
-
-    /**
-     * Test attribute "diet_flags"
-     */
-    public function testPropertyDietFlags()
-    {
-    }
-
-    /**
-     * Test attribute "packaging_photos"
-     */
-    public function testPropertyPackagingPhotos()
-    {
-    }
-
-    /**
-     * Test attribute "allergens"
-     */
-    public function testPropertyAllergens()
-    {
-    }
-
-    /**
-     * Test attribute "brand_list"
-     */
-    public function testPropertyBrandList()
-    {
-    }
-
-    /**
-     * Test attribute "countries"
-     */
-    public function testPropertyCountries()
-    {
-    }
-
-    /**
-     * Test attribute "country_details"
-     */
-    public function testPropertyCountryDetails()
-    {
-    }
-
-    /**
-     * Test attribute "palm_oil_ingredients"
-     */
-    public function testPropertyPalmOilIngredients()
-    {
-    }
-
-    /**
-     * Test attribute "ingredient_list"
-     */
-    public function testPropertyIngredientList()
-    {
-    }
-
-    /**
-     * Test attribute "has_english_ingredients"
-     */
-    public function testPropertyHasEnglishIngredients()
-    {
-    }
-
-    /**
-     * Test attribute "minerals"
-     */
-    public function testPropertyMinerals()
-    {
-    }
-
-    /**
-     * Test attribute "traces"
-     */
-    public function testPropertyTraces()
-    {
-    }
-
-    /**
-     * Test attribute "vitamins"
-     */
-    public function testPropertyVitamins()
-    {
-    }
-
-    /**
-     * Test attribute "description"
-     */
-    public function testPropertyDescription()
-    {
-    }
-
-    /**
-     * Test attribute "keywords"
-     */
-    public function testPropertyKeywords()
+    public function testPropertyCarbohydrateValue()
     {
     }
 }
