@@ -81,8 +81,7 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
 'traces' => 'string[]',
 'vitamins' => 'string[]',
 'description' => 'string',
-'keywords' => 'string[]',
-'footnote' => 'string'    ];
+'keywords' => 'string[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -114,8 +113,7 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
 'traces' => null,
 'vitamins' => null,
 'description' => null,
-'keywords' => null,
-'footnote' => null    ];
+'keywords' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -168,8 +166,7 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
 'traces' => 'traces',
 'vitamins' => 'vitamins',
 'description' => 'description',
-'keywords' => 'keywords',
-'footnote' => 'footnote'    ];
+'keywords' => 'keywords'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -201,8 +198,7 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
 'traces' => 'setTraces',
 'vitamins' => 'setVitamins',
 'description' => 'setDescription',
-'keywords' => 'setKeywords',
-'footnote' => 'setFootnote'    ];
+'keywords' => 'setKeywords'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -234,8 +230,7 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
 'traces' => 'getTraces',
 'vitamins' => 'getVitamins',
 'description' => 'getDescription',
-'keywords' => 'getKeywords',
-'footnote' => 'getFootnote'    ];
+'keywords' => 'getKeywords'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -320,7 +315,6 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
         $this->container['vitamins'] = isset($data['vitamins']) ? $data['vitamins'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['keywords'] = isset($data['keywords']) ? $data['keywords'] : null;
-        $this->container['footnote'] = isset($data['footnote']) ? $data['footnote'] : null;
     }
 
     /**
@@ -943,30 +937,6 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
     public function setKeywords($keywords)
     {
         $this->container['keywords'] = $keywords;
-
-        return $this;
-    }
-
-    /**
-     * Gets footnote
-     *
-     * @return string
-     */
-    public function getFootnote()
-    {
-        return $this->container['footnote'];
-    }
-
-    /**
-     * Sets footnote
-     *
-     * @param string $footnote Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall.
-     *
-     * @return $this
-     */
-    public function setFootnote($footnote)
-    {
-        $this->container['footnote'] = $footnote;
 
         return $this;
     }

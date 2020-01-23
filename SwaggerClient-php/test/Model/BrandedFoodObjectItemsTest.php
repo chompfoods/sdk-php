@@ -249,11 +249,4 @@ class BrandedFoodObjectItemsTest extends \PHPUnit_Framework_TestCase
     public function testPropertyKeywords()
     {
     }
-
-    /**
-     * Test attribute "footnote"
-     */
-    public function testPropertyFootnote()
-    {
-    }
 }
