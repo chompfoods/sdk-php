@@ -251,13 +251,6 @@ class BrandedFoodObjectItemsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "common_names"
-     */
-    public function testPropertyCommonNames()
-    {
-    }
-
-    /**
      * Test attribute "description"
      */
     public function testPropertyDescription()
