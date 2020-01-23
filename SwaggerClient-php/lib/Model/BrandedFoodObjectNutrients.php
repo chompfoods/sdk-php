@@ -35,7 +35,7 @@ use \Swagger\Client\ObjectSerializer;
  * BrandedFoodObjectNutrients Class Doc Comment
  *
  * @category Class
- * @description An object containing nutrient information from multiple sources
+ * @description An object containing information for a specific nutrient found in this food item
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -57,8 +57,12 @@ class BrandedFoodObjectNutrients implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'chomp' => '\Swagger\Client\Model\BrandedFoodObjectNutrientsChomp[]',
-'usda' => '\Swagger\Client\Model\BrandedFoodObjectNutrientsUsda[]'    ];
+        'name' => 'string',
+'per_100g' => 'float',
+'measurement_unit' => 'string',
+'rank' => 'int',
+'data_points' => 'int',
+'description' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -66,8 +70,12 @@ class BrandedFoodObjectNutrients implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'chomp' => null,
-'usda' => null    ];
+        'name' => null,
+'per_100g' => null,
+'measurement_unit' => null,
+'rank' => null,
+'data_points' => null,
+'description' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -96,8 +104,12 @@ class BrandedFoodObjectNutrients implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'chomp' => 'chomp',
-'usda' => 'usda'    ];
+        'name' => 'name',
+'per_100g' => 'per_100g',
+'measurement_unit' => 'measurement_unit',
+'rank' => 'rank',
+'data_points' => 'data_points',
+'description' => 'description'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -105,8 +117,12 @@ class BrandedFoodObjectNutrients implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'chomp' => 'setChomp',
-'usda' => 'setUsda'    ];
+        'name' => 'setName',
+'per_100g' => 'setPer100g',
+'measurement_unit' => 'setMeasurementUnit',
+'rank' => 'setRank',
+'data_points' => 'setDataPoints',
+'description' => 'setDescription'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -114,8 +130,12 @@ class BrandedFoodObjectNutrients implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'chomp' => 'getChomp',
-'usda' => 'getUsda'    ];
+        'name' => 'getName',
+'per_100g' => 'getPer100g',
+'measurement_unit' => 'getMeasurementUnit',
+'rank' => 'getRank',
+'data_points' => 'getDataPoints',
+'description' => 'getDescription'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -175,8 +195,12 @@ class BrandedFoodObjectNutrients implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['chomp'] = isset($data['chomp']) ? $data['chomp'] : null;
-        $this->container['usda'] = isset($data['usda']) ? $data['usda'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['per_100g'] = isset($data['per_100g']) ? $data['per_100g'] : null;
+        $this->container['measurement_unit'] = isset($data['measurement_unit']) ? $data['measurement_unit'] : null;
+        $this->container['rank'] = isset($data['rank']) ? $data['rank'] : null;
+        $this->container['data_points'] = isset($data['data_points']) ? $data['data_points'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
     }
 
     /**
@@ -204,49 +228,145 @@ class BrandedFoodObjectNutrients implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets chomp
+     * Gets name
      *
-     * @return \Swagger\Client\Model\BrandedFoodObjectNutrientsChomp[]
+     * @return string
      */
-    public function getChomp()
+    public function getName()
     {
-        return $this->container['chomp'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets chomp
+     * Sets name
      *
-     * @param \Swagger\Client\Model\BrandedFoodObjectNutrientsChomp[] $chomp An array containing an object for each nutrient data point
+     * @param string $name Nutrient name
      *
      * @return $this
      */
-    public function setChomp($chomp)
+    public function setName($name)
     {
-        $this->container['chomp'] = $chomp;
+        $this->container['name'] = $name;
 
         return $this;
     }
 
     /**
-     * Gets usda
+     * Gets per_100g
      *
-     * @return \Swagger\Client\Model\BrandedFoodObjectNutrientsUsda[]
+     * @return float
      */
-    public function getUsda()
+    public function getPer100g()
     {
-        return $this->container['usda'];
+        return $this->container['per_100g'];
     }
 
     /**
-     * Sets usda
+     * Sets per_100g
      *
-     * @param \Swagger\Client\Model\BrandedFoodObjectNutrientsUsda[] $usda An array containing an object for each nutrient data point as found in the USDA database
+     * @param float $per_100g Amount of the nutrient per 100g of food
      *
      * @return $this
      */
-    public function setUsda($usda)
+    public function setPer100g($per_100g)
     {
-        $this->container['usda'] = $usda;
+        $this->container['per_100g'] = $per_100g;
+
+        return $this;
+    }
+
+    /**
+     * Gets measurement_unit
+     *
+     * @return string
+     */
+    public function getMeasurementUnit()
+    {
+        return $this->container['measurement_unit'];
+    }
+
+    /**
+     * Sets measurement_unit
+     *
+     * @param string $measurement_unit The unit used for the measure of this nutrient
+     *
+     * @return $this
+     */
+    public function setMeasurementUnit($measurement_unit)
+    {
+        $this->container['measurement_unit'] = $measurement_unit;
+
+        return $this;
+    }
+
+    /**
+     * Gets rank
+     *
+     * @return int
+     */
+    public function getRank()
+    {
+        return $this->container['rank'];
+    }
+
+    /**
+     * Sets rank
+     *
+     * @param int $rank Nutrient rank
+     *
+     * @return $this
+     */
+    public function setRank($rank)
+    {
+        $this->container['rank'] = $rank;
+
+        return $this;
+    }
+
+    /**
+     * Gets data_points
+     *
+     * @return int
+     */
+    public function getDataPoints()
+    {
+        return $this->container['data_points'];
+    }
+
+    /**
+     * Sets data_points
+     *
+     * @param int $data_points Number of observations on which the value is based
+     *
+     * @return $this
+     */
+    public function setDataPoints($data_points)
+    {
+        $this->container['data_points'] = $data_points;
+
+        return $this;
+    }
+
+    /**
+     * Gets description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+     * Sets description
+     *
+     * @param string $description Description of the nutrient source
+     *
+     * @return $this
+     */
+    public function setDescription($description)
+    {
+        $this->container['description'] = $description;
 
         return $this;
     }

@@ -87,27 +87,6 @@ $apiInstance = new Swagger\Client\Api\DefaultApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = 56; // int | #### The ID number of a branded food item.  **Example #1: Using Chomp ID** > ```&id=15```  **Example #2: Using FDC ID** > ```&id=FDC_ID&source=USDA```
-$source = "source_example"; // string | #### Configure the endpoint to accept food IDs from various data sources. This endpoint defaults to Chomp but can accept FDC IDs.  **Example** > ```&source=Chomp```  **Tips**   * Pass in ```&source=USDA``` if you want to look up food items using a USDA FDC ID.
-
-try {
-    $result = $apiInstance->foodBrandedIdPhpGet($id, $source);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling DefaultApi->foodBrandedIdPhpGet: ', $e->getMessage(), PHP_EOL;
-}
-
-// Configure API key authorization: ApiKeyAuth
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('api_key', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('api_key', 'Bearer');
-
-$apiInstance = new Swagger\Client\Api\DefaultApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
 $name = "name_example"; // string | #### Search for branded food items using a general food name keyword. This does not have to exactly match the \"official\" name for the food.  **Example** > ```&name=Starburst```
 $limit = 56; // int | #### Set maximum number of records you want the API to return.  **Example** > ```&limit=10```
 $page = 56; // int | #### This is how you paginate the search result. By default, you will see the first 10 records. You must increment the page number to access the next 10 records, and so on.  **Example** > ```&page=1```
@@ -184,7 +163,6 @@ All URIs are relative to *https://chompthis.com/api/v2*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *DefaultApi* | [**foodBrandedBarcodePhpGet**](docs/Api/DefaultApi.md#foodbrandedbarcodephpget) | **GET** /food/branded/barcode.php | Get a branded food item using a barcode
-*DefaultApi* | [**foodBrandedIdPhpGet**](docs/Api/DefaultApi.md#foodbrandedidphpget) | **GET** /food/branded/id.php | Get a branded food item using an ID number
 *DefaultApi* | [**foodBrandedNamePhpGet**](docs/Api/DefaultApi.md#foodbrandednamephpget) | **GET** /food/branded/name.php | Get a branded food item by name
 *DefaultApi* | [**foodBrandedSearchPhpGet**](docs/Api/DefaultApi.md#foodbrandedsearchphpget) | **GET** /food/branded/search.php | Get data for branded food items using various search parameters
 *DefaultApi* | [**foodIngredientSearchPhpGet**](docs/Api/DefaultApi.md#foodingredientsearchphpget) | **GET** /food/ingredient/search.php | Get raw/generic food ingredient item(s)
@@ -198,19 +176,14 @@ Class | Method | HTTP request | Description
  - [BrandedFoodObjectDietLabelsGlutenFree](docs/Model/BrandedFoodObjectDietLabelsGlutenFree.md)
  - [BrandedFoodObjectDietLabelsVegan](docs/Model/BrandedFoodObjectDietLabelsVegan.md)
  - [BrandedFoodObjectDietLabelsVegetarian](docs/Model/BrandedFoodObjectDietLabelsVegetarian.md)
- - [BrandedFoodObjectIngredients](docs/Model/BrandedFoodObjectIngredients.md)
  - [BrandedFoodObjectItems](docs/Model/BrandedFoodObjectItems.md)
  - [BrandedFoodObjectNutrients](docs/Model/BrandedFoodObjectNutrients.md)
- - [BrandedFoodObjectNutrientsChomp](docs/Model/BrandedFoodObjectNutrientsChomp.md)
- - [BrandedFoodObjectNutrientsUsda](docs/Model/BrandedFoodObjectNutrientsUsda.md)
  - [BrandedFoodObjectPackage](docs/Model/BrandedFoodObjectPackage.md)
  - [BrandedFoodObjectPackagingPhotos](docs/Model/BrandedFoodObjectPackagingPhotos.md)
  - [BrandedFoodObjectPackagingPhotosFront](docs/Model/BrandedFoodObjectPackagingPhotosFront.md)
  - [BrandedFoodObjectPackagingPhotosIngredients](docs/Model/BrandedFoodObjectPackagingPhotosIngredients.md)
  - [BrandedFoodObjectPackagingPhotosNutrition](docs/Model/BrandedFoodObjectPackagingPhotosNutrition.md)
  - [BrandedFoodObjectServing](docs/Model/BrandedFoodObjectServing.md)
- - [BrandedFoodObjectServingChomp](docs/Model/BrandedFoodObjectServingChomp.md)
- - [BrandedFoodObjectServingUsda](docs/Model/BrandedFoodObjectServingUsda.md)
  - [IngredientObject](docs/Model/IngredientObject.md)
  - [IngredientObjectCalorieConversionFactor](docs/Model/IngredientObjectCalorieConversionFactor.md)
  - [IngredientObjectComponents](docs/Model/IngredientObjectComponents.md)

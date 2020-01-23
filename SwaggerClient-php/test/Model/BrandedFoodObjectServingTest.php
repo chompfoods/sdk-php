@@ -76,16 +76,23 @@ class BrandedFoodObjectServingTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "chomp"
+     * Test attribute "size"
      */
-    public function testPropertyChomp()
+    public function testPropertySize()
     {
     }
 
     /**
-     * Test attribute "usda"
+     * Test attribute "measurement_unit"
      */
-    public function testPropertyUsda()
+    public function testPropertyMeasurementUnit()
+    {
+    }
+
+    /**
+     * Test attribute "size_fulltext"
+     */
+    public function testPropertySizeFulltext()
     {
     }
 }

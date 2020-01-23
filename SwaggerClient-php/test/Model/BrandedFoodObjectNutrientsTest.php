@@ -32,7 +32,7 @@ namespace Swagger\Client;
  * BrandedFoodObjectNutrientsTest Class Doc Comment
  *
  * @category    Class
- * @description An object containing nutrient information from multiple sources
+ * @description An object containing information for a specific nutrient found in this food item
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -76,16 +76,44 @@ class BrandedFoodObjectNutrientsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "chomp"
+     * Test attribute "name"
      */
-    public function testPropertyChomp()
+    public function testPropertyName()
     {
     }
 
     /**
-     * Test attribute "usda"
+     * Test attribute "per_100g"
      */
-    public function testPropertyUsda()
+    public function testPropertyPer100g()
+    {
+    }
+
+    /**
+     * Test attribute "measurement_unit"
+     */
+    public function testPropertyMeasurementUnit()
+    {
+    }
+
+    /**
+     * Test attribute "rank"
+     */
+    public function testPropertyRank()
+    {
+    }
+
+    /**
+     * Test attribute "data_points"
+     */
+    public function testPropertyDataPoints()
+    {
+    }
+
+    /**
+     * Test attribute "description"
+     */
+    public function testPropertyDescription()
     {
     }
 }

@@ -60,11 +60,11 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
         'barcode' => 'string',
 'name' => 'string',
 'brand' => 'string',
-'ingredients' => '\Swagger\Client\Model\BrandedFoodObjectIngredients',
+'ingredients' => 'string',
 'package' => '\Swagger\Client\Model\BrandedFoodObjectPackage',
 'serving' => '\Swagger\Client\Model\BrandedFoodObjectServing',
 'categories' => 'string[]',
-'nutrients' => '\Swagger\Client\Model\BrandedFoodObjectNutrients',
+'nutrients' => '\Swagger\Client\Model\BrandedFoodObjectNutrients[]',
 'diet_labels' => '\Swagger\Client\Model\BrandedFoodObjectDietLabels',
 'diet_flags' => '\Swagger\Client\Model\BrandedFoodObjectDietFlags[]',
 'packaging_photos' => '\Swagger\Client\Model\BrandedFoodObjectPackagingPhotos',
@@ -404,7 +404,7 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
     /**
      * Gets ingredients
      *
-     * @return \Swagger\Client\Model\BrandedFoodObjectIngredients
+     * @return string
      */
     public function getIngredients()
     {
@@ -414,7 +414,7 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
     /**
      * Sets ingredients
      *
-     * @param \Swagger\Client\Model\BrandedFoodObjectIngredients $ingredients ingredients
+     * @param string $ingredients This food item's ingredients from greatest quantity to least
      *
      * @return $this
      */
@@ -500,7 +500,7 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
     /**
      * Gets nutrients
      *
-     * @return \Swagger\Client\Model\BrandedFoodObjectNutrients
+     * @return \Swagger\Client\Model\BrandedFoodObjectNutrients[]
      */
     public function getNutrients()
     {
@@ -510,7 +510,7 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
     /**
      * Sets nutrients
      *
-     * @param \Swagger\Client\Model\BrandedFoodObjectNutrients $nutrients nutrients
+     * @param \Swagger\Client\Model\BrandedFoodObjectNutrients[] $nutrients An array containing nutrient informatio objects for this food item
      *
      * @return $this
      */

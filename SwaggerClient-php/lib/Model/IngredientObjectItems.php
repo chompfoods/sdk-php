@@ -59,7 +59,7 @@ class IngredientObjectItems implements ModelInterface, ArrayAccess
     protected static $swaggerTypes = [
         'name' => 'string',
 'categories' => 'string[]',
-'nutrients' => '\Swagger\Client\Model\IngredientObjectNutrients',
+'nutrients' => '\Swagger\Client\Model\IngredientObjectNutrients[]',
 'calorie_conversion_factor' => '\Swagger\Client\Model\IngredientObjectCalorieConversionFactor',
 'protein_conversion_factor' => 'float',
 'diet_labels' => '\Swagger\Client\Model\BrandedFoodObjectDietLabels',
@@ -308,7 +308,7 @@ class IngredientObjectItems implements ModelInterface, ArrayAccess
     /**
      * Gets nutrients
      *
-     * @return \Swagger\Client\Model\IngredientObjectNutrients
+     * @return \Swagger\Client\Model\IngredientObjectNutrients[]
      */
     public function getNutrients()
     {
@@ -318,7 +318,7 @@ class IngredientObjectItems implements ModelInterface, ArrayAccess
     /**
      * Sets nutrients
      *
-     * @param \Swagger\Client\Model\IngredientObjectNutrients $nutrients nutrients
+     * @param \Swagger\Client\Model\IngredientObjectNutrients[] $nutrients An array containing nutrient informatio objects for this food item
      *
      * @return $this
      */

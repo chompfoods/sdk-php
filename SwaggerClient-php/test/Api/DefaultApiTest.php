@@ -81,16 +81,6 @@ class DefaultApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test case for foodBrandedIdPhpGet
-     *
-     * Get a branded food item using an ID number.
-     *
-     */
-    public function testFoodBrandedIdPhpGet()
-    {
-    }
-
-    /**
      * Test case for foodBrandedNamePhpGet
      *
      * Get a branded food item by name.

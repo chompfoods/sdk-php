@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **string** | Item name as provided by brand owner or as shown on packaging | [optional] 
 **categories** | **string[]** |  | [optional] 
-**nutrients** | [**\Swagger\Client\Model\IngredientObjectNutrients**](IngredientObjectNutrients.md) |  | [optional] 
+**nutrients** | [**\Swagger\Client\Model\IngredientObjectNutrients[]**](IngredientObjectNutrients.md) | An array containing nutrient informatio objects for this food item | [optional] 
 **calorie_conversion_factor** | [**\Swagger\Client\Model\IngredientObjectCalorieConversionFactor**](IngredientObjectCalorieConversionFactor.md) |  | [optional] 
 **protein_conversion_factor** | **float** | The multiplication factor used to calculate protein from nitrogen | [optional] 
 **diet_labels** | [**\Swagger\Client\Model\BrandedFoodObjectDietLabels**](BrandedFoodObjectDietLabels.md) |  | [optional] 
