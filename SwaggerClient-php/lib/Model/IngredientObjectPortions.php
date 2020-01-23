@@ -1,6 +1,6 @@
 <?php
 /**
- * IngredientObjectItems
+ * IngredientObjectPortions
  *
  * PHP version 5
  *
@@ -32,15 +32,15 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * IngredientObjectItems Class Doc Comment
+ * IngredientObjectPortions Class Doc Comment
  *
  * @category Class
- * @description An object containing information for this specific item.
+ * @description An object containing information on a specific food portion found in this item
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class IngredientObjectItems implements ModelInterface, ArrayAccess
+class IngredientObjectPortions implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class IngredientObjectItems implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'IngredientObject_items';
+    protected static $swaggerModelName = 'IngredientObject_portions';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,16 +57,11 @@ class IngredientObjectItems implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'name' => 'string',
-'categories' => 'string[]',
-'nutrients' => '\Swagger\Client\Model\IngredientObjectNutrients',
-'calorie_conversion_factor' => '\Swagger\Client\Model\BrandedFoodObjectCalorieConversionFactor',
-'protein_conversion_factor' => 'float',
-'diet_labels' => '\Swagger\Client\Model\BrandedFoodObjectDietLabels',
-'components' => '\Swagger\Client\Model\IngredientObjectComponents[]',
-'portions' => '\Swagger\Client\Model\IngredientObjectPortions[]',
-'common_names' => 'string',
+        'measurement_unit' => 'string',
 'description' => 'string',
+'modifier' => 'string',
+'gram_weight' => 'float',
+'data_points' => 'int',
 'footnote' => 'string'    ];
 
     /**
@@ -75,16 +70,11 @@ class IngredientObjectItems implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'name' => null,
-'categories' => null,
-'nutrients' => null,
-'calorie_conversion_factor' => null,
-'protein_conversion_factor' => null,
-'diet_labels' => null,
-'components' => null,
-'portions' => null,
-'common_names' => null,
+        'measurement_unit' => null,
 'description' => null,
+'modifier' => null,
+'gram_weight' => null,
+'data_points' => null,
 'footnote' => null    ];
 
     /**
@@ -114,16 +104,11 @@ class IngredientObjectItems implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'name' => 'name',
-'categories' => 'categories',
-'nutrients' => 'nutrients',
-'calorie_conversion_factor' => 'calorie_conversion_factor',
-'protein_conversion_factor' => 'protein_conversion_factor',
-'diet_labels' => 'diet_labels',
-'components' => 'components',
-'portions' => 'portions',
-'common_names' => 'common_names',
+        'measurement_unit' => 'measurement_unit',
 'description' => 'description',
+'modifier' => 'modifier',
+'gram_weight' => 'gram_weight',
+'data_points' => 'data_points',
 'footnote' => 'footnote'    ];
 
     /**
@@ -132,16 +117,11 @@ class IngredientObjectItems implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'name' => 'setName',
-'categories' => 'setCategories',
-'nutrients' => 'setNutrients',
-'calorie_conversion_factor' => 'setCalorieConversionFactor',
-'protein_conversion_factor' => 'setProteinConversionFactor',
-'diet_labels' => 'setDietLabels',
-'components' => 'setComponents',
-'portions' => 'setPortions',
-'common_names' => 'setCommonNames',
+        'measurement_unit' => 'setMeasurementUnit',
 'description' => 'setDescription',
+'modifier' => 'setModifier',
+'gram_weight' => 'setGramWeight',
+'data_points' => 'setDataPoints',
 'footnote' => 'setFootnote'    ];
 
     /**
@@ -150,16 +130,11 @@ class IngredientObjectItems implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'name' => 'getName',
-'categories' => 'getCategories',
-'nutrients' => 'getNutrients',
-'calorie_conversion_factor' => 'getCalorieConversionFactor',
-'protein_conversion_factor' => 'getProteinConversionFactor',
-'diet_labels' => 'getDietLabels',
-'components' => 'getComponents',
-'portions' => 'getPortions',
-'common_names' => 'getCommonNames',
+        'measurement_unit' => 'getMeasurementUnit',
 'description' => 'getDescription',
+'modifier' => 'getModifier',
+'gram_weight' => 'getGramWeight',
+'data_points' => 'getDataPoints',
 'footnote' => 'getFootnote'    ];
 
     /**
@@ -220,16 +195,11 @@ class IngredientObjectItems implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['categories'] = isset($data['categories']) ? $data['categories'] : null;
-        $this->container['nutrients'] = isset($data['nutrients']) ? $data['nutrients'] : null;
-        $this->container['calorie_conversion_factor'] = isset($data['calorie_conversion_factor']) ? $data['calorie_conversion_factor'] : null;
-        $this->container['protein_conversion_factor'] = isset($data['protein_conversion_factor']) ? $data['protein_conversion_factor'] : null;
-        $this->container['diet_labels'] = isset($data['diet_labels']) ? $data['diet_labels'] : null;
-        $this->container['components'] = isset($data['components']) ? $data['components'] : null;
-        $this->container['portions'] = isset($data['portions']) ? $data['portions'] : null;
-        $this->container['common_names'] = isset($data['common_names']) ? $data['common_names'] : null;
+        $this->container['measurement_unit'] = isset($data['measurement_unit']) ? $data['measurement_unit'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['modifier'] = isset($data['modifier']) ? $data['modifier'] : null;
+        $this->container['gram_weight'] = isset($data['gram_weight']) ? $data['gram_weight'] : null;
+        $this->container['data_points'] = isset($data['data_points']) ? $data['data_points'] : null;
         $this->container['footnote'] = isset($data['footnote']) ? $data['footnote'] : null;
     }
 
@@ -258,217 +228,25 @@ class IngredientObjectItems implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets name
+     * Gets measurement_unit
      *
      * @return string
      */
-    public function getName()
+    public function getMeasurementUnit()
     {
-        return $this->container['name'];
+        return $this->container['measurement_unit'];
     }
 
     /**
-     * Sets name
+     * Sets measurement_unit
      *
-     * @param string $name Item name as provided by brand owner or as shown on packaging
+     * @param string $measurement_unit The unit used for measure (e.g. if mesure is 3 tsp, the unit is tsp)
      *
      * @return $this
      */
-    public function setName($name)
+    public function setMeasurementUnit($measurement_unit)
     {
-        $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * Gets categories
-     *
-     * @return string[]
-     */
-    public function getCategories()
-    {
-        return $this->container['categories'];
-    }
-
-    /**
-     * Sets categories
-     *
-     * @param string[] $categories categories
-     *
-     * @return $this
-     */
-    public function setCategories($categories)
-    {
-        $this->container['categories'] = $categories;
-
-        return $this;
-    }
-
-    /**
-     * Gets nutrients
-     *
-     * @return \Swagger\Client\Model\IngredientObjectNutrients
-     */
-    public function getNutrients()
-    {
-        return $this->container['nutrients'];
-    }
-
-    /**
-     * Sets nutrients
-     *
-     * @param \Swagger\Client\Model\IngredientObjectNutrients $nutrients nutrients
-     *
-     * @return $this
-     */
-    public function setNutrients($nutrients)
-    {
-        $this->container['nutrients'] = $nutrients;
-
-        return $this;
-    }
-
-    /**
-     * Gets calorie_conversion_factor
-     *
-     * @return \Swagger\Client\Model\BrandedFoodObjectCalorieConversionFactor
-     */
-    public function getCalorieConversionFactor()
-    {
-        return $this->container['calorie_conversion_factor'];
-    }
-
-    /**
-     * Sets calorie_conversion_factor
-     *
-     * @param \Swagger\Client\Model\BrandedFoodObjectCalorieConversionFactor $calorie_conversion_factor calorie_conversion_factor
-     *
-     * @return $this
-     */
-    public function setCalorieConversionFactor($calorie_conversion_factor)
-    {
-        $this->container['calorie_conversion_factor'] = $calorie_conversion_factor;
-
-        return $this;
-    }
-
-    /**
-     * Gets protein_conversion_factor
-     *
-     * @return float
-     */
-    public function getProteinConversionFactor()
-    {
-        return $this->container['protein_conversion_factor'];
-    }
-
-    /**
-     * Sets protein_conversion_factor
-     *
-     * @param float $protein_conversion_factor The multiplication factor used to calculate protein from nitrogen
-     *
-     * @return $this
-     */
-    public function setProteinConversionFactor($protein_conversion_factor)
-    {
-        $this->container['protein_conversion_factor'] = $protein_conversion_factor;
-
-        return $this;
-    }
-
-    /**
-     * Gets diet_labels
-     *
-     * @return \Swagger\Client\Model\BrandedFoodObjectDietLabels
-     */
-    public function getDietLabels()
-    {
-        return $this->container['diet_labels'];
-    }
-
-    /**
-     * Sets diet_labels
-     *
-     * @param \Swagger\Client\Model\BrandedFoodObjectDietLabels $diet_labels diet_labels
-     *
-     * @return $this
-     */
-    public function setDietLabels($diet_labels)
-    {
-        $this->container['diet_labels'] = $diet_labels;
-
-        return $this;
-    }
-
-    /**
-     * Gets components
-     *
-     * @return \Swagger\Client\Model\IngredientObjectComponents[]
-     */
-    public function getComponents()
-    {
-        return $this->container['components'];
-    }
-
-    /**
-     * Sets components
-     *
-     * @param \Swagger\Client\Model\IngredientObjectComponents[] $components An array of objects containing the constituent parts of a food (e.g. bone is a component of meat)
-     *
-     * @return $this
-     */
-    public function setComponents($components)
-    {
-        $this->container['components'] = $components;
-
-        return $this;
-    }
-
-    /**
-     * Gets portions
-     *
-     * @return \Swagger\Client\Model\IngredientObjectPortions[]
-     */
-    public function getPortions()
-    {
-        return $this->container['portions'];
-    }
-
-    /**
-     * Sets portions
-     *
-     * @param \Swagger\Client\Model\IngredientObjectPortions[] $portions An array of objects containing information on discrete amounts of a food found in this item
-     *
-     * @return $this
-     */
-    public function setPortions($portions)
-    {
-        $this->container['portions'] = $portions;
-
-        return $this;
-    }
-
-    /**
-     * Gets common_names
-     *
-     * @return string
-     */
-    public function getCommonNames()
-    {
-        return $this->container['common_names'];
-    }
-
-    /**
-     * Sets common_names
-     *
-     * @param string $common_names Common names associated with this item. These generally clarify what the item is (e.g. when the brand name is \"BRAND's Spicy Enchilada\" the common name may be \"Chicken enchilada\")
-     *
-     * @return $this
-     */
-    public function setCommonNames($common_names)
-    {
-        $this->container['common_names'] = $common_names;
+        $this->container['measurement_unit'] = $measurement_unit;
 
         return $this;
     }
@@ -486,13 +264,85 @@ class IngredientObjectItems implements ModelInterface, ArrayAccess
     /**
      * Sets description
      *
-     * @param string $description A description of this item
+     * @param string $description Comments that provide more specificity on the measure. For example, for a pizza measure the dissemination text might be 1 slice is 1/8th of a 14 inch pizza.
      *
      * @return $this
      */
     public function setDescription($description)
     {
         $this->container['description'] = $description;
+
+        return $this;
+    }
+
+    /**
+     * Gets modifier
+     *
+     * @return string
+     */
+    public function getModifier()
+    {
+        return $this->container['modifier'];
+    }
+
+    /**
+     * Sets modifier
+     *
+     * @param string $modifier Qualifier of the measure (e.g. related to food shape or form) (e.g. melted, crushed, diced)
+     *
+     * @return $this
+     */
+    public function setModifier($modifier)
+    {
+        $this->container['modifier'] = $modifier;
+
+        return $this;
+    }
+
+    /**
+     * Gets gram_weight
+     *
+     * @return float
+     */
+    public function getGramWeight()
+    {
+        return $this->container['gram_weight'];
+    }
+
+    /**
+     * Sets gram_weight
+     *
+     * @param float $gram_weight The weight of the measure in grams
+     *
+     * @return $this
+     */
+    public function setGramWeight($gram_weight)
+    {
+        $this->container['gram_weight'] = $gram_weight;
+
+        return $this;
+    }
+
+    /**
+     * Gets data_points
+     *
+     * @return int
+     */
+    public function getDataPoints()
+    {
+        return $this->container['data_points'];
+    }
+
+    /**
+     * Sets data_points
+     *
+     * @param int $data_points The number of observations on which the measure is based
+     *
+     * @return $this
+     */
+    public function setDataPoints($data_points)
+    {
+        $this->container['data_points'] = $data_points;
 
         return $this;
     }
@@ -510,7 +360,7 @@ class IngredientObjectItems implements ModelInterface, ArrayAccess
     /**
      * Sets footnote
      *
-     * @param string $footnote Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall.
+     * @param string $footnote Comments on any unusual aspects of the measure. Examples might includes caveats on the usage of a measure, or reasons why a measure gram weight is an unexpected value.
      *
      * @return $this
      */

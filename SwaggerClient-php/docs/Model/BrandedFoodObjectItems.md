@@ -16,8 +16,6 @@ Name | Type | Description | Notes
 **diet_labels** | [**\Swagger\Client\Model\BrandedFoodObjectDietLabels**](BrandedFoodObjectDietLabels.md) |  | [optional] 
 **diet_flags** | [**\Swagger\Client\Model\BrandedFoodObjectDietFlags[]**](BrandedFoodObjectDietFlags.md) | An array of ingredient objects that were flagged while grading this item for compatibility with each diet | [optional] 
 **packaging_photos** | [**\Swagger\Client\Model\BrandedFoodObjectPackagingPhotos**](BrandedFoodObjectPackagingPhotos.md) |  | [optional] 
-**components** | [**\Swagger\Client\Model\BrandedFoodObjectComponents[]**](BrandedFoodObjectComponents.md) | An array of objects containing the constituent parts of a food (e.g. bone is a component of meat) | [optional] 
-**portions** | [**\Swagger\Client\Model\BrandedFoodObjectPortions[]**](BrandedFoodObjectPortions.md) | An array of objects containing information on discrete amounts of a food found in this item | [optional] 
 **allergens** | **string[]** | An array of ingredients in this item that may cause allergic reactions in people | [optional] 
 **brand_list** | **string[]** | An array of brands we have associated with this item. Some items are sold by more than 1 brand. | [optional] 
 **countries** | **string[]** | An array of countries where this item is sold | [optional] 

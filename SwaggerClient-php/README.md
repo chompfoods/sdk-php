@@ -193,7 +193,6 @@ Class | Method | HTTP request | Description
 
  - [BrandedFoodObject](docs/Model/BrandedFoodObject.md)
  - [BrandedFoodObjectCalorieConversionFactor](docs/Model/BrandedFoodObjectCalorieConversionFactor.md)
- - [BrandedFoodObjectComponents](docs/Model/BrandedFoodObjectComponents.md)
  - [BrandedFoodObjectCountryDetails](docs/Model/BrandedFoodObjectCountryDetails.md)
  - [BrandedFoodObjectDietFlags](docs/Model/BrandedFoodObjectDietFlags.md)
  - [BrandedFoodObjectDietLabels](docs/Model/BrandedFoodObjectDietLabels.md)
@@ -210,13 +209,14 @@ Class | Method | HTTP request | Description
  - [BrandedFoodObjectPackagingPhotosFront](docs/Model/BrandedFoodObjectPackagingPhotosFront.md)
  - [BrandedFoodObjectPackagingPhotosIngredients](docs/Model/BrandedFoodObjectPackagingPhotosIngredients.md)
  - [BrandedFoodObjectPackagingPhotosNutrition](docs/Model/BrandedFoodObjectPackagingPhotosNutrition.md)
- - [BrandedFoodObjectPortions](docs/Model/BrandedFoodObjectPortions.md)
  - [BrandedFoodObjectServing](docs/Model/BrandedFoodObjectServing.md)
  - [BrandedFoodObjectServingChomp](docs/Model/BrandedFoodObjectServingChomp.md)
  - [BrandedFoodObjectServingUsda](docs/Model/BrandedFoodObjectServingUsda.md)
  - [IngredientObject](docs/Model/IngredientObject.md)
+ - [IngredientObjectComponents](docs/Model/IngredientObjectComponents.md)
  - [IngredientObjectItems](docs/Model/IngredientObjectItems.md)
  - [IngredientObjectNutrients](docs/Model/IngredientObjectNutrients.md)
+ - [IngredientObjectPortions](docs/Model/IngredientObjectPortions.md)
 
 ## Documentation For Authorization
 

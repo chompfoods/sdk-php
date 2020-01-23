@@ -1,6 +1,6 @@
 <?php
 /**
- * BrandedFoodObjectItemsTest
+ * IngredientObjectComponentsTest
  *
  * PHP version 5
  *
@@ -29,15 +29,15 @@
 namespace Swagger\Client;
 
 /**
- * BrandedFoodObjectItemsTest Class Doc Comment
+ * IngredientObjectComponentsTest Class Doc Comment
  *
  * @category    Class
- * @description An object containing information for this specific item.
+ * @description An object containing information on a specific component of this food item
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class BrandedFoodObjectItemsTest extends \PHPUnit_Framework_TestCase
+class IngredientObjectComponentsTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -69,16 +69,9 @@ class BrandedFoodObjectItemsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "BrandedFoodObjectItems"
+     * Test "IngredientObjectComponents"
      */
-    public function testBrandedFoodObjectItems()
-    {
-    }
-
-    /**
-     * Test attribute "barcode"
-     */
-    public function testPropertyBarcode()
+    public function testIngredientObjectComponents()
     {
     }
 
@@ -90,170 +83,30 @@ class BrandedFoodObjectItemsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "brand"
+     * Test attribute "pct_weight"
      */
-    public function testPropertyBrand()
+    public function testPropertyPctWeight()
     {
     }
 
     /**
-     * Test attribute "ingredients"
+     * Test attribute "gram_weight"
      */
-    public function testPropertyIngredients()
+    public function testPropertyGramWeight()
     {
     }
 
     /**
-     * Test attribute "package"
+     * Test attribute "is_refuse"
      */
-    public function testPropertyPackage()
+    public function testPropertyIsRefuse()
     {
     }
 
     /**
-     * Test attribute "serving"
+     * Test attribute "data_points"
      */
-    public function testPropertyServing()
-    {
-    }
-
-    /**
-     * Test attribute "categories"
-     */
-    public function testPropertyCategories()
-    {
-    }
-
-    /**
-     * Test attribute "nutrients"
-     */
-    public function testPropertyNutrients()
-    {
-    }
-
-    /**
-     * Test attribute "calorie_conversion_factor"
-     */
-    public function testPropertyCalorieConversionFactor()
-    {
-    }
-
-    /**
-     * Test attribute "protein_conversion_factor"
-     */
-    public function testPropertyProteinConversionFactor()
-    {
-    }
-
-    /**
-     * Test attribute "diet_labels"
-     */
-    public function testPropertyDietLabels()
-    {
-    }
-
-    /**
-     * Test attribute "diet_flags"
-     */
-    public function testPropertyDietFlags()
-    {
-    }
-
-    /**
-     * Test attribute "packaging_photos"
-     */
-    public function testPropertyPackagingPhotos()
-    {
-    }
-
-    /**
-     * Test attribute "allergens"
-     */
-    public function testPropertyAllergens()
-    {
-    }
-
-    /**
-     * Test attribute "brand_list"
-     */
-    public function testPropertyBrandList()
-    {
-    }
-
-    /**
-     * Test attribute "countries"
-     */
-    public function testPropertyCountries()
-    {
-    }
-
-    /**
-     * Test attribute "country_details"
-     */
-    public function testPropertyCountryDetails()
-    {
-    }
-
-    /**
-     * Test attribute "palm_oil_ingredients"
-     */
-    public function testPropertyPalmOilIngredients()
-    {
-    }
-
-    /**
-     * Test attribute "ingredient_list"
-     */
-    public function testPropertyIngredientList()
-    {
-    }
-
-    /**
-     * Test attribute "has_english_ingredients"
-     */
-    public function testPropertyHasEnglishIngredients()
-    {
-    }
-
-    /**
-     * Test attribute "minerals"
-     */
-    public function testPropertyMinerals()
-    {
-    }
-
-    /**
-     * Test attribute "traces"
-     */
-    public function testPropertyTraces()
-    {
-    }
-
-    /**
-     * Test attribute "vitamins"
-     */
-    public function testPropertyVitamins()
-    {
-    }
-
-    /**
-     * Test attribute "description"
-     */
-    public function testPropertyDescription()
-    {
-    }
-
-    /**
-     * Test attribute "keywords"
-     */
-    public function testPropertyKeywords()
-    {
-    }
-
-    /**
-     * Test attribute "footnote"
-     */
-    public function testPropertyFootnote()
+    public function testPropertyDataPoints()
     {
     }
 }

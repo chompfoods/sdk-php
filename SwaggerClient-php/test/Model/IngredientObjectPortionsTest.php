@@ -1,6 +1,6 @@
 <?php
 /**
- * BrandedFoodObjectItemsTest
+ * IngredientObjectPortionsTest
  *
  * PHP version 5
  *
@@ -29,15 +29,15 @@
 namespace Swagger\Client;
 
 /**
- * BrandedFoodObjectItemsTest Class Doc Comment
+ * IngredientObjectPortionsTest Class Doc Comment
  *
  * @category    Class
- * @description An object containing information for this specific item.
+ * @description An object containing information on a specific food portion found in this item
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class BrandedFoodObjectItemsTest extends \PHPUnit_Framework_TestCase
+class IngredientObjectPortionsTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -69,170 +69,16 @@ class BrandedFoodObjectItemsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "BrandedFoodObjectItems"
+     * Test "IngredientObjectPortions"
      */
-    public function testBrandedFoodObjectItems()
+    public function testIngredientObjectPortions()
     {
     }
 
     /**
-     * Test attribute "barcode"
+     * Test attribute "measurement_unit"
      */
-    public function testPropertyBarcode()
-    {
-    }
-
-    /**
-     * Test attribute "name"
-     */
-    public function testPropertyName()
-    {
-    }
-
-    /**
-     * Test attribute "brand"
-     */
-    public function testPropertyBrand()
-    {
-    }
-
-    /**
-     * Test attribute "ingredients"
-     */
-    public function testPropertyIngredients()
-    {
-    }
-
-    /**
-     * Test attribute "package"
-     */
-    public function testPropertyPackage()
-    {
-    }
-
-    /**
-     * Test attribute "serving"
-     */
-    public function testPropertyServing()
-    {
-    }
-
-    /**
-     * Test attribute "categories"
-     */
-    public function testPropertyCategories()
-    {
-    }
-
-    /**
-     * Test attribute "nutrients"
-     */
-    public function testPropertyNutrients()
-    {
-    }
-
-    /**
-     * Test attribute "calorie_conversion_factor"
-     */
-    public function testPropertyCalorieConversionFactor()
-    {
-    }
-
-    /**
-     * Test attribute "protein_conversion_factor"
-     */
-    public function testPropertyProteinConversionFactor()
-    {
-    }
-
-    /**
-     * Test attribute "diet_labels"
-     */
-    public function testPropertyDietLabels()
-    {
-    }
-
-    /**
-     * Test attribute "diet_flags"
-     */
-    public function testPropertyDietFlags()
-    {
-    }
-
-    /**
-     * Test attribute "packaging_photos"
-     */
-    public function testPropertyPackagingPhotos()
-    {
-    }
-
-    /**
-     * Test attribute "allergens"
-     */
-    public function testPropertyAllergens()
-    {
-    }
-
-    /**
-     * Test attribute "brand_list"
-     */
-    public function testPropertyBrandList()
-    {
-    }
-
-    /**
-     * Test attribute "countries"
-     */
-    public function testPropertyCountries()
-    {
-    }
-
-    /**
-     * Test attribute "country_details"
-     */
-    public function testPropertyCountryDetails()
-    {
-    }
-
-    /**
-     * Test attribute "palm_oil_ingredients"
-     */
-    public function testPropertyPalmOilIngredients()
-    {
-    }
-
-    /**
-     * Test attribute "ingredient_list"
-     */
-    public function testPropertyIngredientList()
-    {
-    }
-
-    /**
-     * Test attribute "has_english_ingredients"
-     */
-    public function testPropertyHasEnglishIngredients()
-    {
-    }
-
-    /**
-     * Test attribute "minerals"
-     */
-    public function testPropertyMinerals()
-    {
-    }
-
-    /**
-     * Test attribute "traces"
-     */
-    public function testPropertyTraces()
-    {
-    }
-
-    /**
-     * Test attribute "vitamins"
-     */
-    public function testPropertyVitamins()
+    public function testPropertyMeasurementUnit()
     {
     }
 
@@ -244,9 +90,23 @@ class BrandedFoodObjectItemsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "keywords"
+     * Test attribute "modifier"
      */
-    public function testPropertyKeywords()
+    public function testPropertyModifier()
+    {
+    }
+
+    /**
+     * Test attribute "gram_weight"
+     */
+    public function testPropertyGramWeight()
+    {
+    }
+
+    /**
+     * Test attribute "data_points"
+     */
+    public function testPropertyDataPoints()
     {
     }
 

@@ -70,8 +70,6 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
 'diet_labels' => '\Swagger\Client\Model\BrandedFoodObjectDietLabels',
 'diet_flags' => '\Swagger\Client\Model\BrandedFoodObjectDietFlags[]',
 'packaging_photos' => '\Swagger\Client\Model\BrandedFoodObjectPackagingPhotos',
-'components' => '\Swagger\Client\Model\BrandedFoodObjectComponents[]',
-'portions' => '\Swagger\Client\Model\BrandedFoodObjectPortions[]',
 'allergens' => 'string[]',
 'brand_list' => 'string[]',
 'countries' => 'string[]',
@@ -105,8 +103,6 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
 'diet_labels' => null,
 'diet_flags' => null,
 'packaging_photos' => null,
-'components' => null,
-'portions' => null,
 'allergens' => null,
 'brand_list' => null,
 'countries' => null,
@@ -161,8 +157,6 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
 'diet_labels' => 'diet_labels',
 'diet_flags' => 'diet_flags',
 'packaging_photos' => 'packaging_photos',
-'components' => 'components',
-'portions' => 'portions',
 'allergens' => 'allergens',
 'brand_list' => 'brand_list',
 'countries' => 'countries',
@@ -196,8 +190,6 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
 'diet_labels' => 'setDietLabels',
 'diet_flags' => 'setDietFlags',
 'packaging_photos' => 'setPackagingPhotos',
-'components' => 'setComponents',
-'portions' => 'setPortions',
 'allergens' => 'setAllergens',
 'brand_list' => 'setBrandList',
 'countries' => 'setCountries',
@@ -231,8 +223,6 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
 'diet_labels' => 'getDietLabels',
 'diet_flags' => 'getDietFlags',
 'packaging_photos' => 'getPackagingPhotos',
-'components' => 'getComponents',
-'portions' => 'getPortions',
 'allergens' => 'getAllergens',
 'brand_list' => 'getBrandList',
 'countries' => 'getCountries',
@@ -318,8 +308,6 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
         $this->container['diet_labels'] = isset($data['diet_labels']) ? $data['diet_labels'] : null;
         $this->container['diet_flags'] = isset($data['diet_flags']) ? $data['diet_flags'] : null;
         $this->container['packaging_photos'] = isset($data['packaging_photos']) ? $data['packaging_photos'] : null;
-        $this->container['components'] = isset($data['components']) ? $data['components'] : null;
-        $this->container['portions'] = isset($data['portions']) ? $data['portions'] : null;
         $this->container['allergens'] = isset($data['allergens']) ? $data['allergens'] : null;
         $this->container['brand_list'] = isset($data['brand_list']) ? $data['brand_list'] : null;
         $this->container['countries'] = isset($data['countries']) ? $data['countries'] : null;
@@ -667,54 +655,6 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
     public function setPackagingPhotos($packaging_photos)
     {
         $this->container['packaging_photos'] = $packaging_photos;
-
-        return $this;
-    }
-
-    /**
-     * Gets components
-     *
-     * @return \Swagger\Client\Model\BrandedFoodObjectComponents[]
-     */
-    public function getComponents()
-    {
-        return $this->container['components'];
-    }
-
-    /**
-     * Sets components
-     *
-     * @param \Swagger\Client\Model\BrandedFoodObjectComponents[] $components An array of objects containing the constituent parts of a food (e.g. bone is a component of meat)
-     *
-     * @return $this
-     */
-    public function setComponents($components)
-    {
-        $this->container['components'] = $components;
-
-        return $this;
-    }
-
-    /**
-     * Gets portions
-     *
-     * @return \Swagger\Client\Model\BrandedFoodObjectPortions[]
-     */
-    public function getPortions()
-    {
-        return $this->container['portions'];
-    }
-
-    /**
-     * Sets portions
-     *
-     * @param \Swagger\Client\Model\BrandedFoodObjectPortions[] $portions An array of objects containing information on discrete amounts of a food found in this item
-     *
-     * @return $this
-     */
-    public function setPortions($portions)
-    {
-        $this->container['portions'] = $portions;
 
         return $this;
     }
