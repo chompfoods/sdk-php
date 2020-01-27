@@ -88,8 +88,8 @@ $apiInstance = new Swagger\Client\Api\DefaultApi(
     $config
 );
 $name = "name_example"; // string | #### Search for branded food items using a general food name keyword. This does not have to exactly match the \"official\" name for the food.  **Example** > ```&name=Starburst```
-$limit = 56; // int | #### Set maximum number of records you want the API to return.  **Example** > ```&limit=10```
-$page = 56; // int | #### This is how you paginate the search result. By default, you will see the first 10 records. You must increment the page number to access the next 10 records, and so on.  **Example** > ```&page=1```
+$limit = 56; // int | #### Set maximum number of records you want the API to return. The default value is \"**10**.\"  **Example** > ```&limit=10```
+$page = 56; // int | #### This is how you paginate the search result. By default, you will see the first 10 records. You must increment the page number to access the next 10 records, and so on. The default value is \"**1**.\"  **Example** > ```&page=1```
 
 try {
     $result = $apiInstance->foodBrandedNamePhpGet($name, $limit, $page);
@@ -121,8 +121,8 @@ $nutrient = "nutrient_example"; // string | #### Filter the search to only inclu
 $palm_oil = "palm_oil_example"; // string | #### Filter the search to only include branded foods that contain a specific ingredient made using palm oil.  **Example** > ```&palm_oil=E160a Beta Carotene```
 $trace = "trace_example"; // string | ### Filter the search to only include branded foods that contain a specific trace ingredient.  **Example** > ```&trace=Tree Nuts```  **Important Note**: This parameter cannot be used alone. It must be paired with at least 1 additional parameter.
 $vitamin = "vitamin_example"; // string | #### Filter the search to only include branded foods that contain a specific vitamin.  **Example** > ```&vitamin=Biotin```
-$limit = 56; // int | #### Set maximum number of records you want the API to return.  **Example** > ```&limit=10```
-$page = 56; // int | #### This is how you paginate the search result. By default, you will see the first 10 records. You must increment the page number to access the next 10 records, and so on.  **Example** > ```&page=1```
+$limit = 56; // int | #### Set maximum number of records you want the API to return. The default value is \"**10**.\"  **Example** > ```&limit=10```
+$page = 56; // int | #### This is how you paginate the search result. By default, you will see the first 10 records. You must increment the page number to access the next 10 records, and so on. The default value is \"**1**.\"  **Example** > ```&page=1```
 
 try {
     $result = $apiInstance->foodBrandedSearchPhpGet($allergen, $brand, $category, $country, $diet, $ingredient, $keyword, $mineral, $nutrient, $palm_oil, $trace, $vitamin, $limit, $page);
@@ -143,8 +143,8 @@ $apiInstance = new Swagger\Client\Api\DefaultApi(
     $config
 );
 $find = "find_example"; // string | Search our database for a single ingredient or a specific set of ingredients.  **Example #1: Single Ingredient** > ```&find=broccoli```  **Example #2: Set of Ingredients** > ```&find=broccoli,cauliflower,spinach```  **Important Notes**    * Comma-separated lists cannot contain more than **15 ingredients**. You must perform additional API calls if you are looking up more than 15 ingredients.
-$raw = true; // bool | #### Optionally filter the search result to only include raw ingredients.  **Example** > ```&raw=true```
-$limit = 56; // int | #### Set maximum number of records you want the API to return, per search term.  **Example** > ```&limit=3```
+$raw = true; // bool | #### Optionally filter the search result to only include raw ingredients. The default value is \"**false**.\"  **Example** > ```&raw=true```
+$limit = 56; // int | #### Set maximum number of records you want the API to return, per search term. The default value is \"**1**.\"  **Example** > ```&limit=3```
 
 try {
     $result = $apiInstance->foodIngredientSearchPhpGet($find, $raw, $limit);
