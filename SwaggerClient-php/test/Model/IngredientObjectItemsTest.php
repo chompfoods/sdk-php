@@ -137,4 +137,18 @@ class IngredientObjectItemsTest extends \PHPUnit_Framework_TestCase
     public function testPropertyFootnote()
     {
     }
+
+    /**
+     * Test attribute "search_term"
+     */
+    public function testPropertySearchTerm()
+    {
+    }
+
+    /**
+     * Test attribute "score"
+     */
+    public function testPropertyScore()
+    {
+    }
 }

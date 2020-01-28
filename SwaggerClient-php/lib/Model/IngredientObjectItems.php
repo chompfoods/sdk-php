@@ -65,7 +65,9 @@ class IngredientObjectItems implements ModelInterface, ArrayAccess
 'components' => '\Swagger\Client\Model\IngredientObjectComponents[]',
 'portions' => '\Swagger\Client\Model\IngredientObjectPortions[]',
 'common_name' => 'string',
-'footnote' => 'string'    ];
+'footnote' => 'string',
+'search_term' => 'string',
+'score' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -81,7 +83,9 @@ class IngredientObjectItems implements ModelInterface, ArrayAccess
 'components' => null,
 'portions' => null,
 'common_name' => null,
-'footnote' => null    ];
+'footnote' => null,
+'search_term' => null,
+'score' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -118,7 +122,9 @@ class IngredientObjectItems implements ModelInterface, ArrayAccess
 'components' => 'components',
 'portions' => 'portions',
 'common_name' => 'common_name',
-'footnote' => 'footnote'    ];
+'footnote' => 'footnote',
+'search_term' => 'search_term',
+'score' => 'score'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -134,7 +140,9 @@ class IngredientObjectItems implements ModelInterface, ArrayAccess
 'components' => 'setComponents',
 'portions' => 'setPortions',
 'common_name' => 'setCommonName',
-'footnote' => 'setFootnote'    ];
+'footnote' => 'setFootnote',
+'search_term' => 'setSearchTerm',
+'score' => 'setScore'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -150,7 +158,9 @@ class IngredientObjectItems implements ModelInterface, ArrayAccess
 'components' => 'getComponents',
 'portions' => 'getPortions',
 'common_name' => 'getCommonName',
-'footnote' => 'getFootnote'    ];
+'footnote' => 'getFootnote',
+'search_term' => 'getSearchTerm',
+'score' => 'getScore'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -219,6 +229,8 @@ class IngredientObjectItems implements ModelInterface, ArrayAccess
         $this->container['portions'] = isset($data['portions']) ? $data['portions'] : null;
         $this->container['common_name'] = isset($data['common_name']) ? $data['common_name'] : null;
         $this->container['footnote'] = isset($data['footnote']) ? $data['footnote'] : null;
+        $this->container['search_term'] = isset($data['search_term']) ? $data['search_term'] : null;
+        $this->container['score'] = isset($data['score']) ? $data['score'] : null;
     }
 
     /**
@@ -457,6 +469,54 @@ class IngredientObjectItems implements ModelInterface, ArrayAccess
     public function setFootnote($footnote)
     {
         $this->container['footnote'] = $footnote;
+
+        return $this;
+    }
+
+    /**
+     * Gets search_term
+     *
+     * @return string
+     */
+    public function getSearchTerm()
+    {
+        return $this->container['search_term'];
+    }
+
+    /**
+     * Sets search_term
+     *
+     * @param string $search_term The original search term that found this food item.
+     *
+     * @return $this
+     */
+    public function setSearchTerm($search_term)
+    {
+        $this->container['search_term'] = $search_term;
+
+        return $this;
+    }
+
+    /**
+     * Gets score
+     *
+     * @return string
+     */
+    public function getScore()
+    {
+        return $this->container['score'];
+    }
+
+    /**
+     * Sets score
+     *
+     * @param string $score A value that represents how similar the name of this food item is to the original search term.
+     *
+     * @return $this
+     */
+    public function setScore($score)
+    {
+        $this->container['score'] = $score;
 
         return $this;
     }
