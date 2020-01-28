@@ -142,12 +142,11 @@ $apiInstance = new Swagger\Client\Api\DefaultApi(
     new GuzzleHttp\Client(),
     $config
 );
-$find = "find_example"; // string | Search our database for a single ingredient or a specific set of ingredients.  **Example #1: Single Ingredient** > ```&find=broccoli```  **Example #2: Set of Ingredients** > ```&find=broccoli,cauliflower,spinach```  **Important Notes**    * Comma-separated lists cannot contain more than **15 ingredients**. You must perform additional API calls if you are looking up more than 15 ingredients.
-$raw = true; // bool | #### Optionally filter the search result to only include raw ingredients. The default value is \"**false**.\"  **Example** > ```&raw=true```
+$find = "find_example"; // string | Search our database for a single ingredient or a specific set of ingredients.  **Example #1: Single Ingredient** > ```&find=raw broccoli```  **Example #2: Set of Ingredients** > ```&find=raw broccoli,raw cauliflower,mashed potatoes```  **Important Notes**    * Comma-separated lists cannot contain more than **10 ingredients**. You must perform additional API calls if you are looking up more than 10 ingredients.
 $limit = 56; // int | #### Set maximum number of records you want the API to return, per search term. The default value is \"**1**.\"  **Example** > ```&limit=3```
 
 try {
-    $result = $apiInstance->foodIngredientSearchPhpGet($find, $raw, $limit);
+    $result = $apiInstance->foodIngredientSearchPhpGet($find, $limit);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DefaultApi->foodIngredientSearchPhpGet: ', $e->getMessage(), PHP_EOL;

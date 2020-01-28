@@ -1009,17 +1009,16 @@ class DefaultApi
      *
      * Get raw/generic food ingredient item(s)
      *
-     * @param  string $find Search our database for a single ingredient or a specific set of ingredients.  **Example #1: Single Ingredient** &gt; &#x60;&#x60;&#x60;&amp;find&#x3D;broccoli&#x60;&#x60;&#x60;  **Example #2: Set of Ingredients** &gt; &#x60;&#x60;&#x60;&amp;find&#x3D;broccoli,cauliflower,spinach&#x60;&#x60;&#x60;  **Important Notes**    * Comma-separated lists cannot contain more than **15 ingredients**. You must perform additional API calls if you are looking up more than 15 ingredients. (required)
-     * @param  bool $raw #### Optionally filter the search result to only include raw ingredients. The default value is \&quot;**false**.\&quot;  **Example** &gt; &#x60;&#x60;&#x60;&amp;raw&#x3D;true&#x60;&#x60;&#x60; (optional)
+     * @param  string $find Search our database for a single ingredient or a specific set of ingredients.  **Example #1: Single Ingredient** &gt; &#x60;&#x60;&#x60;&amp;find&#x3D;raw broccoli&#x60;&#x60;&#x60;  **Example #2: Set of Ingredients** &gt; &#x60;&#x60;&#x60;&amp;find&#x3D;raw broccoli,raw cauliflower,mashed potatoes&#x60;&#x60;&#x60;  **Important Notes**    * Comma-separated lists cannot contain more than **10 ingredients**. You must perform additional API calls if you are looking up more than 10 ingredients. (required)
      * @param  int $limit #### Set maximum number of records you want the API to return, per search term. The default value is \&quot;**1**.\&quot;  **Example** &gt; &#x60;&#x60;&#x60;&amp;limit&#x3D;3&#x60;&#x60;&#x60; (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Swagger\Client\Model\IngredientObject
      */
-    public function foodIngredientSearchPhpGet($find, $raw = null, $limit = null)
+    public function foodIngredientSearchPhpGet($find, $limit = null)
     {
-        list($response) = $this->foodIngredientSearchPhpGetWithHttpInfo($find, $raw, $limit);
+        list($response) = $this->foodIngredientSearchPhpGetWithHttpInfo($find, $limit);
         return $response;
     }
 
@@ -1028,18 +1027,17 @@ class DefaultApi
      *
      * Get raw/generic food ingredient item(s)
      *
-     * @param  string $find Search our database for a single ingredient or a specific set of ingredients.  **Example #1: Single Ingredient** &gt; &#x60;&#x60;&#x60;&amp;find&#x3D;broccoli&#x60;&#x60;&#x60;  **Example #2: Set of Ingredients** &gt; &#x60;&#x60;&#x60;&amp;find&#x3D;broccoli,cauliflower,spinach&#x60;&#x60;&#x60;  **Important Notes**    * Comma-separated lists cannot contain more than **15 ingredients**. You must perform additional API calls if you are looking up more than 15 ingredients. (required)
-     * @param  bool $raw #### Optionally filter the search result to only include raw ingredients. The default value is \&quot;**false**.\&quot;  **Example** &gt; &#x60;&#x60;&#x60;&amp;raw&#x3D;true&#x60;&#x60;&#x60; (optional)
+     * @param  string $find Search our database for a single ingredient or a specific set of ingredients.  **Example #1: Single Ingredient** &gt; &#x60;&#x60;&#x60;&amp;find&#x3D;raw broccoli&#x60;&#x60;&#x60;  **Example #2: Set of Ingredients** &gt; &#x60;&#x60;&#x60;&amp;find&#x3D;raw broccoli,raw cauliflower,mashed potatoes&#x60;&#x60;&#x60;  **Important Notes**    * Comma-separated lists cannot contain more than **10 ingredients**. You must perform additional API calls if you are looking up more than 10 ingredients. (required)
      * @param  int $limit #### Set maximum number of records you want the API to return, per search term. The default value is \&quot;**1**.\&quot;  **Example** &gt; &#x60;&#x60;&#x60;&amp;limit&#x3D;3&#x60;&#x60;&#x60; (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\Model\IngredientObject, HTTP status code, HTTP response headers (array of strings)
      */
-    public function foodIngredientSearchPhpGetWithHttpInfo($find, $raw = null, $limit = null)
+    public function foodIngredientSearchPhpGetWithHttpInfo($find, $limit = null)
     {
         $returnType = '\Swagger\Client\Model\IngredientObject';
-        $request = $this->foodIngredientSearchPhpGetRequest($find, $raw, $limit);
+        $request = $this->foodIngredientSearchPhpGetRequest($find, $limit);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1105,16 +1103,15 @@ class DefaultApi
      *
      * Get raw/generic food ingredient item(s)
      *
-     * @param  string $find Search our database for a single ingredient or a specific set of ingredients.  **Example #1: Single Ingredient** &gt; &#x60;&#x60;&#x60;&amp;find&#x3D;broccoli&#x60;&#x60;&#x60;  **Example #2: Set of Ingredients** &gt; &#x60;&#x60;&#x60;&amp;find&#x3D;broccoli,cauliflower,spinach&#x60;&#x60;&#x60;  **Important Notes**    * Comma-separated lists cannot contain more than **15 ingredients**. You must perform additional API calls if you are looking up more than 15 ingredients. (required)
-     * @param  bool $raw #### Optionally filter the search result to only include raw ingredients. The default value is \&quot;**false**.\&quot;  **Example** &gt; &#x60;&#x60;&#x60;&amp;raw&#x3D;true&#x60;&#x60;&#x60; (optional)
+     * @param  string $find Search our database for a single ingredient or a specific set of ingredients.  **Example #1: Single Ingredient** &gt; &#x60;&#x60;&#x60;&amp;find&#x3D;raw broccoli&#x60;&#x60;&#x60;  **Example #2: Set of Ingredients** &gt; &#x60;&#x60;&#x60;&amp;find&#x3D;raw broccoli,raw cauliflower,mashed potatoes&#x60;&#x60;&#x60;  **Important Notes**    * Comma-separated lists cannot contain more than **10 ingredients**. You must perform additional API calls if you are looking up more than 10 ingredients. (required)
      * @param  int $limit #### Set maximum number of records you want the API to return, per search term. The default value is \&quot;**1**.\&quot;  **Example** &gt; &#x60;&#x60;&#x60;&amp;limit&#x3D;3&#x60;&#x60;&#x60; (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function foodIngredientSearchPhpGetAsync($find, $raw = null, $limit = null)
+    public function foodIngredientSearchPhpGetAsync($find, $limit = null)
     {
-        return $this->foodIngredientSearchPhpGetAsyncWithHttpInfo($find, $raw, $limit)
+        return $this->foodIngredientSearchPhpGetAsyncWithHttpInfo($find, $limit)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1127,17 +1124,16 @@ class DefaultApi
      *
      * Get raw/generic food ingredient item(s)
      *
-     * @param  string $find Search our database for a single ingredient or a specific set of ingredients.  **Example #1: Single Ingredient** &gt; &#x60;&#x60;&#x60;&amp;find&#x3D;broccoli&#x60;&#x60;&#x60;  **Example #2: Set of Ingredients** &gt; &#x60;&#x60;&#x60;&amp;find&#x3D;broccoli,cauliflower,spinach&#x60;&#x60;&#x60;  **Important Notes**    * Comma-separated lists cannot contain more than **15 ingredients**. You must perform additional API calls if you are looking up more than 15 ingredients. (required)
-     * @param  bool $raw #### Optionally filter the search result to only include raw ingredients. The default value is \&quot;**false**.\&quot;  **Example** &gt; &#x60;&#x60;&#x60;&amp;raw&#x3D;true&#x60;&#x60;&#x60; (optional)
+     * @param  string $find Search our database for a single ingredient or a specific set of ingredients.  **Example #1: Single Ingredient** &gt; &#x60;&#x60;&#x60;&amp;find&#x3D;raw broccoli&#x60;&#x60;&#x60;  **Example #2: Set of Ingredients** &gt; &#x60;&#x60;&#x60;&amp;find&#x3D;raw broccoli,raw cauliflower,mashed potatoes&#x60;&#x60;&#x60;  **Important Notes**    * Comma-separated lists cannot contain more than **10 ingredients**. You must perform additional API calls if you are looking up more than 10 ingredients. (required)
      * @param  int $limit #### Set maximum number of records you want the API to return, per search term. The default value is \&quot;**1**.\&quot;  **Example** &gt; &#x60;&#x60;&#x60;&amp;limit&#x3D;3&#x60;&#x60;&#x60; (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function foodIngredientSearchPhpGetAsyncWithHttpInfo($find, $raw = null, $limit = null)
+    public function foodIngredientSearchPhpGetAsyncWithHttpInfo($find, $limit = null)
     {
         $returnType = '\Swagger\Client\Model\IngredientObject';
-        $request = $this->foodIngredientSearchPhpGetRequest($find, $raw, $limit);
+        $request = $this->foodIngredientSearchPhpGetRequest($find, $limit);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1179,14 +1175,13 @@ class DefaultApi
     /**
      * Create request for operation 'foodIngredientSearchPhpGet'
      *
-     * @param  string $find Search our database for a single ingredient or a specific set of ingredients.  **Example #1: Single Ingredient** &gt; &#x60;&#x60;&#x60;&amp;find&#x3D;broccoli&#x60;&#x60;&#x60;  **Example #2: Set of Ingredients** &gt; &#x60;&#x60;&#x60;&amp;find&#x3D;broccoli,cauliflower,spinach&#x60;&#x60;&#x60;  **Important Notes**    * Comma-separated lists cannot contain more than **15 ingredients**. You must perform additional API calls if you are looking up more than 15 ingredients. (required)
-     * @param  bool $raw #### Optionally filter the search result to only include raw ingredients. The default value is \&quot;**false**.\&quot;  **Example** &gt; &#x60;&#x60;&#x60;&amp;raw&#x3D;true&#x60;&#x60;&#x60; (optional)
+     * @param  string $find Search our database for a single ingredient or a specific set of ingredients.  **Example #1: Single Ingredient** &gt; &#x60;&#x60;&#x60;&amp;find&#x3D;raw broccoli&#x60;&#x60;&#x60;  **Example #2: Set of Ingredients** &gt; &#x60;&#x60;&#x60;&amp;find&#x3D;raw broccoli,raw cauliflower,mashed potatoes&#x60;&#x60;&#x60;  **Important Notes**    * Comma-separated lists cannot contain more than **10 ingredients**. You must perform additional API calls if you are looking up more than 10 ingredients. (required)
      * @param  int $limit #### Set maximum number of records you want the API to return, per search term. The default value is \&quot;**1**.\&quot;  **Example** &gt; &#x60;&#x60;&#x60;&amp;limit&#x3D;3&#x60;&#x60;&#x60; (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function foodIngredientSearchPhpGetRequest($find, $raw = null, $limit = null)
+    protected function foodIngredientSearchPhpGetRequest($find, $limit = null)
     {
         // verify the required parameter 'find' is set
         if ($find === null || (is_array($find) && count($find) === 0)) {
@@ -1205,10 +1200,6 @@ class DefaultApi
         // query params
         if ($find !== null) {
             $queryParams['find'] = ObjectSerializer::toQueryValue($find);
-        }
-        // query params
-        if ($raw !== null) {
-            $queryParams['raw'] = ObjectSerializer::toQueryValue($raw);
         }
         // query params
         if ($limit !== null) {
