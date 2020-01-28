@@ -462,7 +462,7 @@ class IngredientObjectItems implements ModelInterface, ArrayAccess
     /**
      * Sets footnote
      *
-     * @param string $footnote Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall.
+     * @param string $footnote Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall
      *
      * @return $this
      */
@@ -486,7 +486,7 @@ class IngredientObjectItems implements ModelInterface, ArrayAccess
     /**
      * Sets search_term
      *
-     * @param string $search_term The original search term that found this food item.
+     * @param string $search_term The original search term that found this food item
      *
      * @return $this
      */
@@ -510,7 +510,7 @@ class IngredientObjectItems implements ModelInterface, ArrayAccess
     /**
      * Sets score
      *
-     * @param string $score A value that represents how similar the name of this food item is to the original search term.
+     * @param string $score A value that represents how similar the name of this food item is to the original search term. The lower the value the closer this item's name is to the original search term.
      *
      * @return $this
      */
