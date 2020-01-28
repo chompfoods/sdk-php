@@ -62,11 +62,9 @@ class IngredientObjectItems implements ModelInterface, ArrayAccess
 'nutrients' => '\Swagger\Client\Model\IngredientObjectNutrients[]',
 'calorie_conversion_factor' => '\Swagger\Client\Model\IngredientObjectCalorieConversionFactor',
 'protein_conversion_factor' => 'float',
-'diet_labels' => '\Swagger\Client\Model\BrandedFoodObjectDietLabels',
 'components' => '\Swagger\Client\Model\IngredientObjectComponents[]',
 'portions' => '\Swagger\Client\Model\IngredientObjectPortions[]',
 'common_name' => 'string',
-'description' => 'string',
 'footnote' => 'string'    ];
 
     /**
@@ -80,11 +78,9 @@ class IngredientObjectItems implements ModelInterface, ArrayAccess
 'nutrients' => null,
 'calorie_conversion_factor' => null,
 'protein_conversion_factor' => null,
-'diet_labels' => null,
 'components' => null,
 'portions' => null,
 'common_name' => null,
-'description' => null,
 'footnote' => null    ];
 
     /**
@@ -119,11 +115,9 @@ class IngredientObjectItems implements ModelInterface, ArrayAccess
 'nutrients' => 'nutrients',
 'calorie_conversion_factor' => 'calorie_conversion_factor',
 'protein_conversion_factor' => 'protein_conversion_factor',
-'diet_labels' => 'diet_labels',
 'components' => 'components',
 'portions' => 'portions',
 'common_name' => 'common_name',
-'description' => 'description',
 'footnote' => 'footnote'    ];
 
     /**
@@ -137,11 +131,9 @@ class IngredientObjectItems implements ModelInterface, ArrayAccess
 'nutrients' => 'setNutrients',
 'calorie_conversion_factor' => 'setCalorieConversionFactor',
 'protein_conversion_factor' => 'setProteinConversionFactor',
-'diet_labels' => 'setDietLabels',
 'components' => 'setComponents',
 'portions' => 'setPortions',
 'common_name' => 'setCommonName',
-'description' => 'setDescription',
 'footnote' => 'setFootnote'    ];
 
     /**
@@ -155,11 +147,9 @@ class IngredientObjectItems implements ModelInterface, ArrayAccess
 'nutrients' => 'getNutrients',
 'calorie_conversion_factor' => 'getCalorieConversionFactor',
 'protein_conversion_factor' => 'getProteinConversionFactor',
-'diet_labels' => 'getDietLabels',
 'components' => 'getComponents',
 'portions' => 'getPortions',
 'common_name' => 'getCommonName',
-'description' => 'getDescription',
 'footnote' => 'getFootnote'    ];
 
     /**
@@ -225,11 +215,9 @@ class IngredientObjectItems implements ModelInterface, ArrayAccess
         $this->container['nutrients'] = isset($data['nutrients']) ? $data['nutrients'] : null;
         $this->container['calorie_conversion_factor'] = isset($data['calorie_conversion_factor']) ? $data['calorie_conversion_factor'] : null;
         $this->container['protein_conversion_factor'] = isset($data['protein_conversion_factor']) ? $data['protein_conversion_factor'] : null;
-        $this->container['diet_labels'] = isset($data['diet_labels']) ? $data['diet_labels'] : null;
         $this->container['components'] = isset($data['components']) ? $data['components'] : null;
         $this->container['portions'] = isset($data['portions']) ? $data['portions'] : null;
         $this->container['common_name'] = isset($data['common_name']) ? $data['common_name'] : null;
-        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['footnote'] = isset($data['footnote']) ? $data['footnote'] : null;
     }
 
@@ -378,30 +366,6 @@ class IngredientObjectItems implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets diet_labels
-     *
-     * @return \Swagger\Client\Model\BrandedFoodObjectDietLabels
-     */
-    public function getDietLabels()
-    {
-        return $this->container['diet_labels'];
-    }
-
-    /**
-     * Sets diet_labels
-     *
-     * @param \Swagger\Client\Model\BrandedFoodObjectDietLabels $diet_labels diet_labels
-     *
-     * @return $this
-     */
-    public function setDietLabels($diet_labels)
-    {
-        $this->container['diet_labels'] = $diet_labels;
-
-        return $this;
-    }
-
-    /**
      * Gets components
      *
      * @return \Swagger\Client\Model\IngredientObjectComponents[]
@@ -469,30 +433,6 @@ class IngredientObjectItems implements ModelInterface, ArrayAccess
     public function setCommonName($common_name)
     {
         $this->container['common_name'] = $common_name;
-
-        return $this;
-    }
-
-    /**
-     * Gets description
-     *
-     * @return string
-     */
-    public function getDescription()
-    {
-        return $this->container['description'];
-    }
-
-    /**
-     * Sets description
-     *
-     * @param string $description A description of this item
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        $this->container['description'] = $description;
 
         return $this;
     }

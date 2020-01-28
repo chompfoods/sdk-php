@@ -111,13 +111,6 @@ class IngredientObjectItemsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "diet_labels"
-     */
-    public function testPropertyDietLabels()
-    {
-    }
-
-    /**
      * Test attribute "components"
      */
     public function testPropertyComponents()
@@ -135,13 +128,6 @@ class IngredientObjectItemsTest extends \PHPUnit_Framework_TestCase
      * Test attribute "common_name"
      */
     public function testPropertyCommonName()
-    {
-    }
-
-    /**
-     * Test attribute "description"
-     */
-    public function testPropertyDescription()
     {
     }
 
