@@ -1,6 +1,6 @@
 <?php
 /**
- * BrandedFoodObjectDietLabelsTest
+ * IngredientObjectCalorieConversionFactorTest
  *
  * PHP version 5
  *
@@ -29,15 +29,15 @@
 namespace Swagger\Client;
 
 /**
- * BrandedFoodObjectDietLabelsTest Class Doc Comment
+ * IngredientObjectCalorieConversionFactorTest Class Doc Comment
  *
  * @category    Class
- * @description An object containing this item&#x27;s compatibility grades for each supported diet
+ * @description An object containing the multiplication factors to be used when calculating energy from macronutrients for a specific food.
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class BrandedFoodObjectDietLabelsTest extends \PHPUnit_Framework_TestCase
+class IngredientObjectCalorieConversionFactorTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -69,30 +69,30 @@ class BrandedFoodObjectDietLabelsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "BrandedFoodObjectDietLabels"
+     * Test "IngredientObjectCalorieConversionFactor"
      */
-    public function testBrandedFoodObjectDietLabels()
+    public function testIngredientObjectCalorieConversionFactor()
     {
     }
 
     /**
-     * Test attribute "vegan"
+     * Test attribute "protein_value"
      */
-    public function testPropertyVegan()
+    public function testPropertyProteinValue()
     {
     }
 
     /**
-     * Test attribute "vegetarian"
+     * Test attribute "fat_value"
      */
-    public function testPropertyVegetarian()
+    public function testPropertyFatValue()
     {
     }
 
     /**
-     * Test attribute "gluten_free"
+     * Test attribute "carbohydrate_value"
      */
-    public function testPropertyGlutenFree()
+    public function testPropertyCarbohydrateValue()
     {
     }
 }

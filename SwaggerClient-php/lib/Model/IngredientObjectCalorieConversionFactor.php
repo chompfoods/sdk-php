@@ -1,6 +1,6 @@
 <?php
 /**
- * BrandedFoodObjectComponents
+ * IngredientObjectCalorieConversionFactor
  *
  * PHP version 5
  *
@@ -13,7 +13,7 @@
 /**
  * Chomp Food Database API Documentation
  *
- * __Important:__   - An __[API key](https://chompthis.com/api/)__ is required for access to this API.   - Get yours at __[https://chompthis.com/api](https://chompthis.com/api/)__.  -----  __Getting Started:__   - __[Subscribe](https://chompthis.com/api/#pricing)__ to the API.   - Scroll down and click the \"__Authorize__\" button.   - Enter your API key into the \"__value__\" input, click the \"__Authorize__\" button, then click the \"__Close__\" button.   - Scroll down to the section titled \"__default__\" and click on the API endpoint you wish to use.   - Click the \"__Try it out__\" button.   - Enter the information the endpoint requires.   - Click the \"__Execute__\" button.  __Example:__    - __[View example](https://raw.githubusercontent.com/chompfoods/examples/master/response-object.json)__ API response object.  -----  __How Do I Find My API Key?__   - Your API key was sent to the email address you used to create your subscription.   - You will also find your API key in the __[Client Center](https://chompthis.com/api/manage.php)__.   - _Read __[this article](https://desk.zoho.com/portal/chompthis/kb/articles/how-do-i-find-my-api-key)__ for more information._  ||| | ------- | -------- | | [Knowledge Base](https://desk.zoho.com/portal/chompthis/kb/chomp) | [Pricing](https://chompthis.com/api/) | | [Attribution](https://chompthis.com/api/docs/attribution.php) | [Cost Calculator](https://chompthis.com/api/cost-calculator.php) | | [Terms & License](https://chompthis.com/api/terms.php) | [Database Search](https://chompthis.com/api/lookup.php) | | [Support](https://chompthis.com/api/ticket-new.php) | [Query Builder](https://chompthis.com/api/build.php) | | [Client Center](https://chompthis.com/api/manage.php) | |
+ * ## Important An **[API key](https://chompthis.com/api/)** is required for access to this API. Get yours at **[https://chompthis.com/api](https://chompthis.com/api/)**.  ### Getting Started   * **[Subscribe](https://chompthis.com/api/#pricing)** to the API.   * Scroll down and click the \"**Authorize**\" button.   * Enter your API key into the \"**value**\" input, click the \"**Authorize**\" button, then click the \"**Close**\" button.   * Scroll down to the section titled \"**default**\" and click on the API endpoint you wish to use.   * Click the \"**Try it out**\" button.   * Enter the information the endpoint requires.   * Click the \"**Execute**\" button.  ### Example    * Branded food response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/branded-food-response-object.json)**   * Ingredient response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/ingredient-response-object.json)**   * Error response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/error-response-object.json)**  ### How Do I Find My API Key?   * Your API key was sent to the email address you used to create your subscription.   * You will also find your API key in the **[Client Center](https://chompthis.com/api/manage.php)**.   * Read **[this article](https://desk.zoho.com/portal/chompthis/kb/articles/how-do-i-find-my-api-key)** for more information.  ### Helpful Links   * **Help & Support**     * [Knowledge Base &raquo;](https://desk.zoho.com/portal/chompthis/kb/chomp)     * [Support &raquo;](https://chompthis.com/api/ticket-new.php)     * [Client Center &raquo;](https://chompthis.com/api/manage.php)   * **Pricing**     * [Subscription Options &raquo;](https://chompthis.com/api/)     * [Cost Calculator &raquo;](https://chompthis.com/api/cost-calculator.php)   * **Guidelines**     * [Terms & License &raquo;](https://chompthis.com/api/terms.php)     * [Attribution &raquo;](https://chompthis.com/api/docs/attribution.php)
  *
  * OpenAPI spec version: 1.0.0-oas3
  * 
@@ -32,15 +32,15 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * BrandedFoodObjectComponents Class Doc Comment
+ * IngredientObjectCalorieConversionFactor Class Doc Comment
  *
  * @category Class
- * @description An object containing information on a specific component of this food item
+ * @description An object containing the multiplication factors to be used when calculating energy from macronutrients for a specific food.
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class BrandedFoodObjectComponents implements ModelInterface, ArrayAccess
+class IngredientObjectCalorieConversionFactor implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class BrandedFoodObjectComponents implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'BrandedFoodObject_components';
+    protected static $swaggerModelName = 'IngredientObject_calorie_conversion_factor';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,11 +57,9 @@ class BrandedFoodObjectComponents implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'name' => 'string',
-'pct_weight' => 'float',
-'gram_weight' => 'float',
-'is_refuse' => 'bool',
-'data_points' => 'int'    ];
+        'protein_value' => 'float',
+'fat_value' => 'float',
+'carbohydrate_value' => 'float'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -69,11 +67,9 @@ class BrandedFoodObjectComponents implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'name' => null,
-'pct_weight' => null,
-'gram_weight' => null,
-'is_refuse' => null,
-'data_points' => null    ];
+        'protein_value' => null,
+'fat_value' => null,
+'carbohydrate_value' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -102,11 +98,9 @@ class BrandedFoodObjectComponents implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'name' => 'name',
-'pct_weight' => 'pct_weight',
-'gram_weight' => 'gram_weight',
-'is_refuse' => 'is_refuse',
-'data_points' => 'data_points'    ];
+        'protein_value' => 'protein_value',
+'fat_value' => 'fat_value',
+'carbohydrate_value' => 'carbohydrate_value'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -114,11 +108,9 @@ class BrandedFoodObjectComponents implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'name' => 'setName',
-'pct_weight' => 'setPctWeight',
-'gram_weight' => 'setGramWeight',
-'is_refuse' => 'setIsRefuse',
-'data_points' => 'setDataPoints'    ];
+        'protein_value' => 'setProteinValue',
+'fat_value' => 'setFatValue',
+'carbohydrate_value' => 'setCarbohydrateValue'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -126,11 +118,9 @@ class BrandedFoodObjectComponents implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'name' => 'getName',
-'pct_weight' => 'getPctWeight',
-'gram_weight' => 'getGramWeight',
-'is_refuse' => 'getIsRefuse',
-'data_points' => 'getDataPoints'    ];
+        'protein_value' => 'getProteinValue',
+'fat_value' => 'getFatValue',
+'carbohydrate_value' => 'getCarbohydrateValue'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -190,11 +180,9 @@ class BrandedFoodObjectComponents implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['pct_weight'] = isset($data['pct_weight']) ? $data['pct_weight'] : null;
-        $this->container['gram_weight'] = isset($data['gram_weight']) ? $data['gram_weight'] : null;
-        $this->container['is_refuse'] = isset($data['is_refuse']) ? $data['is_refuse'] : null;
-        $this->container['data_points'] = isset($data['data_points']) ? $data['data_points'] : null;
+        $this->container['protein_value'] = isset($data['protein_value']) ? $data['protein_value'] : null;
+        $this->container['fat_value'] = isset($data['fat_value']) ? $data['fat_value'] : null;
+        $this->container['carbohydrate_value'] = isset($data['carbohydrate_value']) ? $data['carbohydrate_value'] : null;
     }
 
     /**
@@ -222,121 +210,73 @@ class BrandedFoodObjectComponents implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets name
-     *
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-     * Sets name
-     *
-     * @param string $name The kind of component, e.g. bone
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * Gets pct_weight
+     * Gets protein_value
      *
      * @return float
      */
-    public function getPctWeight()
+    public function getProteinValue()
     {
-        return $this->container['pct_weight'];
+        return $this->container['protein_value'];
     }
 
     /**
-     * Sets pct_weight
+     * Sets protein_value
      *
-     * @param float $pct_weight The weight of the component as a percentage of the total weight of the food
+     * @param float $protein_value The multiplication factor for protein
      *
      * @return $this
      */
-    public function setPctWeight($pct_weight)
+    public function setProteinValue($protein_value)
     {
-        $this->container['pct_weight'] = $pct_weight;
+        $this->container['protein_value'] = $protein_value;
 
         return $this;
     }
 
     /**
-     * Gets gram_weight
+     * Gets fat_value
      *
      * @return float
      */
-    public function getGramWeight()
+    public function getFatValue()
     {
-        return $this->container['gram_weight'];
+        return $this->container['fat_value'];
     }
 
     /**
-     * Sets gram_weight
+     * Sets fat_value
      *
-     * @param float $gram_weight The weight of the component in grams
+     * @param float $fat_value The multiplication factor for fat
      *
      * @return $this
      */
-    public function setGramWeight($gram_weight)
+    public function setFatValue($fat_value)
     {
-        $this->container['gram_weight'] = $gram_weight;
+        $this->container['fat_value'] = $fat_value;
 
         return $this;
     }
 
     /**
-     * Gets is_refuse
+     * Gets carbohydrate_value
      *
-     * @return bool
+     * @return float
      */
-    public function getIsRefuse()
+    public function getCarbohydrateValue()
     {
-        return $this->container['is_refuse'];
+        return $this->container['carbohydrate_value'];
     }
 
     /**
-     * Sets is_refuse
+     * Sets carbohydrate_value
      *
-     * @param bool $is_refuse Whether the component is refuse, i.e. not edible
+     * @param float $carbohydrate_value The multiplication factor for carbohydrates
      *
      * @return $this
      */
-    public function setIsRefuse($is_refuse)
+    public function setCarbohydrateValue($carbohydrate_value)
     {
-        $this->container['is_refuse'] = $is_refuse;
-
-        return $this;
-    }
-
-    /**
-     * Gets data_points
-     *
-     * @return int
-     */
-    public function getDataPoints()
-    {
-        return $this->container['data_points'];
-    }
-
-    /**
-     * Sets data_points
-     *
-     * @param int $data_points The number of obersvations on which the measure is based
-     *
-     * @return $this
-     */
-    public function setDataPoints($data_points)
-    {
-        $this->container['data_points'] = $data_points;
+        $this->container['carbohydrate_value'] = $carbohydrate_value;
 
         return $this;
     }

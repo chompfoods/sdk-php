@@ -13,7 +13,7 @@
 /**
  * Chomp Food Database API Documentation
  *
- * __Important:__   - An __[API key](https://chompthis.com/api/)__ is required for access to this API.   - Get yours at __[https://chompthis.com/api](https://chompthis.com/api/)__.  -----  __Getting Started:__   - __[Subscribe](https://chompthis.com/api/#pricing)__ to the API.   - Scroll down and click the \"__Authorize__\" button.   - Enter your API key into the \"__value__\" input, click the \"__Authorize__\" button, then click the \"__Close__\" button.   - Scroll down to the section titled \"__default__\" and click on the API endpoint you wish to use.   - Click the \"__Try it out__\" button.   - Enter the information the endpoint requires.   - Click the \"__Execute__\" button.  __Example:__    - __[View example](https://raw.githubusercontent.com/chompfoods/examples/master/response-object.json)__ API response object.  -----  __How Do I Find My API Key?__   - Your API key was sent to the email address you used to create your subscription.   - You will also find your API key in the __[Client Center](https://chompthis.com/api/manage.php)__.   - _Read __[this article](https://desk.zoho.com/portal/chompthis/kb/articles/how-do-i-find-my-api-key)__ for more information._  ||| | ------- | -------- | | [Knowledge Base](https://desk.zoho.com/portal/chompthis/kb/chomp) | [Pricing](https://chompthis.com/api/) | | [Attribution](https://chompthis.com/api/docs/attribution.php) | [Cost Calculator](https://chompthis.com/api/cost-calculator.php) | | [Terms & License](https://chompthis.com/api/terms.php) | [Database Search](https://chompthis.com/api/lookup.php) | | [Support](https://chompthis.com/api/ticket-new.php) | [Query Builder](https://chompthis.com/api/build.php) | | [Client Center](https://chompthis.com/api/manage.php) | |
+ * ## Important An **[API key](https://chompthis.com/api/)** is required for access to this API. Get yours at **[https://chompthis.com/api](https://chompthis.com/api/)**.  ### Getting Started   * **[Subscribe](https://chompthis.com/api/#pricing)** to the API.   * Scroll down and click the \"**Authorize**\" button.   * Enter your API key into the \"**value**\" input, click the \"**Authorize**\" button, then click the \"**Close**\" button.   * Scroll down to the section titled \"**default**\" and click on the API endpoint you wish to use.   * Click the \"**Try it out**\" button.   * Enter the information the endpoint requires.   * Click the \"**Execute**\" button.  ### Example    * Branded food response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/branded-food-response-object.json)**   * Ingredient response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/ingredient-response-object.json)**   * Error response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/error-response-object.json)**  ### How Do I Find My API Key?   * Your API key was sent to the email address you used to create your subscription.   * You will also find your API key in the **[Client Center](https://chompthis.com/api/manage.php)**.   * Read **[this article](https://desk.zoho.com/portal/chompthis/kb/articles/how-do-i-find-my-api-key)** for more information.  ### Helpful Links   * **Help & Support**     * [Knowledge Base &raquo;](https://desk.zoho.com/portal/chompthis/kb/chomp)     * [Support &raquo;](https://chompthis.com/api/ticket-new.php)     * [Client Center &raquo;](https://chompthis.com/api/manage.php)   * **Pricing**     * [Subscription Options &raquo;](https://chompthis.com/api/)     * [Cost Calculator &raquo;](https://chompthis.com/api/cost-calculator.php)   * **Guidelines**     * [Terms & License &raquo;](https://chompthis.com/api/terms.php)     * [Attribution &raquo;](https://chompthis.com/api/docs/attribution.php)
  *
  * OpenAPI spec version: 1.0.0-oas3
  * 
@@ -35,7 +35,7 @@ use \Swagger\Client\ObjectSerializer;
  * IngredientObjectNutrients Class Doc Comment
  *
  * @category Class
- * @description An object containing nutrient information from each source
+ * @description An object containing information for a specific nutrient found in this food item
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -57,7 +57,16 @@ class IngredientObjectNutrients implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'usda' => '\Swagger\Client\Model\BrandedFoodObjectNutrientsUsda[]'    ];
+        'name' => 'string',
+'per_100g' => 'float',
+'measurement_unit' => 'string',
+'min' => 'float',
+'max' => 'float',
+'median' => 'float',
+'rank' => 'int',
+'data_points' => 'int',
+'footnote' => 'string',
+'description' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -65,7 +74,16 @@ class IngredientObjectNutrients implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'usda' => null    ];
+        'name' => null,
+'per_100g' => null,
+'measurement_unit' => null,
+'min' => null,
+'max' => null,
+'median' => null,
+'rank' => null,
+'data_points' => null,
+'footnote' => null,
+'description' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -94,7 +112,16 @@ class IngredientObjectNutrients implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'usda' => 'usda'    ];
+        'name' => 'name',
+'per_100g' => 'per_100g',
+'measurement_unit' => 'measurement_unit',
+'min' => 'min',
+'max' => 'max',
+'median' => 'median',
+'rank' => 'rank',
+'data_points' => 'data_points',
+'footnote' => 'footnote',
+'description' => 'description'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -102,7 +129,16 @@ class IngredientObjectNutrients implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'usda' => 'setUsda'    ];
+        'name' => 'setName',
+'per_100g' => 'setPer100g',
+'measurement_unit' => 'setMeasurementUnit',
+'min' => 'setMin',
+'max' => 'setMax',
+'median' => 'setMedian',
+'rank' => 'setRank',
+'data_points' => 'setDataPoints',
+'footnote' => 'setFootnote',
+'description' => 'setDescription'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -110,7 +146,16 @@ class IngredientObjectNutrients implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'usda' => 'getUsda'    ];
+        'name' => 'getName',
+'per_100g' => 'getPer100g',
+'measurement_unit' => 'getMeasurementUnit',
+'min' => 'getMin',
+'max' => 'getMax',
+'median' => 'getMedian',
+'rank' => 'getRank',
+'data_points' => 'getDataPoints',
+'footnote' => 'getFootnote',
+'description' => 'getDescription'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -170,7 +215,16 @@ class IngredientObjectNutrients implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['usda'] = isset($data['usda']) ? $data['usda'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['per_100g'] = isset($data['per_100g']) ? $data['per_100g'] : null;
+        $this->container['measurement_unit'] = isset($data['measurement_unit']) ? $data['measurement_unit'] : null;
+        $this->container['min'] = isset($data['min']) ? $data['min'] : null;
+        $this->container['max'] = isset($data['max']) ? $data['max'] : null;
+        $this->container['median'] = isset($data['median']) ? $data['median'] : null;
+        $this->container['rank'] = isset($data['rank']) ? $data['rank'] : null;
+        $this->container['data_points'] = isset($data['data_points']) ? $data['data_points'] : null;
+        $this->container['footnote'] = isset($data['footnote']) ? $data['footnote'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
     }
 
     /**
@@ -198,25 +252,241 @@ class IngredientObjectNutrients implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets usda
+     * Gets name
      *
-     * @return \Swagger\Client\Model\BrandedFoodObjectNutrientsUsda[]
+     * @return string
      */
-    public function getUsda()
+    public function getName()
     {
-        return $this->container['usda'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets usda
+     * Sets name
      *
-     * @param \Swagger\Client\Model\BrandedFoodObjectNutrientsUsda[] $usda An array containing an object for each nutrient data point as found in the USDA database
+     * @param string $name Nutrient name
      *
      * @return $this
      */
-    public function setUsda($usda)
+    public function setName($name)
     {
-        $this->container['usda'] = $usda;
+        $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets per_100g
+     *
+     * @return float
+     */
+    public function getPer100g()
+    {
+        return $this->container['per_100g'];
+    }
+
+    /**
+     * Sets per_100g
+     *
+     * @param float $per_100g Amount of the nutrient per 100g of food
+     *
+     * @return $this
+     */
+    public function setPer100g($per_100g)
+    {
+        $this->container['per_100g'] = $per_100g;
+
+        return $this;
+    }
+
+    /**
+     * Gets measurement_unit
+     *
+     * @return string
+     */
+    public function getMeasurementUnit()
+    {
+        return $this->container['measurement_unit'];
+    }
+
+    /**
+     * Sets measurement_unit
+     *
+     * @param string $measurement_unit The unit used for the measure of this nutrient
+     *
+     * @return $this
+     */
+    public function setMeasurementUnit($measurement_unit)
+    {
+        $this->container['measurement_unit'] = $measurement_unit;
+
+        return $this;
+    }
+
+    /**
+     * Gets min
+     *
+     * @return float
+     */
+    public function getMin()
+    {
+        return $this->container['min'];
+    }
+
+    /**
+     * Sets min
+     *
+     * @param float $min Minimum nutrient value
+     *
+     * @return $this
+     */
+    public function setMin($min)
+    {
+        $this->container['min'] = $min;
+
+        return $this;
+    }
+
+    /**
+     * Gets max
+     *
+     * @return float
+     */
+    public function getMax()
+    {
+        return $this->container['max'];
+    }
+
+    /**
+     * Sets max
+     *
+     * @param float $max Maximum nutrient value
+     *
+     * @return $this
+     */
+    public function setMax($max)
+    {
+        $this->container['max'] = $max;
+
+        return $this;
+    }
+
+    /**
+     * Gets median
+     *
+     * @return float
+     */
+    public function getMedian()
+    {
+        return $this->container['median'];
+    }
+
+    /**
+     * Sets median
+     *
+     * @param float $median Median nutrient value
+     *
+     * @return $this
+     */
+    public function setMedian($median)
+    {
+        $this->container['median'] = $median;
+
+        return $this;
+    }
+
+    /**
+     * Gets rank
+     *
+     * @return int
+     */
+    public function getRank()
+    {
+        return $this->container['rank'];
+    }
+
+    /**
+     * Sets rank
+     *
+     * @param int $rank Nutrient rank
+     *
+     * @return $this
+     */
+    public function setRank($rank)
+    {
+        $this->container['rank'] = $rank;
+
+        return $this;
+    }
+
+    /**
+     * Gets data_points
+     *
+     * @return int
+     */
+    public function getDataPoints()
+    {
+        return $this->container['data_points'];
+    }
+
+    /**
+     * Sets data_points
+     *
+     * @param int $data_points Number of observations on which the value is based
+     *
+     * @return $this
+     */
+    public function setDataPoints($data_points)
+    {
+        $this->container['data_points'] = $data_points;
+
+        return $this;
+    }
+
+    /**
+     * Gets footnote
+     *
+     * @return string
+     */
+    public function getFootnote()
+    {
+        return $this->container['footnote'];
+    }
+
+    /**
+     * Sets footnote
+     *
+     * @param string $footnote Comments on any unusual aspect of the food nutrient. Examples might include why a nutrient value is different than typically expected.
+     *
+     * @return $this
+     */
+    public function setFootnote($footnote)
+    {
+        $this->container['footnote'] = $footnote;
+
+        return $this;
+    }
+
+    /**
+     * Gets description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+     * Sets description
+     *
+     * @param string $description Description of the nutrient source
+     *
+     * @return $this
+     */
+    public function setDescription($description)
+    {
+        $this->container['description'] = $description;
 
         return $this;
     }

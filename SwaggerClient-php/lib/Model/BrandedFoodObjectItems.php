@@ -13,7 +13,7 @@
 /**
  * Chomp Food Database API Documentation
  *
- * __Important:__   - An __[API key](https://chompthis.com/api/)__ is required for access to this API.   - Get yours at __[https://chompthis.com/api](https://chompthis.com/api/)__.  -----  __Getting Started:__   - __[Subscribe](https://chompthis.com/api/#pricing)__ to the API.   - Scroll down and click the \"__Authorize__\" button.   - Enter your API key into the \"__value__\" input, click the \"__Authorize__\" button, then click the \"__Close__\" button.   - Scroll down to the section titled \"__default__\" and click on the API endpoint you wish to use.   - Click the \"__Try it out__\" button.   - Enter the information the endpoint requires.   - Click the \"__Execute__\" button.  __Example:__    - __[View example](https://raw.githubusercontent.com/chompfoods/examples/master/response-object.json)__ API response object.  -----  __How Do I Find My API Key?__   - Your API key was sent to the email address you used to create your subscription.   - You will also find your API key in the __[Client Center](https://chompthis.com/api/manage.php)__.   - _Read __[this article](https://desk.zoho.com/portal/chompthis/kb/articles/how-do-i-find-my-api-key)__ for more information._  ||| | ------- | -------- | | [Knowledge Base](https://desk.zoho.com/portal/chompthis/kb/chomp) | [Pricing](https://chompthis.com/api/) | | [Attribution](https://chompthis.com/api/docs/attribution.php) | [Cost Calculator](https://chompthis.com/api/cost-calculator.php) | | [Terms & License](https://chompthis.com/api/terms.php) | [Database Search](https://chompthis.com/api/lookup.php) | | [Support](https://chompthis.com/api/ticket-new.php) | [Query Builder](https://chompthis.com/api/build.php) | | [Client Center](https://chompthis.com/api/manage.php) | |
+ * ## Important An **[API key](https://chompthis.com/api/)** is required for access to this API. Get yours at **[https://chompthis.com/api](https://chompthis.com/api/)**.  ### Getting Started   * **[Subscribe](https://chompthis.com/api/#pricing)** to the API.   * Scroll down and click the \"**Authorize**\" button.   * Enter your API key into the \"**value**\" input, click the \"**Authorize**\" button, then click the \"**Close**\" button.   * Scroll down to the section titled \"**default**\" and click on the API endpoint you wish to use.   * Click the \"**Try it out**\" button.   * Enter the information the endpoint requires.   * Click the \"**Execute**\" button.  ### Example    * Branded food response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/branded-food-response-object.json)**   * Ingredient response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/ingredient-response-object.json)**   * Error response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/error-response-object.json)**  ### How Do I Find My API Key?   * Your API key was sent to the email address you used to create your subscription.   * You will also find your API key in the **[Client Center](https://chompthis.com/api/manage.php)**.   * Read **[this article](https://desk.zoho.com/portal/chompthis/kb/articles/how-do-i-find-my-api-key)** for more information.  ### Helpful Links   * **Help & Support**     * [Knowledge Base &raquo;](https://desk.zoho.com/portal/chompthis/kb/chomp)     * [Support &raquo;](https://chompthis.com/api/ticket-new.php)     * [Client Center &raquo;](https://chompthis.com/api/manage.php)   * **Pricing**     * [Subscription Options &raquo;](https://chompthis.com/api/)     * [Cost Calculator &raquo;](https://chompthis.com/api/cost-calculator.php)   * **Guidelines**     * [Terms & License &raquo;](https://chompthis.com/api/terms.php)     * [Attribution &raquo;](https://chompthis.com/api/docs/attribution.php)
  *
  * OpenAPI spec version: 1.0.0-oas3
  * 
@@ -64,14 +64,10 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
 'package' => '\Swagger\Client\Model\BrandedFoodObjectPackage',
 'serving' => '\Swagger\Client\Model\BrandedFoodObjectServing',
 'categories' => 'string[]',
-'nutrients' => '\Swagger\Client\Model\BrandedFoodObjectNutrients',
-'calorie_conversion_factor' => '\Swagger\Client\Model\BrandedFoodObjectCalorieConversionFactor',
-'protein_conversion_factor' => 'float',
+'nutrients' => '\Swagger\Client\Model\BrandedFoodObjectNutrients[]',
 'diet_labels' => '\Swagger\Client\Model\BrandedFoodObjectDietLabels',
 'diet_flags' => '\Swagger\Client\Model\BrandedFoodObjectDietFlags[]',
 'packaging_photos' => '\Swagger\Client\Model\BrandedFoodObjectPackagingPhotos',
-'components' => '\Swagger\Client\Model\BrandedFoodObjectComponents[]',
-'portions' => '\Swagger\Client\Model\BrandedFoodObjectPortions[]',
 'allergens' => 'string[]',
 'brand_list' => 'string[]',
 'countries' => 'string[]',
@@ -81,10 +77,9 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
 'has_english_ingredients' => 'bool',
 'minerals' => 'string[]',
 'traces' => 'string[]',
-'common_name' => 'string',
+'vitamins' => 'string[]',
 'description' => 'string',
-'keywords' => 'string[]',
-'footnote' => 'string'    ];
+'keywords' => 'string[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -100,13 +95,9 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
 'serving' => null,
 'categories' => null,
 'nutrients' => null,
-'calorie_conversion_factor' => null,
-'protein_conversion_factor' => null,
 'diet_labels' => null,
 'diet_flags' => null,
 'packaging_photos' => null,
-'components' => null,
-'portions' => null,
 'allergens' => null,
 'brand_list' => null,
 'countries' => null,
@@ -116,10 +107,9 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
 'has_english_ingredients' => null,
 'minerals' => null,
 'traces' => null,
-'common_name' => null,
+'vitamins' => null,
 'description' => null,
-'keywords' => null,
-'footnote' => null    ];
+'keywords' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -156,13 +146,9 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
 'serving' => 'serving',
 'categories' => 'categories',
 'nutrients' => 'nutrients',
-'calorie_conversion_factor' => 'calorie_conversion_factor',
-'protein_conversion_factor' => 'protein_conversion_factor',
 'diet_labels' => 'diet_labels',
 'diet_flags' => 'diet_flags',
 'packaging_photos' => 'packaging_photos',
-'components' => 'components',
-'portions' => 'portions',
 'allergens' => 'allergens',
 'brand_list' => 'brand_list',
 'countries' => 'countries',
@@ -172,10 +158,9 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
 'has_english_ingredients' => 'has_english_ingredients',
 'minerals' => 'minerals',
 'traces' => 'traces',
-'common_name' => 'common_name',
+'vitamins' => 'vitamins',
 'description' => 'description',
-'keywords' => 'keywords',
-'footnote' => 'footnote'    ];
+'keywords' => 'keywords'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -191,13 +176,9 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
 'serving' => 'setServing',
 'categories' => 'setCategories',
 'nutrients' => 'setNutrients',
-'calorie_conversion_factor' => 'setCalorieConversionFactor',
-'protein_conversion_factor' => 'setProteinConversionFactor',
 'diet_labels' => 'setDietLabels',
 'diet_flags' => 'setDietFlags',
 'packaging_photos' => 'setPackagingPhotos',
-'components' => 'setComponents',
-'portions' => 'setPortions',
 'allergens' => 'setAllergens',
 'brand_list' => 'setBrandList',
 'countries' => 'setCountries',
@@ -207,10 +188,9 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
 'has_english_ingredients' => 'setHasEnglishIngredients',
 'minerals' => 'setMinerals',
 'traces' => 'setTraces',
-'common_name' => 'setCommonName',
+'vitamins' => 'setVitamins',
 'description' => 'setDescription',
-'keywords' => 'setKeywords',
-'footnote' => 'setFootnote'    ];
+'keywords' => 'setKeywords'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -226,13 +206,9 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
 'serving' => 'getServing',
 'categories' => 'getCategories',
 'nutrients' => 'getNutrients',
-'calorie_conversion_factor' => 'getCalorieConversionFactor',
-'protein_conversion_factor' => 'getProteinConversionFactor',
 'diet_labels' => 'getDietLabels',
 'diet_flags' => 'getDietFlags',
 'packaging_photos' => 'getPackagingPhotos',
-'components' => 'getComponents',
-'portions' => 'getPortions',
 'allergens' => 'getAllergens',
 'brand_list' => 'getBrandList',
 'countries' => 'getCountries',
@@ -242,10 +218,9 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
 'has_english_ingredients' => 'getHasEnglishIngredients',
 'minerals' => 'getMinerals',
 'traces' => 'getTraces',
-'common_name' => 'getCommonName',
+'vitamins' => 'getVitamins',
 'description' => 'getDescription',
-'keywords' => 'getKeywords',
-'footnote' => 'getFootnote'    ];
+'keywords' => 'getKeywords'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -313,13 +288,9 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
         $this->container['serving'] = isset($data['serving']) ? $data['serving'] : null;
         $this->container['categories'] = isset($data['categories']) ? $data['categories'] : null;
         $this->container['nutrients'] = isset($data['nutrients']) ? $data['nutrients'] : null;
-        $this->container['calorie_conversion_factor'] = isset($data['calorie_conversion_factor']) ? $data['calorie_conversion_factor'] : null;
-        $this->container['protein_conversion_factor'] = isset($data['protein_conversion_factor']) ? $data['protein_conversion_factor'] : null;
         $this->container['diet_labels'] = isset($data['diet_labels']) ? $data['diet_labels'] : null;
         $this->container['diet_flags'] = isset($data['diet_flags']) ? $data['diet_flags'] : null;
         $this->container['packaging_photos'] = isset($data['packaging_photos']) ? $data['packaging_photos'] : null;
-        $this->container['components'] = isset($data['components']) ? $data['components'] : null;
-        $this->container['portions'] = isset($data['portions']) ? $data['portions'] : null;
         $this->container['allergens'] = isset($data['allergens']) ? $data['allergens'] : null;
         $this->container['brand_list'] = isset($data['brand_list']) ? $data['brand_list'] : null;
         $this->container['countries'] = isset($data['countries']) ? $data['countries'] : null;
@@ -329,10 +300,9 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
         $this->container['has_english_ingredients'] = isset($data['has_english_ingredients']) ? $data['has_english_ingredients'] : null;
         $this->container['minerals'] = isset($data['minerals']) ? $data['minerals'] : null;
         $this->container['traces'] = isset($data['traces']) ? $data['traces'] : null;
-        $this->container['common_name'] = isset($data['common_name']) ? $data['common_name'] : null;
+        $this->container['vitamins'] = isset($data['vitamins']) ? $data['vitamins'] : null;
         $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['keywords'] = isset($data['keywords']) ? $data['keywords'] : null;
-        $this->container['footnote'] = isset($data['footnote']) ? $data['footnote'] : null;
     }
 
     /**
@@ -444,7 +414,7 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
     /**
      * Sets ingredients
      *
-     * @param string $ingredients Ingredients in order of highest value to least
+     * @param string $ingredients This food item's ingredients from greatest quantity to least
      *
      * @return $this
      */
@@ -530,7 +500,7 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
     /**
      * Gets nutrients
      *
-     * @return \Swagger\Client\Model\BrandedFoodObjectNutrients
+     * @return \Swagger\Client\Model\BrandedFoodObjectNutrients[]
      */
     public function getNutrients()
     {
@@ -540,61 +510,13 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
     /**
      * Sets nutrients
      *
-     * @param \Swagger\Client\Model\BrandedFoodObjectNutrients $nutrients nutrients
+     * @param \Swagger\Client\Model\BrandedFoodObjectNutrients[] $nutrients An array containing nutrient informatio objects for this food item
      *
      * @return $this
      */
     public function setNutrients($nutrients)
     {
         $this->container['nutrients'] = $nutrients;
-
-        return $this;
-    }
-
-    /**
-     * Gets calorie_conversion_factor
-     *
-     * @return \Swagger\Client\Model\BrandedFoodObjectCalorieConversionFactor
-     */
-    public function getCalorieConversionFactor()
-    {
-        return $this->container['calorie_conversion_factor'];
-    }
-
-    /**
-     * Sets calorie_conversion_factor
-     *
-     * @param \Swagger\Client\Model\BrandedFoodObjectCalorieConversionFactor $calorie_conversion_factor calorie_conversion_factor
-     *
-     * @return $this
-     */
-    public function setCalorieConversionFactor($calorie_conversion_factor)
-    {
-        $this->container['calorie_conversion_factor'] = $calorie_conversion_factor;
-
-        return $this;
-    }
-
-    /**
-     * Gets protein_conversion_factor
-     *
-     * @return float
-     */
-    public function getProteinConversionFactor()
-    {
-        return $this->container['protein_conversion_factor'];
-    }
-
-    /**
-     * Sets protein_conversion_factor
-     *
-     * @param float $protein_conversion_factor The multiplication factor used to calculate protein from nitrogen
-     *
-     * @return $this
-     */
-    public function setProteinConversionFactor($protein_conversion_factor)
-    {
-        $this->container['protein_conversion_factor'] = $protein_conversion_factor;
 
         return $this;
     }
@@ -667,54 +589,6 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
     public function setPackagingPhotos($packaging_photos)
     {
         $this->container['packaging_photos'] = $packaging_photos;
-
-        return $this;
-    }
-
-    /**
-     * Gets components
-     *
-     * @return \Swagger\Client\Model\BrandedFoodObjectComponents[]
-     */
-    public function getComponents()
-    {
-        return $this->container['components'];
-    }
-
-    /**
-     * Sets components
-     *
-     * @param \Swagger\Client\Model\BrandedFoodObjectComponents[] $components An array of objects containing the constituent parts of a food (e.g. bone is a component of meat)
-     *
-     * @return $this
-     */
-    public function setComponents($components)
-    {
-        $this->container['components'] = $components;
-
-        return $this;
-    }
-
-    /**
-     * Gets portions
-     *
-     * @return \Swagger\Client\Model\BrandedFoodObjectPortions[]
-     */
-    public function getPortions()
-    {
-        return $this->container['portions'];
-    }
-
-    /**
-     * Sets portions
-     *
-     * @param \Swagger\Client\Model\BrandedFoodObjectPortions[] $portions An array of objects containing information on discrete amounts of a food found in this item
-     *
-     * @return $this
-     */
-    public function setPortions($portions)
-    {
-        $this->container['portions'] = $portions;
 
         return $this;
     }
@@ -936,25 +810,25 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets common_name
+     * Gets vitamins
      *
-     * @return string
+     * @return string[]
      */
-    public function getCommonName()
+    public function getVitamins()
     {
-        return $this->container['common_name'];
+        return $this->container['vitamins'];
     }
 
     /**
-     * Sets common_name
+     * Sets vitamins
      *
-     * @param string $common_name Common names associated with this item. These generally clarify what the item is (e.g. when the brand name is \"BRAND's Spicy Enchilada\" the common name may be \"Chicken enchilada\")
+     * @param string[] $vitamins An array of vitamins that are found in this item
      *
      * @return $this
      */
-    public function setCommonName($common_name)
+    public function setVitamins($vitamins)
     {
-        $this->container['common_name'] = $common_name;
+        $this->container['vitamins'] = $vitamins;
 
         return $this;
     }
@@ -1003,30 +877,6 @@ class BrandedFoodObjectItems implements ModelInterface, ArrayAccess
     public function setKeywords($keywords)
     {
         $this->container['keywords'] = $keywords;
-
-        return $this;
-    }
-
-    /**
-     * Gets footnote
-     *
-     * @return string
-     */
-    public function getFootnote()
-    {
-        return $this->container['footnote'];
-    }
-
-    /**
-     * Sets footnote
-     *
-     * @param string $footnote Comments on any unusual aspects of this item. Examples might include unusual aspects of the food overall.
-     *
-     * @return $this
-     */
-    public function setFootnote($footnote)
-    {
-        $this->container['footnote'] = $footnote;
 
         return $this;
     }

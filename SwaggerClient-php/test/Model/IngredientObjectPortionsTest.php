@@ -1,6 +1,6 @@
 <?php
 /**
- * BrandedFoodObjectDietLabelsTest
+ * IngredientObjectPortionsTest
  *
  * PHP version 5
  *
@@ -29,15 +29,15 @@
 namespace Swagger\Client;
 
 /**
- * BrandedFoodObjectDietLabelsTest Class Doc Comment
+ * IngredientObjectPortionsTest Class Doc Comment
  *
  * @category    Class
- * @description An object containing this item&#x27;s compatibility grades for each supported diet
+ * @description An object containing information on a specific food portion found in this item
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class BrandedFoodObjectDietLabelsTest extends \PHPUnit_Framework_TestCase
+class IngredientObjectPortionsTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -69,30 +69,51 @@ class BrandedFoodObjectDietLabelsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "BrandedFoodObjectDietLabels"
+     * Test "IngredientObjectPortions"
      */
-    public function testBrandedFoodObjectDietLabels()
+    public function testIngredientObjectPortions()
     {
     }
 
     /**
-     * Test attribute "vegan"
+     * Test attribute "measurement_unit"
      */
-    public function testPropertyVegan()
+    public function testPropertyMeasurementUnit()
     {
     }
 
     /**
-     * Test attribute "vegetarian"
+     * Test attribute "description"
      */
-    public function testPropertyVegetarian()
+    public function testPropertyDescription()
     {
     }
 
     /**
-     * Test attribute "gluten_free"
+     * Test attribute "modifier"
      */
-    public function testPropertyGlutenFree()
+    public function testPropertyModifier()
+    {
+    }
+
+    /**
+     * Test attribute "gram_weight"
+     */
+    public function testPropertyGramWeight()
+    {
+    }
+
+    /**
+     * Test attribute "data_points"
+     */
+    public function testPropertyDataPoints()
+    {
+    }
+
+    /**
+     * Test attribute "footnote"
+     */
+    public function testPropertyFootnote()
     {
     }
 }

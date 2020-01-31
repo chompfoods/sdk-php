@@ -1,6 +1,6 @@
 <?php
 /**
- * BrandedFoodObjectNutrientsUsda
+ * IngredientObjectPortions
  *
  * PHP version 5
  *
@@ -13,7 +13,7 @@
 /**
  * Chomp Food Database API Documentation
  *
- * __Important:__   - An __[API key](https://chompthis.com/api/)__ is required for access to this API.   - Get yours at __[https://chompthis.com/api](https://chompthis.com/api/)__.  -----  __Getting Started:__   - __[Subscribe](https://chompthis.com/api/#pricing)__ to the API.   - Scroll down and click the \"__Authorize__\" button.   - Enter your API key into the \"__value__\" input, click the \"__Authorize__\" button, then click the \"__Close__\" button.   - Scroll down to the section titled \"__default__\" and click on the API endpoint you wish to use.   - Click the \"__Try it out__\" button.   - Enter the information the endpoint requires.   - Click the \"__Execute__\" button.  __Example:__    - __[View example](https://raw.githubusercontent.com/chompfoods/examples/master/response-object.json)__ API response object.  -----  __How Do I Find My API Key?__   - Your API key was sent to the email address you used to create your subscription.   - You will also find your API key in the __[Client Center](https://chompthis.com/api/manage.php)__.   - _Read __[this article](https://desk.zoho.com/portal/chompthis/kb/articles/how-do-i-find-my-api-key)__ for more information._  ||| | ------- | -------- | | [Knowledge Base](https://desk.zoho.com/portal/chompthis/kb/chomp) | [Pricing](https://chompthis.com/api/) | | [Attribution](https://chompthis.com/api/docs/attribution.php) | [Cost Calculator](https://chompthis.com/api/cost-calculator.php) | | [Terms & License](https://chompthis.com/api/terms.php) | [Database Search](https://chompthis.com/api/lookup.php) | | [Support](https://chompthis.com/api/ticket-new.php) | [Query Builder](https://chompthis.com/api/build.php) | | [Client Center](https://chompthis.com/api/manage.php) | |
+ * ## Important An **[API key](https://chompthis.com/api/)** is required for access to this API. Get yours at **[https://chompthis.com/api](https://chompthis.com/api/)**.  ### Getting Started   * **[Subscribe](https://chompthis.com/api/#pricing)** to the API.   * Scroll down and click the \"**Authorize**\" button.   * Enter your API key into the \"**value**\" input, click the \"**Authorize**\" button, then click the \"**Close**\" button.   * Scroll down to the section titled \"**default**\" and click on the API endpoint you wish to use.   * Click the \"**Try it out**\" button.   * Enter the information the endpoint requires.   * Click the \"**Execute**\" button.  ### Example    * Branded food response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/branded-food-response-object.json)**   * Ingredient response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/ingredient-response-object.json)**   * Error response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/error-response-object.json)**  ### How Do I Find My API Key?   * Your API key was sent to the email address you used to create your subscription.   * You will also find your API key in the **[Client Center](https://chompthis.com/api/manage.php)**.   * Read **[this article](https://desk.zoho.com/portal/chompthis/kb/articles/how-do-i-find-my-api-key)** for more information.  ### Helpful Links   * **Help & Support**     * [Knowledge Base &raquo;](https://desk.zoho.com/portal/chompthis/kb/chomp)     * [Support &raquo;](https://chompthis.com/api/ticket-new.php)     * [Client Center &raquo;](https://chompthis.com/api/manage.php)   * **Pricing**     * [Subscription Options &raquo;](https://chompthis.com/api/)     * [Cost Calculator &raquo;](https://chompthis.com/api/cost-calculator.php)   * **Guidelines**     * [Terms & License &raquo;](https://chompthis.com/api/terms.php)     * [Attribution &raquo;](https://chompthis.com/api/docs/attribution.php)
  *
  * OpenAPI spec version: 1.0.0-oas3
  * 
@@ -32,14 +32,15 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * BrandedFoodObjectNutrientsUsda Class Doc Comment
+ * IngredientObjectPortions Class Doc Comment
  *
  * @category Class
+ * @description An object containing information on a specific food portion found in this item
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class BrandedFoodObjectNutrientsUsda implements ModelInterface, ArrayAccess
+class IngredientObjectPortions implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +49,7 @@ class BrandedFoodObjectNutrientsUsda implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'BrandedFoodObject_nutrients_usda';
+    protected static $swaggerModelName = 'IngredientObject_portions';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,17 +57,12 @@ class BrandedFoodObjectNutrientsUsda implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'id' => 'int',
-'name' => 'string',
-'per_100g' => 'float',
-'measurement_unit' => 'string',
-'min' => 'float',
-'max' => 'float',
-'median' => 'float',
+        'measurement_unit' => 'string',
+'description' => 'string',
+'modifier' => 'string',
+'gram_weight' => 'float',
 'data_points' => 'int',
-'footnote' => 'string',
-'source' => 'string',
-'description' => 'string'    ];
+'footnote' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -74,17 +70,12 @@ class BrandedFoodObjectNutrientsUsda implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'id' => null,
-'name' => null,
-'per_100g' => null,
-'measurement_unit' => null,
-'min' => null,
-'max' => null,
-'median' => null,
+        'measurement_unit' => null,
+'description' => null,
+'modifier' => null,
+'gram_weight' => null,
 'data_points' => null,
-'footnote' => null,
-'source' => null,
-'description' => null    ];
+'footnote' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -113,17 +104,12 @@ class BrandedFoodObjectNutrientsUsda implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-'name' => 'name',
-'per_100g' => 'per_100g',
-'measurement_unit' => 'measurement_unit',
-'min' => 'min',
-'max' => 'max',
-'median' => 'median',
+        'measurement_unit' => 'measurement_unit',
+'description' => 'description',
+'modifier' => 'modifier',
+'gram_weight' => 'gram_weight',
 'data_points' => 'data_points',
-'footnote' => 'footnote',
-'source' => 'source',
-'description' => 'description'    ];
+'footnote' => 'footnote'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -131,17 +117,12 @@ class BrandedFoodObjectNutrientsUsda implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-'name' => 'setName',
-'per_100g' => 'setPer100g',
-'measurement_unit' => 'setMeasurementUnit',
-'min' => 'setMin',
-'max' => 'setMax',
-'median' => 'setMedian',
+        'measurement_unit' => 'setMeasurementUnit',
+'description' => 'setDescription',
+'modifier' => 'setModifier',
+'gram_weight' => 'setGramWeight',
 'data_points' => 'setDataPoints',
-'footnote' => 'setFootnote',
-'source' => 'setSource',
-'description' => 'setDescription'    ];
+'footnote' => 'setFootnote'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -149,17 +130,12 @@ class BrandedFoodObjectNutrientsUsda implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-'name' => 'getName',
-'per_100g' => 'getPer100g',
-'measurement_unit' => 'getMeasurementUnit',
-'min' => 'getMin',
-'max' => 'getMax',
-'median' => 'getMedian',
+        'measurement_unit' => 'getMeasurementUnit',
+'description' => 'getDescription',
+'modifier' => 'getModifier',
+'gram_weight' => 'getGramWeight',
 'data_points' => 'getDataPoints',
-'footnote' => 'getFootnote',
-'source' => 'getSource',
-'description' => 'getDescription'    ];
+'footnote' => 'getFootnote'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -219,17 +195,12 @@ class BrandedFoodObjectNutrientsUsda implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['per_100g'] = isset($data['per_100g']) ? $data['per_100g'] : null;
         $this->container['measurement_unit'] = isset($data['measurement_unit']) ? $data['measurement_unit'] : null;
-        $this->container['min'] = isset($data['min']) ? $data['min'] : null;
-        $this->container['max'] = isset($data['max']) ? $data['max'] : null;
-        $this->container['median'] = isset($data['median']) ? $data['median'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['modifier'] = isset($data['modifier']) ? $data['modifier'] : null;
+        $this->container['gram_weight'] = isset($data['gram_weight']) ? $data['gram_weight'] : null;
         $this->container['data_points'] = isset($data['data_points']) ? $data['data_points'] : null;
         $this->container['footnote'] = isset($data['footnote']) ? $data['footnote'] : null;
-        $this->container['source'] = isset($data['source']) ? $data['source'] : null;
-        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
     }
 
     /**
@@ -257,78 +228,6 @@ class BrandedFoodObjectNutrientsUsda implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets id
-     *
-     * @return int
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     *
-     * @param int $id Nutrient ID
-     *
-     * @return $this
-     */
-    public function setId($id)
-    {
-        $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * Gets name
-     *
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-     * Sets name
-     *
-     * @param string $name Nutrient name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * Gets per_100g
-     *
-     * @return float
-     */
-    public function getPer100g()
-    {
-        return $this->container['per_100g'];
-    }
-
-    /**
-     * Sets per_100g
-     *
-     * @param float $per_100g Amount of the nutrient per 100g of food
-     *
-     * @return $this
-     */
-    public function setPer100g($per_100g)
-    {
-        $this->container['per_100g'] = $per_100g;
-
-        return $this;
-    }
-
-    /**
      * Gets measurement_unit
      *
      * @return string
@@ -341,7 +240,7 @@ class BrandedFoodObjectNutrientsUsda implements ModelInterface, ArrayAccess
     /**
      * Sets measurement_unit
      *
-     * @param string $measurement_unit The unit used for the measure of this nutrient
+     * @param string $measurement_unit The unit used for measure (e.g. if mesure is 3 tsp, the unit is tsp)
      *
      * @return $this
      */
@@ -353,73 +252,73 @@ class BrandedFoodObjectNutrientsUsda implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets min
+     * Gets description
      *
-     * @return float
+     * @return string
      */
-    public function getMin()
+    public function getDescription()
     {
-        return $this->container['min'];
+        return $this->container['description'];
     }
 
     /**
-     * Sets min
+     * Sets description
      *
-     * @param float $min Minimum nutrient value
+     * @param string $description Comments that provide more specificity on the measure. For example, for a pizza measure the dissemination text might be 1 slice is 1/8th of a 14 inch pizza.
      *
      * @return $this
      */
-    public function setMin($min)
+    public function setDescription($description)
     {
-        $this->container['min'] = $min;
+        $this->container['description'] = $description;
 
         return $this;
     }
 
     /**
-     * Gets max
+     * Gets modifier
      *
-     * @return float
+     * @return string
      */
-    public function getMax()
+    public function getModifier()
     {
-        return $this->container['max'];
+        return $this->container['modifier'];
     }
 
     /**
-     * Sets max
+     * Sets modifier
      *
-     * @param float $max Maximum nutrient value
+     * @param string $modifier Qualifier of the measure (e.g. related to food shape or form) (e.g. melted, crushed, diced)
      *
      * @return $this
      */
-    public function setMax($max)
+    public function setModifier($modifier)
     {
-        $this->container['max'] = $max;
+        $this->container['modifier'] = $modifier;
 
         return $this;
     }
 
     /**
-     * Gets median
+     * Gets gram_weight
      *
      * @return float
      */
-    public function getMedian()
+    public function getGramWeight()
     {
-        return $this->container['median'];
+        return $this->container['gram_weight'];
     }
 
     /**
-     * Sets median
+     * Sets gram_weight
      *
-     * @param float $median Median nutrient value
+     * @param float $gram_weight The weight of the measure in grams
      *
      * @return $this
      */
-    public function setMedian($median)
+    public function setGramWeight($gram_weight)
     {
-        $this->container['median'] = $median;
+        $this->container['gram_weight'] = $gram_weight;
 
         return $this;
     }
@@ -437,7 +336,7 @@ class BrandedFoodObjectNutrientsUsda implements ModelInterface, ArrayAccess
     /**
      * Sets data_points
      *
-     * @param int $data_points Number of observations on which the value is based
+     * @param int $data_points The number of observations on which the measure is based
      *
      * @return $this
      */
@@ -461,61 +360,13 @@ class BrandedFoodObjectNutrientsUsda implements ModelInterface, ArrayAccess
     /**
      * Sets footnote
      *
-     * @param string $footnote Comments on any unusual aspect of the food nutrient. Examples might include why a nutrient value is different than typically expected.
+     * @param string $footnote Comments on any unusual aspects of the measure. Examples might includes caveats on the usage of a measure, or reasons why a measure gram weight is an unexpected value.
      *
      * @return $this
      */
     public function setFootnote($footnote)
     {
         $this->container['footnote'] = $footnote;
-
-        return $this;
-    }
-
-    /**
-     * Gets source
-     *
-     * @return string
-     */
-    public function getSource()
-    {
-        return $this->container['source'];
-    }
-
-    /**
-     * Sets source
-     *
-     * @param string $source Description of the nutrient source
-     *
-     * @return $this
-     */
-    public function setSource($source)
-    {
-        $this->container['source'] = $source;
-
-        return $this;
-    }
-
-    /**
-     * Gets description
-     *
-     * @return string
-     */
-    public function getDescription()
-    {
-        return $this->container['description'];
-    }
-
-    /**
-     * Sets description
-     *
-     * @param string $description Description of how the food nutrient value was obtained
-     *
-     * @return $this
-     */
-    public function setDescription($description)
-    {
-        $this->container['description'] = $description;
 
         return $this;
     }

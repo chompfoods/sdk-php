@@ -1,6 +1,6 @@
 <?php
 /**
- * BrandedFoodObjectDietLabelsTest
+ * IngredientObjectComponentsTest
  *
  * PHP version 5
  *
@@ -29,15 +29,15 @@
 namespace Swagger\Client;
 
 /**
- * BrandedFoodObjectDietLabelsTest Class Doc Comment
+ * IngredientObjectComponentsTest Class Doc Comment
  *
  * @category    Class
- * @description An object containing this item&#x27;s compatibility grades for each supported diet
+ * @description An object containing information on a specific component of this food item
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class BrandedFoodObjectDietLabelsTest extends \PHPUnit_Framework_TestCase
+class IngredientObjectComponentsTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -69,30 +69,44 @@ class BrandedFoodObjectDietLabelsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "BrandedFoodObjectDietLabels"
+     * Test "IngredientObjectComponents"
      */
-    public function testBrandedFoodObjectDietLabels()
+    public function testIngredientObjectComponents()
     {
     }
 
     /**
-     * Test attribute "vegan"
+     * Test attribute "name"
      */
-    public function testPropertyVegan()
+    public function testPropertyName()
     {
     }
 
     /**
-     * Test attribute "vegetarian"
+     * Test attribute "pct_weight"
      */
-    public function testPropertyVegetarian()
+    public function testPropertyPctWeight()
     {
     }
 
     /**
-     * Test attribute "gluten_free"
+     * Test attribute "gram_weight"
      */
-    public function testPropertyGlutenFree()
+    public function testPropertyGramWeight()
+    {
+    }
+
+    /**
+     * Test attribute "is_refuse"
+     */
+    public function testPropertyIsRefuse()
+    {
+    }
+
+    /**
+     * Test attribute "data_points"
+     */
+    public function testPropertyDataPoints()
     {
     }
 }
