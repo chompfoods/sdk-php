@@ -1,5 +1,5 @@
 # SwaggerClient-php
-## Important An **[API key](https://chompthis.com/api/)** is required for access to this API. Get yours at **[https://chompthis.com/api](https://chompthis.com/api/)**.  ### Getting Started   * **[Subscribe](https://chompthis.com/api/#pricing)** to the API.   * Scroll down and click the \"**Authorize**\" button.   * Enter your API key into the \"**value**\" input, click the \"**Authorize**\" button, then click the \"**Close**\" button.   * Scroll down to the section titled \"**default**\" and click on the API endpoint you wish to use.   * Click the \"**Try it out**\" button.   * Enter the information the endpoint requires.   * Click the \"**Execute**\" button.  ### Example    * Branded food response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/branded-food-response-object.json)**   * Ingredient response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/ingredient-response-object.json)**   * Error response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/error-response-object.json)**  ### How Do I Find My API Key?   * Your API key was sent to the email address you used to create your subscription.   * You will also find your API key in the **[Client Center](https://chompthis.com/api/manage.php)**.   * Read **[this article](https://desk.zoho.com/portal/chompthis/kb/articles/how-do-i-find-my-api-key)** for more information.  ### Helpful Links   * **Help & Support**     * [Knowledge Base &raquo;](https://desk.zoho.com/portal/chompthis/kb/chomp)     * [Support &raquo;](https://chompthis.com/api/ticket-new.php)     * [Client Center &raquo;](https://chompthis.com/api/manage.php)   * **Pricing**     * [Subscription Options &raquo;](https://chompthis.com/api/)     * [Cost Calculator &raquo;](https://chompthis.com/api/cost-calculator.php)   * **Guidelines**     * [Terms & License &raquo;](https://chompthis.com/api/terms.php)     * [Attribution &raquo;](https://chompthis.com/api/docs/attribution.php)
+## Important An **[API key](https://chompthis.com/api/)** is required for access to this API. * Get a **Food Data API** key at **[https://chompthis.com/api](https://chompthis.com/api/)**. * Get a **Recipe Data API** key at **[https://chompthis.com/api/recipes](https://chompthis.com/api/recipes/)**.  ### Getting Started   * Subscribe to the **[Food Data API](https://chompthis.com/api/#pricing)** or the **[Recipe Data API](https://chompthis.com/api/recipes/#pricing)**.   * Scroll down and click the \"**Authorize**\" button.   * Enter your API key into the \"**value**\" input, click the \"**Authorize**\" button, then click the \"**Close**\" button.   * Scroll down to the section titled \"**default**\" and click on the API endpoint you wish to use.   * Click the \"**Try it out**\" button.   * Enter the information the endpoint requires.   * Click the \"**Execute**\" button.  ### Example    * Branded food response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/branded-food-response-object.json)**   * Ingredient response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/ingredient-response-object.json)**   * Recipe response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/example-recipe-response.json)**   * Error response object: **[View example &raquo;](https://raw.githubusercontent.com/chompfoods/examples/master/error-response-object.json)**  ### How Do I Find My API Key?   * Your API key was sent to the email address you used to create your subscription.   * You will also find your API key in the **[Client Center](https://chompthis.com/api/manage.php)**.   * Read **[this article](https://desk.zoho.com/portal/chompthis/kb/articles/how-do-i-find-my-api-key)** for more information.  ### I'm a Premium subscriber. How do I access the API?   * All Premium subscribers must pass in a unique user ID for each user on their platform that is accessing data from the Chomp API. A user ID can be any string of letters and numbers that you assign to your user. Simply add \"user_id\" as a URL parameter when calling the API. *You must add a \"user_id\" URL parameter to every call you make to ANY endpoint.*     * **Example**        > ```ENDPOINT.php?api_key=API_KEY&code=CODE&user_id=USER_ID```  ### Helpful Links   * **Help & Support**     * [Knowledge Base &raquo;](https://desk.zoho.com/portal/chompthis/kb/chomp)     * [Support &raquo;](https://chompthis.com/api/ticket-new.php)     * [Client Center &raquo;](https://chompthis.com/api/manage.php)   * **Pricing**     * [Food Data API Subscription Options &raquo;](https://chompthis.com/api/)     * [Recipe Data API Subscription Options &raquo;](https://chompthis.com/api/recipes/)     * [Food Data API Cost Calculator &raquo;](https://chompthis.com/api/cost-calculator.php)     * [Recipe Data API Cost Calculator &raquo;](https://chompthis.com/api/recipes/cost-calculator.php)   * **Guidelines**     * [Terms & License &raquo;](https://chompthis.com/api/terms.php)     * [Attribution &raquo;](https://chompthis.com/api/docs/attribution.php)
 
 This PHP package is automatically generated by the [Swagger Codegen](https://github.com/swagger-api/swagger-codegen) project:
 
@@ -68,9 +68,10 @@ $apiInstance = new Swagger\Client\Api\DefaultApi(
     $config
 );
 $code = "code_example"; // string | #### UPC/EAN barcode  **Example** > ```&code=0842234000988```
+$user_id = "user_id_example"; // string | #### **Only required for Premium subscribers.** The unique identifier assigned to each user on your platform. This can be any string of letters or numbers and doesn't have to relate to your own database. [Learn more](https://desk.zoho.com/portal/chompthis/en/kb/articles/monthly-active-users)  **Example** > ```&user_id=fehef8w4ha```
 
 try {
-    $result = $apiInstance->foodBrandedBarcodePhpGet($code);
+    $result = $apiInstance->foodBrandedBarcodePhpGet($code, $user_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DefaultApi->foodBrandedBarcodePhpGet: ', $e->getMessage(), PHP_EOL;
@@ -90,9 +91,10 @@ $apiInstance = new Swagger\Client\Api\DefaultApi(
 $name = "name_example"; // string | #### Search for branded food items using a general food name keyword. This does not have to exactly match the \"official\" name for the food.  **Example** > ```&name=Starburst```
 $limit = 56; // int | #### Set maximum number of records you want the API to return. The default value is \"**10**.\"  **Example** > ```&limit=10```
 $page = 56; // int | #### This is how you paginate the search result. By default, you will see the first 10 records. You must increment the page number to access the next 10 records, and so on. The default value is \"**1**.\"  **Example** > ```&page=1```
+$user_id = "user_id_example"; // string | #### **Only required for Premium subscribers.** The unique identifier assigned to each user on your platform. This can be any string of letters or numbers and doesn't have to relate to your own database. [Learn more](https://desk.zoho.com/portal/chompthis/en/kb/articles/monthly-active-users)  **Example** > ```&user_id=fehef8w4ha```
 
 try {
-    $result = $apiInstance->foodBrandedNamePhpGet($name, $limit, $page);
+    $result = $apiInstance->foodBrandedNamePhpGet($name, $limit, $page, $user_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DefaultApi->foodBrandedNamePhpGet: ', $e->getMessage(), PHP_EOL;
@@ -123,9 +125,10 @@ $trace = "trace_example"; // string | ### Filter the search to only include bran
 $vitamin = "vitamin_example"; // string | #### Filter the search to only include branded foods that contain a specific vitamin.  **Example** > ```&vitamin=Biotin```
 $limit = 56; // int | #### Set maximum number of records you want the API to return. The default value is \"**10**.\"  **Example** > ```&limit=10```
 $page = 56; // int | #### This is how you paginate the search result. By default, you will see the first 10 records. You must increment the page number to access the next 10 records, and so on. The default value is \"**1**.\"  **Example** > ```&page=1```
+$user_id = "user_id_example"; // string | #### **Only required for Premium subscribers.** The unique identifier assigned to each user on your platform. This can be any string of letters or numbers and doesn't have to relate to your own database. [Learn more](https://desk.zoho.com/portal/chompthis/en/kb/articles/monthly-active-users)  **Example** > ```&user_id=fehef8w4ha```
 
 try {
-    $result = $apiInstance->foodBrandedSearchPhpGet($allergen, $brand, $category, $country, $diet, $ingredient, $keyword, $mineral, $nutrient, $palm_oil, $trace, $vitamin, $limit, $page);
+    $result = $apiInstance->foodBrandedSearchPhpGet($allergen, $brand, $category, $country, $diet, $ingredient, $keyword, $mineral, $nutrient, $palm_oil, $trace, $vitamin, $limit, $page, $user_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DefaultApi->foodBrandedSearchPhpGet: ', $e->getMessage(), PHP_EOL;
@@ -144,12 +147,106 @@ $apiInstance = new Swagger\Client\Api\DefaultApi(
 );
 $find = "find_example"; // string | Search our database for a single ingredient or a specific set of ingredients.  **Example #1: Single Ingredient** > ```&find=raw broccoli```  **Example #2: Set of Ingredients** > ```&find=raw broccoli,buttermilk waffle,mashed potatoes```  **Important Notes**    * Comma-separated lists cannot contain more than **10 ingredients**. You must perform additional API calls if you are looking up more than 10 ingredients.
 $limit = 56; // int | #### Set maximum number of records you want the API to return, per search term. The default value is \"**1**.\"  **Example** > ```&limit=3```
+$user_id = "user_id_example"; // string | #### **Only required for Premium subscribers.** The unique identifier assigned to each user on your platform. This can be any string of letters or numbers and doesn't have to relate to your own database. [Learn more](https://desk.zoho.com/portal/chompthis/en/kb/articles/monthly-active-users)  **Example** > ```&user_id=fehef8w4ha```
 
 try {
-    $result = $apiInstance->foodIngredientSearchPhpGet($find, $limit);
+    $result = $apiInstance->foodIngredientSearchPhpGet($find, $limit, $user_id);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling DefaultApi->foodIngredientSearchPhpGet: ', $e->getMessage(), PHP_EOL;
+}
+
+// Configure API key authorization: ApiKeyAuth
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('api_key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('api_key', 'Bearer');
+
+$apiInstance = new Swagger\Client\Api\DefaultApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$id = "id_example"; // string | #### A recipe ID. Recipe IDs are exposed in the /recipe/search and /recipe/ingredient endpoints.  **Example** > ```&list=tdm_1143_0459d0028fcf8990724785b9e6775037```
+$user_id = "user_id_example"; // string | #### **Only required for Premium subscribers.** The unique identifier assigned to each user on your platform. This can be any string of letters or numbers and doesn't have to relate to your own database. [Learn more](https://desk.zoho.com/portal/chompthis/en/kb/articles/monthly-active-users)  **Example** > ```&user_id=fehef8w4ha```
+
+try {
+    $result = $apiInstance->recipeIdPhpGet($id, $user_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DefaultApi->recipeIdPhpGet: ', $e->getMessage(), PHP_EOL;
+}
+
+// Configure API key authorization: ApiKeyAuth
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('api_key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('api_key', 'Bearer');
+
+$apiInstance = new Swagger\Client\Api\DefaultApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$list = "list_example"; // string | #### A single ingredient, or a comma-separated list of up to 3 ingredients. Recipes with each of these ingredients will be returned. **You can pass in up to 3 ingredients at a time.**  **Example** > ```&list=cheese,tomato,milk```
+$limit = 56; // int | #### Set maximum number of records you want the API to return. The default value is \"**3**.\"  **Example** > ```&limit=3```
+$page = 56; // int | #### This is how you paginate the search result. By default, you will see the first 3 records. You must increment the page number to access the next 3 records, and so on. The default value is \"**1**.\"  **Example** > ```&page=1```
+$user_id = "user_id_example"; // string | #### **Only required for Premium subscribers.** The unique identifier assigned to each user on your platform. This can be any string of letters or numbers and doesn't have to relate to your own database. [Learn more](https://desk.zoho.com/portal/chompthis/en/kb/articles/monthly-active-users)  **Example** > ```&user_id=fehef8w4ha```
+
+try {
+    $result = $apiInstance->recipeIngredientPhpGet($list, $limit, $page, $user_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DefaultApi->recipeIngredientPhpGet: ', $e->getMessage(), PHP_EOL;
+}
+
+// Configure API key authorization: ApiKeyAuth
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('api_key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('api_key', 'Bearer');
+
+$apiInstance = new Swagger\Client\Api\DefaultApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$limit = 56; // int | #### Set maximum number of records you want the API to return. The default value is \"**5**.\"  **Example** > ```&limit=5```
+$user_id = "user_id_example"; // string | #### **Only required for Premium subscribers.** The unique identifier assigned to each user on your platform. This can be any string of letters or numbers and doesn't have to relate to your own database. [Learn more](https://desk.zoho.com/portal/chompthis/en/kb/articles/monthly-active-users)  **Example** > ```&user_id=fehef8w4ha```
+
+try {
+    $result = $apiInstance->recipeRandomPhpGet($limit, $user_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DefaultApi->recipeRandomPhpGet: ', $e->getMessage(), PHP_EOL;
+}
+
+// Configure API key authorization: ApiKeyAuth
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('api_key', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('api_key', 'Bearer');
+
+$apiInstance = new Swagger\Client\Api\DefaultApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$title = "title_example"; // string | #### A recipe title  **Example** > ```&title=Banana Bread```
+$excluded_cuisine = "excluded_cuisine_example"; // string | #### A specific cuisine you want excluded from results  **Example** > ```&excluded_cuisine=Italian```
+$included_cuisine = "included_cuisine_example"; // string | #### A specific cuisine you want included in results  **Example** > ```&included_cuisine=Chinese```
+$excluded_ingredient = "excluded_ingredient_example"; // string | #### Recipes with this ingredient will be excluded from results  **Example** > ```&excluded_ingredient=egg```
+$included_ingredient = "included_ingredient_example"; // string | #### Only recipes with this ingredient will be returned  **Example** > ```&included_ingredient=apple```
+$nutrients_required = 56; // int | #### Optionally require all recipes to include nutrition info. Recipes with, or without, nutrition info are returned by default.  **Example** > ```&nutrients_required=1```
+$limit = 56; // int | #### Set maximum number of records you want the API to return. The default value is \"**5**.\"  **Example** > ```&limit=3```
+$page = 56; // int | #### This is how you paginate the search result. By default, you will see the first 5 records. You must increment the page number to access the next 5 records, and so on. The default value is \"**1**.\"  **Example** > ```&page=1```
+$user_id = "user_id_example"; // string | #### **Only required for Premium subscribers.** The unique identifier assigned to each user on your platform. This can be any string of letters or numbers and doesn't have to relate to your own database. [Learn more](https://desk.zoho.com/portal/chompthis/en/kb/articles/monthly-active-users)  **Example** > ```&user_id=fehef8w4ha```
+
+try {
+    $result = $apiInstance->recipeSearchPhpGet($title, $excluded_cuisine, $included_cuisine, $excluded_ingredient, $included_ingredient, $nutrients_required, $limit, $page, $user_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling DefaultApi->recipeSearchPhpGet: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -164,6 +261,10 @@ Class | Method | HTTP request | Description
 *DefaultApi* | [**foodBrandedNamePhpGet**](docs/Api/DefaultApi.md#foodbrandednamephpget) | **GET** /food/branded/name.php | Get a branded food item by name
 *DefaultApi* | [**foodBrandedSearchPhpGet**](docs/Api/DefaultApi.md#foodbrandedsearchphpget) | **GET** /food/branded/search.php | Get data for branded food items using various search parameters
 *DefaultApi* | [**foodIngredientSearchPhpGet**](docs/Api/DefaultApi.md#foodingredientsearchphpget) | **GET** /food/ingredient/search.php | Get raw/generic food ingredient item(s)
+*DefaultApi* | [**recipeIdPhpGet**](docs/Api/DefaultApi.md#recipeidphpget) | **GET** /recipe/id.php | Get a recipe by ID
+*DefaultApi* | [**recipeIngredientPhpGet**](docs/Api/DefaultApi.md#recipeingredientphpget) | **GET** /recipe/ingredient.php | Get recipes using a list of ingredients
+*DefaultApi* | [**recipeRandomPhpGet**](docs/Api/DefaultApi.md#reciperandomphpget) | **GET** /recipe/random.php | Get random popular recipes
+*DefaultApi* | [**recipeSearchPhpGet**](docs/Api/DefaultApi.md#recipesearchphpget) | **GET** /recipe/search.php | Get recipes using a title and optional filters
 
 ## Documentation For Models
 
@@ -188,6 +289,14 @@ Class | Method | HTTP request | Description
  - [IngredientObjectItems](docs/Model/IngredientObjectItems.md)
  - [IngredientObjectNutrients](docs/Model/IngredientObjectNutrients.md)
  - [IngredientObjectPortions](docs/Model/IngredientObjectPortions.md)
+ - [RecipeObject](docs/Model/RecipeObject.md)
+ - [RecipeObjectAttributes](docs/Model/RecipeObjectAttributes.md)
+ - [RecipeObjectIngredients](docs/Model/RecipeObjectIngredients.md)
+ - [RecipeObjectItems](docs/Model/RecipeObjectItems.md)
+ - [RecipeObjectMeta](docs/Model/RecipeObjectMeta.md)
+ - [RecipeObjectMetaImages](docs/Model/RecipeObjectMetaImages.md)
+ - [RecipeObjectNutrients](docs/Model/RecipeObjectNutrients.md)
+ - [RecipeObjectNutrientsCalories](docs/Model/RecipeObjectNutrientsCalories.md)
 
 ## Documentation For Authorization
 
